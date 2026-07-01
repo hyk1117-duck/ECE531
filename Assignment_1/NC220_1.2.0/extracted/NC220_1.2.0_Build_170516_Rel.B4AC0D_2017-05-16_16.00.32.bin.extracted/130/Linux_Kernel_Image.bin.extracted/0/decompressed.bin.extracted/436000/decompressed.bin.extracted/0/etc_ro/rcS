@@ -1,0 +1,44 @@
+#!/bin/sh
+
+# mount /usr/local from flash
+mount -t jffs2 /dev/mtdblock5 /usr/local
+mount -t jffs2 /dev/mtdblock6 /usr/local/config/ipcamera
+
+ln -sf /usr/local/etc /etc
+
+if [ ! -d /usr/local/etc ]; then
+	mkdir -p /usr/local/etc
+	cd /etc_ro
+	cp profile fstab /usr/local/etc
+	adduser -SDH root
+fi
+
+mount -a
+mkdir -p /var/run
+mkdir -p /var/log
+#cat /etc_ro/motd
+
+mknod /dev/mixer c 14 0
+mknod /dev/dsp c 14 3 
+
+# kernel optimization
+sysctl -w net.ipv4.tcp_keepalive_time=300
+sysctl -w net.ipv4.tcp_keepalive_probes=5
+sysctl -w net.ipv4.tcp_keepalive_intvl=15
+sysctl -w net.ipv4.tcp_window_scaling=1
+sysctl -w net.ipv4.tcp_max_orphans=32
+sysctl -w net.ipv4.tcp_orphan_retries=2
+sysctl -w net.ipv4.tcp_syncookies=1
+sysctl -w net.ipv4.tcp_tw_reuse=1
+sysctl -w net.ipv4.tcp_tw_recycle=1
+sysctl -w net.ipv4.tcp_timestamps=0
+sysctl -w net.ipv4.tcp_rmem="4096 16384 32768"
+sysctl -w net.ipv4.tcp_max_tw_buckets=512
+sysctl -w net.ipv4.tcp_fin_timeout=15
+sysctl -w net.core.somaxconn=256
+sysctl -w net.ipv4.tcp_max_syn_backlog=64
+sysctl -w kernel.panic=1
+
+# disable cpu qos, this fix eth2 Tx problem
+reg s b0113600
+reg w 0 5e30b

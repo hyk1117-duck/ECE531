@@ -1,0 +1,42 @@
+#!/bin/sh
+
+
+# This script runs when init it run during the boot process.
+
+export PATH=$PATH:/etc/ath
+
+# Mounts everything in the fstab
+
+mount -a
+# cfg mountall
+
+# Insert the ethernet module
+insmod /lib/modules/2.6.31/net/athrs_gmac.ko
+
+##
+## Bring up the network
+##
+
+#export ETH0=eth0
+#export ETH1=eth1
+
+#ifconfig $ETH0 up
+#ifconfig $ETH1 up
+
+#route add -net 224.0.0.0 netmask 224.0.0.0 dev eth0
+ifconfig lo 127.0.0.1 up
+
+# start the page cache/kmem cache cleanup timer in the kernel
+echo 1 > /proc/sys/vm/drop_caches
+
+# when processes uses page-cache more than 20% of system memory, 
+# lets force them to write
+echo 20 > /proc/sys/vm/dirty_ratio
+
+# when the dirty pages cross more than 5% of sys memory, 
+# kick in the pdflush
+echo 5 > /proc/sys/vm/dirty_background_ratio
+
+#/usr/sbin/telnetd &
+
+/usr/bin/shd &

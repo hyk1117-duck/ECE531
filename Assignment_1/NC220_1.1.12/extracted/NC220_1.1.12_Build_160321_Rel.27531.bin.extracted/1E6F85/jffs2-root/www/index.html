@@ -1,0 +1,2467 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+	<title>Network Camera</title>
+	<link type="text/css" href="css/common.css" rel="stylesheet" />
+	<!-- <link type="text/css" href="css/plug.css" rel="stylesheet" />
+	-->
+	<link rel="icon" href="favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+<body>
+	<div id="indexsideover"></div>
+	<div id="main">
+		<div id="header">
+			<div id="top">
+				<div id="logo" class="tooltip lang_title" title="">
+					<a target="_blank" href="http://www.tp-link.com"></a>
+					<span style="display:none">TP-LINK</span>
+				</div>
+				<div id="logout" class="headright-title headright-type"></div>
+				<div id="headright">
+					<span class="headright-title"><span class="lang"></span><!--Cloud Camera, 300Mbps WiFi--></span>
+					<ul class="headright-menu">
+						<li class="headright-menu-cell"><span class="lang"></span><!--[English]--></li>
+						<li class="headright-menu-model">NC220</li>
+
+					</ul>
+					
+
+				</div>
+
+			</div>
+
+		</div>
+		<div id="radius-color"></div>
+		<div id="container">
+			<div id = "containindex">
+
+				<div id="containbody-aside">
+					<div class="containbody-aside-metro">
+						<div class="contanbody-aside-metro-inner">
+
+							<!--
+							<select name="workMode" id="workMode" style="margin:20px;">
+								<option value="development" name="development">development</option>
+								<option value="test" name="test">test</option>
+								<option value="product" name="product">product</option>
+							</select>	
+							-->
+							<span id= "title-videoManages" class="titlenavx titlenavx-selected">
+								<span class="titlenav-border  titlenav-border-first"></span>
+								<span class="title-img title-img-selected"></span>
+								<span class="titlenav-name"><span class="lang"></span><!--Live View--></span>
+							</span>
+							<span id= "title-setting" class="titlenavx">
+								<span class="titlenav-border"></span>
+								<span class="title-img"></span>
+								<span class="titlenav-name"><span class="lang"></span><!--Basic--></span>
+								<span class="title-mark"></span>
+							</span>
+
+							<div class="title-setting-child title-children">
+								<span  name="setting-status-metro" class="setting-status-metro titlenav">
+
+									<span  class="titlenav-name titlenav-name-left"><span class="lang"></span><!--Status--></span>
+								</span>
+								<span id="setting-basic-ip-metro" name="setting-ip-metro" class="setting-ip-metro titlenav ">
+									<span  class="titlenav-name titlenav-name-left"><span class="lang"></span><!--Network--></span>
+								</span>
+
+								<span id="setting-wireless-metro" name="setting-wireless-metro" class="titlenav ">
+									<span  class="titlenav-name titlenav-name-left"><span class="lang"></span><!--Wireless Connection--></span>
+								</span>
+
+								<span name="setting-cloud-metro" class="setting-cloud-metro titlenav">
+									<span class="titlenav-name titlenav-name-left"><span class="lang"></span><!--Cloud Setting--></span>
+								</span>
+
+								<span name="setting-led-metro" class="setting-led-metro titlenav">
+									<span class="titlenav-name titlenav-name-left"><span class="lang"></span><!--LED--></span>
+								</span>
+							</div>
+							<span id= "title-advanced" class="titlenavx">
+								<span class="titlenav-border"></span>
+								<span class="title-img"></span>
+								<span class="title-mark"></span>
+								<span class="titlenav-name"><span class="lang"></span><!--Advanced--></span>
+							</span>
+							<div class="title-advanced-child title-children">
+
+								<span name="setting-status-metro" class="setting-status-metro titlenav">
+
+									<span  class="titlenav-name titlenav-name-left"><span class="lang"></span><!--Status--></span>
+								</span>
+
+								<span  id="setting-ip-metro" name="setting-ip-metro" class="setting-ip-metro titlenav">
+									<span  class="titlenav-name titlenav-name-left"><span class="lang"></span><!--Network--></span>
+								</span>
+								<span id="setting-advance-wireless-metro" name="setting-wireless-metro" class="titlenav ">
+									<span  class="titlenav-name titlenav-name-left"><span class="lang"></span><!--Wireless Connection--></span>
+								</span>
+								<span id="setting-wirelessextender-metro" name="setting-wirelessextender-metro" class="titlenav ">
+									<span  class="titlenav-name titlenav-name-left"><span class="lang"></span><!--Wireless Extender--></span>
+								</span>
+								<span name="setting-cloud-metro" class="setting-cloud-metro titlenav">
+									<span class="titlenav-name titlenav-name-left"><span class="lang"></span><!--Cloud Setting--></span>
+								</span>
+
+								<span id="setting-ddns-metro" name="setting-ddns-metro" class="titlenav ">
+									<span  class="titlenav-name titlenav-name-left"><span class="lang"></span><!--DDNS--></span>
+								</span>
+								<span id="setting-camera-metro" name="setting-camera-metro" class="titlenav">
+									<span  class="titlenav-name titlenav-name-left"><span class="lang"></span><!--Video--></span>
+								</span>
+								<span id="setting-motionalarm-metro" name="setting-motionalarm-metro" class="titlenav ">
+									<span class="titlenav-name titlenav-name-left"><span class="lang"></span><!--Motion Detection--></span>
+								</span>
+								<span id="setting-motionsoundalarm-metro" name="setting-motionsoundalarm-metro" class="titlenav ">
+									<span class="titlenav-name titlenav-name-left"><span class="lang"></span><!--Sound Detection--></span>
+								</span>
+								<span id="setting-ftpalarm-metro" name="setting-ftpalarm-metro" class="titlenav ">
+									<span class="titlenav-name titlenav-name-left"><span class="lang"></span><!--Notification Delivery--></span>
+								</span>
+								<span  name="setting-led-metro" class="setting-led-metro titlenav">
+									<span class="titlenav-name titlenav-name-left"><span class="lang"></span><!--LED--></span>
+								</span>
+							</div>
+							<span id = "title-tool" class="titlenavx">
+								<span class="titlenav-border"></span>
+								<span class="title-img"></span>
+								<span class="title-mark"></span>
+								<span class="titlenav-name"><span class="lang"></span><!--System--></span>
+							</span>
+							<div class="title-tool-child title-children">
+								<span id="setting-usermanage-metro" name="setting-usermanage-metro" class="titlenav ">
+									<span  class="titlenav-name titlenav-name-left"><span class="lang"></span><!--Account--></span>
+								</span>
+								<span id="setting-time-metro" name="setting-time-metro" class="titlenav ">
+									<span class="titlenav-name titlenav-name-left"><span class="lang"></span><!--Date/Time--></span>
+								</span>
+								<span id="setting-sysmanage-metro" name="setting-sysmanage-metro" class="titlenav ">
+									<span  class="titlenav-name titlenav-name-left"><span class="lang"></span><!--Management--></span>
+								</span>
+								<span  id="setting-log-metro" name="setting-log-metro" class="titlenav ">
+									<span class="titlenav-name titlenav-name-left"><span class="lang"></span><!--System Log--></span>
+								</span>
+							</div>
+							<div class="title-videoManages-child-x title-children"></div>
+						</div>
+
+					</div>
+				</div>
+				<div id="containbody-main">
+					<div id="sideover"></div>
+					<div id="containbody-main-inner">
+						<div id="videoManages" class="containbody-main-inner-child containshow">
+
+							<div id="videoManages-main">
+								<div id="videoobject">
+									<div id="objectplayer">
+										<OBJECT id='tpplugin' class="tppluginie" classid='CLSID:71B417B2-B60E-4680-B6FC-8C342DFC4757' align='center' width="640" height="320" border='0px'>
+										
+											<param name="wmode" value="transparent">  
+											<FONT id="tppluginfont" style="display:none" COLOR=red SIZE=5>
+												<!-- Can't find object -->
+											</FONT>
+										</OBJECT>
+									</div>
+								</div>
+								<div id="controlpanel">
+									<ul class="controlpanelul">
+										<li class="videocorl">
+											<span id="videocut" class="videoimg videocutimg lang_title" title=""></span>
+										</li>
+										<li class="videocorl">
+											<span id="videovid" class="videoimg videovidimg lang_title" title=""></span>
+											<span id="videovidon" class="videoimg videovidonimg lang_title" title=""></span>
+										</li>
+										<li class="videocorl">
+											<span id="videoflip" class="videoimg videoflipimg lang_title" title=""></span>
+										</li>
+										<li class="videocorl">
+											<span id="videomirror" class="videoimg videomirrorimg lang_title" title=""></span>
+										</li>
+										<li class="videocorl">
+											<span id="daynight" class="videoimg daynightimg lang_title" title=""></span>
+											<div id="dayandnightcover"></div>
+										</li>
+										<li class="videocorl">
+											<span id="videozoom" class="videoimg videozoomimg lang_title" title=""></span>
+										</li>
+
+									</ul>
+									<ul id="daylist">
+										<li id="automode" class="dayctrl">
+											<span class="videoimg automodeimg lang_title" title=""></span>
+										</li>
+										<li id="daymode" class="dayctrl">
+											<span class="videoimg daymodeimg lang_title" title=""></span>
+										</li>
+										<li id="nightmode" class="dayctrl">
+											<span class="videoimg nightmodeimg lang_title" title=""></span>
+										</li>
+									</ul>
+									<span id="videozoomul">
+										<div id="zoom-bar" class="zoom-bar watchmode-bar"></div>
+									</span>
+									<span class="toolbar-volumeset volume-offon-show">
+										<span id="videovolumestart" class="videocorl">
+											<span class="videoimg videovolumestartimg lang_title" title=""></span>
+										</span>
+										<span id="videovolumestop" class="videocorl">
+											<span class="videoimg videovolumestopimg lang_title" title=""></span>
+										</span>
+										<div id="volume-bar" class="volume-bar watchmode-bar"></div>
+									</span>
+									<span id="videofullscreen" class="videocorl">
+										<span class="videoimg videofullscreenimg lang_title" title=""></span>
+									</span>
+								</div>
+								<div class="video-ctrl-state">
+
+									<div class="video-ctrl-state-cell">
+										<div class="watchmode">
+											<label for="brightness-val"><span class="lang"></span><!--Brightness-->:</label>
+											<div id="brightness-bar" class="watchmode-bar"></div>
+											<input type="text" maxlength="3" id="brightness-val" class="sf" />
+										</div>
+										<div class="watchmode">
+											<label for="contrast-val"><span class="lang"></span><!--Contrast-->:</label>
+											<div id="contrast-bar"  class="watchmode-bar"></div>
+											<input type="text" maxlength="3" id="contrast-val" class="sf" />
+										</div>
+										<div class="watchmode">
+											<label for="saturation-val"><span class="lang"></span><!--Saturation-->:</label>
+											<div id="saturation-bar" class="watchmode-bar"></div>
+											<input type="text" maxlength="3" id="saturation-val" class="sf" />
+										</div>
+										<input id="resetvideo" class="setting-contain-button lang_button" type="button" value=""></div>
+
+									<div class="video-ctrl-state-cell">
+										<div id="resolution-readjust-out" class="watchmode watchmode-long">
+											<label for="Resolution"><span class="lang"></span><!--Resolution-->:</label>
+
+											<select id="resolution-readjust"  name="cbr">
+												<option selected="true" name="VGA" value="1">640*480</option>
+												<option value="2" name="QVGA">320*240</option>
+											</select>
+										</div>
+									</div>
+
+								</div>
+								<div id = "chromealert" style = "display:none">
+									<span>
+										<img src = "../images/tpcamera.png">
+									</span>
+
+									<span>
+										<div>
+											<p>Um,this brower may not support camera video well.</p>
+										</div>
+										<div>
+											<p>If you could't view the camera video,try the tpCamera app or another brower such as Internet Explorer,Firefox,Safari,or Opera.We will update the software as soon as possible. Sorry for the in convenience and thanks for your choice.</p>
+										</div>
+									</span>
+								</div>
+							</div>
+						</div>
+						<div class="setting-contain-cell  setting-contain-usermanage">
+							<div class="setting-contain-title">
+								<span class="setting-contain-title-cell"><span class="lang"></span><!--Account--></span>
+							</div>
+							<div class="setting-contain-usermanage-ctrl-table"></div>
+							<div class="setting-contain-usermanage-ctrl-button">
+								<div class="setting-contain-usermanage-ctrl-button-inner">
+									<input type="button" id="setting-contain-usermanage-ctrl-add" class="setting-contain-button setting-usermanage-contain-button lang_button" value="Add"/>
+									<input type="button" id="setting-contain-usermanage-ctrl-cpwd" class="setting-contain-button setting-usermanage-contain-button lang_button" value="Change Password"/>
+									<input type="button" id="setting-contain-usermanage-ctrl-del" class="setting-contain-button setting-usermanage-contain-button lang_button" value="Delete"/>
+								</div>
+							</div>
+							<div class="setting-contain-usermanage-ctrl">
+
+								<div class="setting-contain-usermanage-ctrl-cell setting-contain-usermanage-ctrl-adduser">
+
+									<div class="setting-contain-usermanage-border">
+										<div class="setting-contain-inner-left">
+											<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+												<span class="setting-contain-usermanage-ctrl-changepassword-cell-title setting-contain-usermanage-ctrl-changepassword-title"><span class="lang"></span><!--Add a New User Account--></span>
+											</div>
+											<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+												<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Username-->:</span>
+												<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+													<input id="usermanage-creatuser-username" class="setting-contain-usermanage-ctrl-input" maxlength="20" type="text" />
+												</span>
+											</div>
+											<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+												<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Password-->:</span>
+												<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+													<input id="usermanage-creatuser-password" class="setting-contain-usermanage-ctrl-input"  maxlength="20" type="password" />
+												</span>
+											</div>
+											<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+												<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Confirm Password-->:</span>
+												<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+													<input id="usermanage-creatuser-cpassword" onpaste="return false" class="setting-contain-usermanage-ctrl-input"  maxlength="20" type="password" />
+												</span>
+											</div>
+
+										</div>
+									</div>
+									<div class="setting-contain-usermanage-ctrl-changepassword-cell-button">
+										<input id="usermanage-creatuser-save" class="setting-contain-button lang_button"  type="button" value="Save"/>
+									</div>
+								</div>
+								<div class="setting-contain-usermanage-ctrl-cell setting-contain-usermanage-ctrl-changepassword">
+									<div class="setting-contain-usermanage-border">
+										<div class="setting-contain-inner-left">
+											<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+												<span class="setting-contain-usermanage-ctrl-changepassword-cell-title setting-contain-usermanage-ctrl-changepassword-title"><span class="lang"></span><!--Change Password-->:</span>
+											</div>
+											<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+												<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Current User-->:</span>
+												<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+													<span id="accountmanage-changepwd-username" class="setting-contain-usermanage-ctrl-changepassword-cell-contain-currentuser"><span class="lang"></span><!--admin--></span>
+												</span>
+											</div>
+											<div class="usermanage-changepassword-oldpassword-outer setting-contain-usermanage-ctrl-changepassword-cell">
+												<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Old Password-->:</span>
+												<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+													<input id="usermanage-changepassword-oldpassword" maxlength="20" class="setting-contain-usermanage-ctrl-input" type="password" />
+												</span>
+											</div>
+											<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+												<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--New Password-->:</span>
+												<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+													<input id="usermanage-changepassword-newpassword" maxlength="20" class="setting-contain-usermanage-ctrl-input " type="password" />
+												</span>
+											</div>
+											<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+												<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Confirm Password-->:</span>
+												<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+													<input id="usermanage-changepassword-confirmpassword" maxlength="20" onpaste="return false" class="setting-contain-usermanage-ctrl-input" type="password" />
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="setting-contain-usermanage-ctrl-changepassword-cell-button">
+										<input id="usermanage-chanpassword-save" class="setting-contain-button lang_button"  type="button" value="Save"/>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="setting-contain-cell  setting-contain-cloud">
+							<div class="setting-contain-title">
+								<span class="setting-contain-title-cell"><span class="lang"></span><!--Cloud Setting--></span>
+							</div>
+							<div id="setting-cloud-login">
+								<div class="setting-contain-inner-left">
+									<div class="cloud-server-status" id="cloud-bind-error">
+										<div class="setting-contain-cloud-introduce"></div>
+									</div>
+									<div class="cloud-server-status" id="cloud-bind-login">
+										<div class="setting-contain-cloud-introduce">
+											<p>
+												<span class="lang"></span>
+												<!--Add your camera to Cloud account-->
+											</p>
+											<p><span class="lang"></span><!--Please enter your Cloud account and password:--></p>
+										</div>
+										<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+											<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Account-->:</span>
+											<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+												<input id="cloud-setting-username" class="setting-contain-usermanage-ctrl-input" type="text" onblur="if(this.value=='')this.value=this.defaultValue;" onfocus="if(this.value==this.defaultValue)this.value='';" value="E-mail/Username"></span>
+										</div>
+										<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+											<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Password-->:</span>
+											<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+												<input id="cloud-setting-pwd" class="setting-contain-usermanage-ctrl-input" type="password" value=""></span>
+										</div>
+										<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+											<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Camera Name-->:</span>
+											<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+												<input id="cloud-setting-cameraname" maxlength="31" class="cloud-setting-cameraname setting-contain-usermanage-ctrl-input" type="text" value=""></span>
+										</div>
+										<div class="setting-contain-cloud-introduce">
+											<p id="skylight-link">
+												<span class="lang"></span><!--With Cloud service, you can view your cloud cameras anytime and anywhere over the Internet. Go to-->
+												<a class="setting-contain-cloud-link" href="http://www.tplinkcloud.com" target="_blank"><span class="lang"></span><!--www.tplinkcloud.com--></a><span class="link_dot">.</span>
+											</p>
+										</div>
+									</div>
+									<div class="cloud-server-status" id="cloud-bind-info">
+										<div class="setting-contain-cloud-introduce">
+											<p id="cloud-connection-status" ><span class="lang"></span><!--The camera has been added to the TP-LINK Cloud account-->.</p>
+											<!-- <p>Your account information is as follows:</p>
+										-->
+									</div>
+									<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+										<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Cloud Account-->:</span>
+										<span id="cloud-info-username" class="cloud-setting-username setting-contain-usermanage-ctrl-changepassword-cell-contain"></span>
+									</div>
+									<div class="setting-contain-cloud-introduce">
+										<p id="skylight-link">
+											With Cloud service, you can view your cloud cameras anytime and anywhere over the Internet. Go to
+											<a class="setting-contain-cloud-link" href="http://www.tplinkcloud.com" target="_blank">www.tplinkcloud.com</a><span class="link_dot">.</span>
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="setting-contain-ip-ctrl-button">
+								<div class="setting-contain-ip-ctrl-button-inner">
+									<input id="cloud-setting-submit" class="setting-cloud-button setting-contain-button lang_button" type="button" value="Register">
+									<input id="cloud-setting-rebind" class="setting-cloud-button setting-contain-button lang_button" type="button" value="Reregister">
+									<input id="cloud-setting-unbind" class="setting-cloud-button setting-contain-button lang_button" type="button" value="Deregister">
+									<input id="cloud-setting-refresh" class="setting-cloud-button setting-contain-button lang_button" type="button" value="Refresh"></div>
+							</div>
+						</div>
+						<div id="setting-cloud-register">
+							<div class="setting-contain-inner-left">
+								<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+									<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--E-mail-->:</span>
+									<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+										<input id="cloud-register-email" class="setting-contain-usermanage-ctrl-input" type="text" value=""></span>
+								</div>
+								<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+									<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Username-->:</span>
+									<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+										<input id="cloud-register-username" class="setting-contain-usermanage-ctrl-input" type="text" value=""></span>
+								</div>
+								<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+									<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Password-->:</span>
+									<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+										<input id="cloud-register-password" class="setting-contain-usermanage-ctrl-input" type="password" value=""></span>
+								</div>
+								<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+									<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Confirm Password-->:</span>
+									<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+										<input id="cloud-register-cpwd" class="setting-contain-usermanage-ctrl-input" type="password" value=""></span>
+								</div>
+								<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+									<span id="acceptout" class="setting-contain-usermanage-ctrl-changepassword-cell-title">
+										<input id="accept" type="checkbox" name="leftright" value="1">
+										<p>
+											<span class="lang"></span><!--I accept the TP-LINK Cloud-->
+											<a href="https://www.tplinkcloud.com/PrivacyPolicy.php" target="_blank"><span class="lang"></span><!--Privacy Policy--></a>
+											<span class="lang"></span><!--and-->
+											<a href="https://www.tplinkcloud.com/TermsofUse.php" target="_blank"><span class="lang"></span><!--Terms of Use--></a>
+											.
+										</p>
+									</span>
+								</div>
+							</div>
+							<div class="setting-contain-ip-ctrl-button">
+								<div class="setting-contain-ip-ctrl-button-inner">
+									<input id="cloud-register-regist" class="setting-contain-button lang_button" type="button" value="Sign up">
+									<input id="cloud-register-cancle" class="setting-contain-button lang_button" type="button" value="Back"></div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="setting-contain-cell  setting-contain-ip" >
+						<div class="setting-contain-ip-ctrl-cell ">
+							<div id="setting-contain-title-ip" class="setting-contain-title">
+								<span class="setting-contain-title-cell"><span class="lang"></span><!--IP Address--></span>
+							</div>
+							<div class="setting-contain-inner-left">
+								<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+
+									<span class="setting-contain-radio-ctrl">
+										<div class="setting-radio-outcontain">
+											<div class="setting-radio-contain">
+												<input id="ipmodel-dynamic" class="ip-radio-setting" type="radio"  checked="" value="1" name="dhcpppp">
+												<span class="setting-contain-ip-ipmodel-title"><span class="lang"></span><!--Dynamic IP--></span>
+											</div>
+										</div>
+										<div class="setting-radio-outcontain setting-radio-outcontain-floatright">
+											<div class="setting-radio-contain ">
+												<input id="ipmodel-static" class="ip-radio-setting" type="radio"  value="0" name="dhcpppp"></div>
+											<span class="setting-contain-ip-ipmodel-title"><span class="lang"></span><!--Static IP--></span>
+
+										</div>
+
+									</span>
+
+								</div>
+
+								<div class=" setting-contain-ip-ipmodel-cell">
+									<div id="ipsetting-ipmodel-static" class="setting-contain-ip-ipmodel-static  setting-contain-ip-ipmodel-choice-cell">
+										<div class="setting-contain-ip-ipmodel-contain">
+											<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+												<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--MAC Address-->:</span>
+												<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+													<span id="ipsetting-macadrr" class="setting-contain-usermanage-ctrl-setting-contain-text">00-12-14-56-FF-5A</span>
+												</span>
+											</div>
+											<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+												<span class="setting-contain-usermanage-ip-ipmodel-cell-title"><span class="lang"></span><!--IP Address-->:</span>
+												<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+													<input id="ipsetting-staticip" class="setting-contain-usermanage-ctrl-input" type="text"></span>
+											</div>
+											<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+												<span class="setting-contain-usermanage-ip-ipmodel-cell-title"><span class="lang"></span><!--Subnet Mask-->:</span>
+												<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+													<input id="ipsetting-staticsubmask" class="setting-contain-usermanage-ctrl-input" type="text"></span>
+											</div>
+											<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+												<span class="setting-contain-usermanage-ip-ipmodel-cell-title"><span class="lang"></span><!--Default Gateway-->:</span>
+												<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+													<input id="ipsetting-staticgateway" class="setting-contain-usermanage-ctrl-input" type="text"></span>
+											</div>
+											<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+												<span class="setting-contain-usermanage-ip-ipmodel-cell-title"><span class="lang"></span><!--Primary DNS Server-->:</span>
+												<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+													<input id="ipsetting-staticpds" class="setting-contain-usermanage-ctrl-input" type="text"></span>
+											</div>
+											<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+												<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Secondary DNS Server-->:</span>
+												<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+													<input id="ipsetting-staticsds" class="setting-contain-usermanage-ctrl-input" type="text"></span>
+											</div>
+										</div>
+									</div>
+									<div id="ipsetting-ipmodel-dynamic" class="setting-contain-ip-ipmodel-dynamic setting-contain-ip-ipmodel-choice-cell">
+
+										<div id="dhcp-fallback-disable" class="dhcp-fallback-cell">
+											<div class="setting-contain-usermanage-ctrl-changepassword-cell dhcp-fallback-childcell">
+												<span id="ipsetting-fallback-title" class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Fallback IP-->:</span>
+												<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+													<input  id="ipsetting-fallbackip" class="ipsetting-fallbackip setting-contain-usermanage-ctrl-input" type="text"></span>
+											</div>
+										</div>
+										<!-- dhcp-fallback-disable -->
+
+									</div>
+								</div>
+							</div>
+							<div class="basic-setting-ip-contain">
+								<div class="setting-contain-ip-ctrl-cell ">
+									<div id="setting-contain-title-pppoe" class="setting-contain-title">
+										<span class="setting-contain-title-cell"><span class="lang"></span><!--PPPoE--></span>
+									</div>
+									<div class="setting-contain-inner-left">
+										<div class="setting-contain-pppoe-set-cell">
+											<!-- <div class="setting-contain-usermanage-ctrl-changepassword-cell marginbottom25">
+											<span class="setting-contain-usermanage-ip-ipmodel-cell-title">
+
+												<span class="setting-contain-radio-ctrl">
+													<div class="setting-radio-outcontain">
+														<div class="setting-radio-contain">
+															<input id="pppoe-enable" class="pppoe-radio-setting" type="radio"  value="1" name="pppoe"></div>
+														<span class="setting-contain-ip-ipmodel-title">Enable</span>
+													</div>
+													<div class="setting-radio-outcontain setting-radio-outcontain-floatright">
+														<div class="setting-radio-contain ">
+															<input id="pppoe-disable" class="pppoe-radio-setting" type="radio"  checked="" value="0" name="pppoe">
+															<span class="setting-contain-ip-ipmodel-title">Disable</span>
+														</div>
+													</div>
+												</span>
+
+											</span>
+										</div>
+										-->
+										<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+											<span class="setting-contain-usermanage-ip-ipmodel-cell-title"><span class="lang"></span><!--PPPoE-->:</span>
+
+											<span class="setting-contain-radio-ctrl">
+												<div class="setting-radio-outcontain">
+													<div class="setting-radio-contain">
+														<input id="pppoe-enable" class="pppoe-radio-setting" type="radio"  value="1" name="pppoe"></div>
+													<span class="setting-contain-ip-ipmodel-title"><span class="lang"></span><!--Enable--></span>
+												</div>
+												<div class="setting-radio-outcontain setting-radio-outcontain-floatright">
+													<div class="setting-radio-contain ">
+														<input id="pppoe-disable" class="pppoe-radio-setting" type="radio"  checked="" value="0" name="pppoe">
+														<span class="setting-contain-ip-ipmodel-title"><span class="lang"></span><!--Disable--></span>
+													</div>
+												</div>
+											</span>
+
+										</div>
+
+										<div id="pppoe-setting-cotain">
+											<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+												<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Status-->:</span>
+												<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+													<span id="ipsetting-pppoestate" class="setting-contain-usermanage-ctrl-setting-contain-text"><span class="lang"></span><!--Disconnected--></span>
+												</span>
+											</div>
+											<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+												<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Username-->:</span>
+												<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+													<input id="ipsetting-pppoeusername" class="setting-contain-usermanage-ctrl-input ppoe-setting-everybody" type="text" />
+												</span>
+											</div>
+											<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+												<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Password-->:</span>
+												<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+													<input id="ipsetting-pppoepassword" class="setting-contain-usermanage-ctrl-input ppoe-setting-everybody" type="password" />
+												</span>
+											</div>
+											<!-- <div class="setting-contain-usermanage-ctrl-changepassword-cell">
+											<span class="setting-contain-usermanage-ctrl-changepassword-cell-title">Confirm Password:</span>
+											<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+												<input id="ipsetting-pppoeconfirmpassword" class="setting-contain-usermanage-ctrl-input ppoe-setting-everybody" type="password" onpaste="return false"/>
+											</span>
+										</div>
+										-->
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+
+						<div id="setting-contain-title-http" class="setting-contain-title">
+							<span class="setting-contain-title-cell"><span class="lang"></span><!--HTTP--></span>
+						</div>
+						<div class="setting-contain-inner-left">
+							<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+								<span class="setting-contain-usermanage-ip-ipmodel-cell-title"><span class="lang"></span><!--HTTP Port-->:</span>
+								<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+									<input id="ip-setting-httpport" class="setting-contain-usermanage-ctrl-input" type="text"></span>
+							</div>
+
+						</div>
+						<div id="setting-contain-title-upnp" class="setting-contain-title">
+							<span class="setting-contain-title-cell"><span class="lang"></span><!--UPnP--></span>
+						</div>
+						<div class="setting-contain-inner-left">
+							<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+								<span class="setting-contain-usermanage-ip-ipmodel-cell-title"><span class="lang"></span><!--UPnP Port Forwarding-->:</span>
+
+								<span class="setting-contain-radio-ctrl">
+									<div class="setting-radio-outcontain">
+										<div class="setting-radio-contain">
+											<input id="upnp-enable" class="upnp-radio-setting" type="radio"  value="1" name="upnp"></div>
+										<span class="setting-contain-ip-ipmodel-title"><span class="lang"></span><!--Enable--></span>
+									</div>
+									<div class="setting-radio-outcontain setting-radio-outcontain-floatright">
+										<div class="setting-radio-contain ">
+											<input id="upnp-disable" type="radio" class="upnp-radio-setting" checked="" value="0" name="upnp">
+											<span class="setting-contain-ip-ipmodel-title"><span class="lang"></span><!--Disable--></span>
+										</div>
+									</div>
+								</span>
+
+							</div>
+							<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+								<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--UPnP Name-->:</span>
+								<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+
+									<span id="upnp-name" class="setting-contain-usermanage-ctrl-setting-contain-text">NC220</span>
+								</span>
+							</div>
+						</div>
+
+						<div id="setting-contain-title-bonjour" class="setting-contain-title">
+							<span class="setting-contain-title-cell"><span class="lang"></span><!--Bonjour--></span>
+						</div>
+						<div class="setting-contain-inner-left">
+							<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+								<span class="setting-contain-usermanage-ip-ipmodel-cell-title"><span class="lang"></span><!--Bonjour-->:</span>
+
+								<span class="setting-contain-radio-ctrl">
+									<div class="setting-radio-outcontain">
+										<div class="setting-radio-contain">
+											<input id="bonjour-enable" class="bonjour-radio-setting" type="radio"  value="1" name="bonjour"></div>
+										<span class="setting-contain-ip-ipmodel-title"><span class="lang"></span><!--Enable--></span>
+									</div>
+									<div class="setting-radio-outcontain setting-radio-outcontain-floatright">
+										<div class="setting-radio-contain ">
+											<input id="bonjour-disable" class="bonjour-radio-setting" type="radio"  checked="" value="0" name="bonjour">
+											<span class="setting-contain-ip-ipmodel-title"><span class="lang"></span><!--Disable--></span>
+										</div>
+									</div>
+								</span>
+
+							</div>
+							<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+								<span class="setting-contain-usermanage-ip-ipmodel-cell-title"><span class="lang"></span><!--Bonjour Name-->:</span>
+								<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+									<span id="bonjour-name-setting" class="setting-contain-usermanage-ctrl-setting-contain-text">NC220</span>
+								</span>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<div class="setting-contain-dmt-setting-border"></div>
+				<div class="setting-contain-ip-ctrl-buttons">
+					<div class="setting-contain-ip-ctrl-button-inner">
+						<input type="button" id="setting-contain-ip-network-ctrl-save" class="setting-contain-button lang_button" value="Save"/>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="setting-contain-cell  setting-contain-status">
+				<div id="allstate" class=" ">
+					<div class="status-th">
+						<div class="status-head">
+							<span id="status-basicinformation" class="status-title"><span class="lang"></span><!--Basic--></span>
+						</div>
+						<ul class="status-table">
+							<li class="status-line">
+								<span class=" status-index status-td status-td-strong">
+									<span id="status-title-model" class="status-name"><span class="lang"></span><!--Camera Name-->:</span>
+								</span>
+								<span class="status-td">
+									<span id="status-model" class="status-info">TL-NC220</span>
+								</span>
+								<span class="status-ico status-td"></span>
+							</li>
+
+							<li class="status-line">
+								<span class="status-index status-td status-td-strong">
+									<span id="status-title-devicemodel" class="status-name"><span class="lang"></span><!--Model-->:</span>
+								</span>
+								<span class="status-td">
+									<span id="status-devicemodel" class="status-info">1.0</span>
+								</span>
+								<span class="status-ico status-td"></span>
+							</li>
+							<li class="status-line">
+								<span class="status-index  status-td">
+									<span id="status-title-fwVersion" class="status-name"><span class="lang"></span><!--Firmware Version-->:</span>
+								</span>
+								<span class="status-td">
+									<span id="status-fwVersion" class="status-info">1.0.1 Build 140806 Rel.17096</span>
+								</span>
+								<span class="status-ico status-td"></span>
+							</li>
+							<li class="status-line">
+								<span class="status-index status-td">
+									<span id="status-title-viewer" class="status-name"><span class="lang"></span><!--Current Viewers-->:</span>
+								</span>
+								<span class="status-td">
+									<span id="status-viewer" class="status-info">IPCAM</span>
+								</span>
+								<span class="status-ico status-td"></span>
+							</li>
+
+						</ul>
+					</div>
+
+					<div class="status-th">
+						<div class="status-head">
+							<span id="status-title-cloudinfo" class="status-title"><span class="lang"></span><!--Cloud Server--></span>
+						</div>
+						<ul class="status-table">
+							<li class="status-line">
+								<span class="status-index status-td">
+									<span id="status-title-cloudConnectStatus" class="status-name"><span class="lang"></span><!--Connection Status-->:</span>
+								</span>
+								<span class="status-td">
+									<span id="status-cloudConnectStatus" class="status-info">-</span>
+								</span>
+								<span class="status-ico status-td"></span>
+							</li>
+
+							<li class="status-line">
+								<span class=" status-index status-td status-td-strong">
+									<span id="status-title-cloudUser" class="status-name"><span class="lang"></span><!--Username-->:</span>
+								</span>
+								<span class="status-td">
+									<span id="status-cloudUser" class="status-info">-</span>
+								</span>
+								<span class="status-ico status-td"></span>
+							</li>
+						</ul>
+					</div>
+
+					<div class="status-th">
+						<div class="status-head">
+							<span id="status-title-wireinfo" class="status-title"><span class="lang"></span><!--Wireless--></span>
+						</div>
+						<ul class="status-table">
+							<li class="status-line">
+								<span class=" status-index status-td status-td-strong">
+									<span id="status-title-connectMode" class="status-name"><span class="lang"></span><!--Connection--> Status:</span>
+								</span>
+								<span class="status-td">
+									<span id="status-connectMode" class="status-info"><span class="lang"></span><!--Disconnected--></span>
+								</span>
+								<span class="status-ico status-td"></span>
+							</li>
+							<li class="status-line">
+								<span class=" status-index status-td status-td-strong">
+									<span id="status-title-ssid" class="status-name"><span class="lang"></span><!--Wireless Network Name-->:</span>
+								</span>
+								<span class="status-td">
+									<span id="status-ssid" class="status-info">-</span>
+								</span>
+								<span class="status-ico status-td"></span>
+							</li>
+							<li class="status-line">
+								<span class=" status-index status-td status-td-strong">
+									<span id="status-title-channel" class="status-name"><span class="lang"></span><!--Channel-->:</span>
+								</span>
+								<span class="status-td">
+									<span id="status-channel" class="status-info">-</span>
+								</span>
+								<span class="status-ico status-td"></span>
+							</li>
+							<li class="status-line">
+								<span class=" status-index status-td status-td-strong">
+									<span id="status-title-link" class="status-name"><span class="lang"></span><!--Rate/Signal Strength-->:</span>
+								</span>
+								<span class="status-td">
+									<span id="status-link" class="status-info">-</span>
+								</span>
+								<span class="status-ico status-td"></span>
+							</li>
+							<li class="status-line">
+								<span class=" status-index status-td status-td-strong">
+									<span id="status-title-encryp" class="status-name"><span class="lang"></span><!--Security-->:</span>
+								</span>
+								<span class="status-td">
+									<span id="status-encryp" class="status-info">-</span>
+								</span>
+								<span class="status-ico status-td"></span>
+							</li>
+						</ul>
+					</div>
+
+					<div class="status-th">
+						<div class="status-head">
+							<span id="status-title-netinfo" class="status-title"><span class="lang"></span><!--Network--></span>
+						</div>
+						<ul class="status-table">
+							<li class="status-line">
+								<span class=" status-index status-td status-td-strong">
+									<span id="status-title-linktype" class="status-name"><span class="lang"></span><!--Connection Type-->:</span>
+								</span>
+								<span class="status-td">
+									<span id="status-linktype" class="status-info"><span class="lang"></span><!--Dynamic IP--></span>
+								</span>
+								<span class="status-ico status-td"></span>
+							</li>
+							<li class="status-line">
+								<span class=" status-index status-td status-td-strong">
+									<span id="status-title-mac" class="status-name"><span class="lang"></span><!--MAC Address-->:</span>
+								</span>
+								<span class="status-td">
+									<span id="status-mac" class="status-info">00-12-34-56-78-89</span>
+								</span>
+								<span class="status-ico status-td"></span>
+							</li>
+
+							<li class="status-line">
+								<span class="status-index status-td status-td-strong">
+									<span id="status-title-lanIp" class="status-name"><span class="lang"></span><!--LAN IP Address-->:</span>
+								</span>
+								<span class="status-td">
+									<span id="status-lanIp" class="status-info">192.168.1.128</span>
+								</span>
+								<span class="status-ico status-td"></span>
+							</li>
+							<li class="status-line">
+								<span class="status-index status-td">
+									<span id="status-title-submask" class="status-name"><span class="lang"></span><!--Subnet Mask-->:</span>
+								</span>
+								<span class="status-td">
+									<span id="status-submask" class="status-info">192.168.1.1</span>
+								</span>
+								<span class="status-ico status-td"></span>
+							</li>
+							<li class="status-line">
+								<span class="status-index status-td">
+									<span id="status-title-gateway" class="status-name"><span class="lang"></span><!--Default Gateway-->:</span>
+								</span>
+								<span class="status-td">
+									<span id="status-gateway" class="status-info">192.168.1.1</span>
+								</span>
+								<span class="status-ico status-td"></span>
+							</li>
+							<li class="status-line">
+								<span class="status-index  status-td">
+									<span id="status-title-pdns" class="status-name"><span class="lang"></span><!--Primary DNS Server-->:</span>
+								</span>
+								<span class="status-td">
+									<span id="status-pdns" class="status-info">0.0.0.0</span>
+								</span>
+								<span class="status-ico status-td"></span>
+							</li>
+							<li class="status-line">
+								<span class="status-index  status-td">
+									<span id="status-title-sdns" class="status-name"><span class="lang"></span><!--Secondary DNS Server-->:</span>
+								</span>
+								<span class="status-td">
+									<span id="status-sdns" class="status-info">0.0.0.0</span>
+								</span>
+								<span class="status-ico status-td"></span>
+							</li>
+						</ul>
+					</div>
+
+					<div class="status-th">
+						<div class="status-head">
+							<span id="status-title-pppoe" class="status-title"><span class="lang"></span><!--PPPoE--></span>
+						</div>
+						<ul class="status-table">
+							<li class="status-line">
+								<span class=" status-index status-td status-td-strong">
+									<span id="status-pppoestatus-title" class="status-name"><span class="lang"></span><!--Status-->:</span>
+								</span>
+								<span class="status-td">
+									<span id="status-pppoestatus" class="status-info"><span class="lang"></span><!--Disconnected--></span>
+								</span>
+								<span class="status-ico status-td"></span>
+							</li>
+
+							<li class="status-line">
+								<span class="status-index status-td">
+									<span id="status-pppoewanip-title" class="status-name"><span class="lang"></span><!--WAN IP Address:--></span>
+								</span>
+								<span class="status-td">
+									<span id="status-pppoewanip" class="status-info">192.168.1.1</span>
+								</span>
+								<span class="status-ico status-td"></span>
+							</li>
+						</ul>
+					</div>
+
+					<div class="status-th">
+						<div class="status-head">
+							<span id="status-title-videoinfo" class="status-title"><span class="lang"></span><!--Video Profile 1--></span>
+						</div>
+						<ul class="status-table">
+							<li class="status-line">
+								<span class=" status-index status-td status-td-strong">
+									<span id="status-title-resolution" class="status-name"><span class="lang"></span><!--Resolution-->:</span>
+								</span>
+								<span class="status-td">
+									<span id="status-resolution" class="status-info">5</span>
+								</span>
+								<span class="status-ico status-td"></span>
+							</li>
+
+							<li class="status-line">
+								<span class="status-index status-td">
+									<span id="status-title-frameRate" class="status-name"><span class="lang"></span><!--Frame Rate-->:</span>
+								</span>
+								<span class="status-td">
+									<span id="status-frameRate" class="status-info">30</span>
+									<span class="status-info">FPS</span>
+								</span>
+								<span class="status-ico status-td"></span>
+							</li>
+							<li class="status-line">
+								<span class="status-index status-td status-td-strong">
+									<span id="status-title-imageQuality" class="status-name"><span class="lang"></span><!--Image Quality-->:</span>
+								</span>
+								<span class="status-td">
+									<span id="status-imageQuality" class="status-info">50</span>
+								</span>
+								<span class="status-ico status-td"></span>
+							</li>
+							<li class="status-line">
+								<span class="status-index status-td status-td-strong">
+									<span id="status-title-lightFre" class="status-name"><span class="lang"></span><!--Light Frequency-->:</span>
+								</span>
+								<span class="status-td">
+									<span id="status-lightFre" class="status-info">50</span>
+								</span>
+								<span class="status-ico status-td"></span>
+							</li>
+						</ul>
+					</div>
+
+					<div class="status-th">
+						<div class="status-head">
+							<span id="status-title-videoinfo" class="status-title"><span class="lang"></span><!--Video Profile 2--></span>
+						</div>
+						<ul class="status-table">
+							<li class="status-line">
+								<span class=" status-index status-td status-td-strong">
+									<span id="status-title-resolution" class="status-name"><span class="lang"></span><!--Resolution-->:</span>
+								</span>
+								<span class="status-td">
+									<span id="status-resolution-2" class="status-info">5</span>
+								</span>
+								<span class="status-ico status-td"></span>
+							</li>
+							<li class="status-line">
+								<span class="status-index status-td">
+									<span id="status-title-frameRate" class="status-name"><span class="lang"></span><!--Frame Rate-->:</span>
+								</span>
+								<span class="status-td">
+									<span id="status-frameRate-2" class="status-info">30</span>
+									<span class="status-info">FPS</span>
+								</span>
+								<span class="status-ico status-td"></span>
+							</li>
+							<li class="status-line">
+								<span class="status-index status-td status-td-strong">
+									<span id="status-title-imageQuality" class="status-name"><span class="lang"></span><!--Image Quality-->:</span>
+								</span>
+								<span class="status-td">
+									<span id="status-imageQuality-2" class="status-info">50</span>
+								</span>
+								<span class="status-ico status-td"></span>
+							</li>
+						</ul>
+					</div>
+					
+				</div>
+			</div>
+
+			<div class="setting-contain-cell  setting-contain-wirelessextender">
+				<div class="setting-contain-title">
+					<span class="setting-contain-title-cell"><span class="lang"></span><!--Wireless Extender--></span>
+				</div>
+
+				<div class="setting-contain-inner-left">
+					<div class="setting-contain-usermanage-ctrl-changepassword-cell marginbottom25">
+						<span class="setting-contain-radio-ctrl">
+							<div class="setting-radio-outcontain">
+								<div class="setting-radio-contain">
+									<input id="wirelessex-enable" class="wirelessex-radio-setting" type="radio" name="wirelessex" value="1"></div>
+								<span class="setting-contain-ip-ipmodel-title"><span class="lang"></span><!--Enable--></span>
+							</div>
+							<div class="setting-radio-outcontain setting-radio-outcontain-floatright">
+								<div class="setting-radio-contain ">
+									<input id="wirelessex-disable" class="wirelessex-radio-setting " type="radio" name="wirelessex" value="0" checked="">
+									<span class="setting-contain-ip-ipmodel-title"><span class="lang"></span><!--Disable--></span>
+								</div>
+							</div>
+						</span>
+					</div>
+
+					<div id="setting-wireless-extend-information" >
+
+						<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+							<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Host Wireless Network Name-->:</span>
+							<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+								<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain-currentuser">
+									<span id="wirless-extend-host-ssid" class="setting-contain-usermanage-ctrl-changepassword-cell-contain-currentuser">ipcamtestAP_test2</span>
+								</span>
+							</span>
+						</div>
+
+						<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+							<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Extended Wireless Network Name-->:</span>
+							<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+								<input id="wirelessexhost-enable" class="wirelessex-host-setting wirelessex-host-setting-selected" checked type="radio" value="1" name="wirelessexhost">
+								<span class="setting-contain-ip-ipmodel-title"><span class="lang"></span><!--Same as Host--></span>
+							</span>
+						</div>
+						<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+							<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"></span>
+							<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+								<div class="setting-single-radio-out">
+									<input id="wirelessexhost-disable" class="wirelessex-host-setting wirelessex-host-setting-selected"  type="radio" value="0" name="wirelessexhost"></div>
+								<input type="text" id="setting-wirelessex-ssid" maxlength="32" class="setting-contain-usermanage-ctrl-input" enable=""/>
+							</span>
+						</div>
+						<div id="setting-wirelessex-manually">
+							<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+								<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Security-->:</span>
+								<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+									<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain-currentuser" id="setting-wirelessex-auth-select"></span>
+								</span>
+							</div>
+							<div id="setting-wirelessex-wepkey-contain">
+								<div class="setting-contain-usermanage-ctrl-changepassword-cell" >
+									<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Wep Key Index-->:</span>
+									<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+										<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain-currentuser">
+											<select id="setting-wirelessexmanually-wepkeyindex">
+												<option value="1">1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+												<option value="4">4</option>
+											</select>
+										</span>
+									</span>
+								</div>
+								<div  class="setting-contain-usermanage-ctrl-changepassword-cell">
+									<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Password-->:</span>
+									<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain setting-contain-forshowpassword">
+										<input id="setting-wirelessex-wepkey" class="setting-contain-usermanage-ctrl-input setting-contain-ctrl-password" type="password" maxlength="26">
+										<input id="setting-wirelessex-wepkey-text" class="setting-contain-usermanage-ctrl-input setting-contain-ctrl-passwordtext" type="text" maxlength="26">
+										<span id="setting-wirelessex-showcheckbox" class="setting-contain-checkbox">
+											<div class="setting-contain-checkbox-cell">
+												<input id="setting-wirelessex-wepkey-checkbox" class="" type="checkbox"></div>
+											<span class="setting-contain-wirelessinfo-checkbox-title setting-contain-checkbox-title"><span class="lang"></span><!--Show password--></span>
+										</span>
+									</span>
+								</div>
+							</div>
+							<div id="setting-wirelessex-wpakey-contain">
+								<div  class="setting-contain-usermanage-ctrl-changepassword-cell">
+									<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Encryption-->:</span>
+									<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+										<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain-currentuser" id="setting-wirelessex-encp-select"></span>
+									</span>
+								</div>
+								<div  class="setting-contain-usermanage-ctrl-changepassword-cell">
+									<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Password-->:</span>
+									<span  class="setting-contain-usermanage-ctrl-changepassword-cell-contain setting-contain-forshowpassword">
+										<input id="setting-wirelessex-wpakey" maxlength="64" class="setting-contain-usermanage-ctrl-input setting-contain-ctrl-password" type="password" />
+										<input id="setting-wirelessex-wpakey-text" class="setting-contain-usermanage-ctrl-input setting-contain-ctrl-passwordtext" maxlength="64" type="text" />
+										<span class="setting-contain-checkbox">
+											<div class="setting-contain-checkbox-cell">
+												<input id="setting-wirelessex-wpakey-checkbox" class="" type="checkbox" ></div>
+											<span id="setting-contain-wirelessinfo-checkbox-title" class="setting-contain-checkbox-title"><span class="lang"></span><!--Show password--></span>
+										</span>
+									</span>
+								</div>
+							</div>
+						</div>
+						<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+							<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Max Clients-->:</span>
+							<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+								<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain-currentuser" id="setting-wirelessex-extmaxcli-select"></span>
+							</span>
+						</div>
+						<!-- 
+						-->
+
+						<!-- </div>--></div>
+				</div>
+				<div class="setting-contain-ip-ctrl-button">
+					<div class="setting-contain-ip-ctrl-button-inner">
+						<input type="button" id="setting-contain-wirelessextender-ctrl-save" class="setting-contain-button lang_button" value="Save"/>
+					</div>
+				</div>
+			</div>
+			<div class="setting-contain-cell  setting-contain-wireless">
+				<div class="setting-contain-title">
+					<span class="setting-contain-title-cell"><span class="lang"></span><!--Wireless Connection--></span>
+				</div>
+				<div class="setting-contain-wireless-inner-left">
+					<div id="wirelessenable-contain" class="setting-contain-usermanage-ctrl-changepassword-cell marginbottom25">
+						<span class="setting-contain-radio-ctrl">
+							<div class="setting-radio-outcontain">
+								<div class="setting-radio-contain">
+									<input id="wireless-enable" class="wireless-radio-setting" type="radio" value="1" name="wireless"></div>
+								<span class="setting-contain-ip-ipmodel-title"><span class="lang"></span><!--Enable--></span>
+							</div>
+							<div class="setting-radio-outcontain setting-radio-outcontain-floatright">
+								<div class="setting-radio-contain ">
+									<input id="wireless-disable" class="wireless-radio-setting wireless-radio-setting-selected" type="radio" checked="" value="0" name="wireless">
+									<span class="setting-contain-ip-ipmodel-title"><span class="lang"></span><!--Disable--></span>
+								</div>
+							</div>
+						</span>
+					</div>
+				</div>
+				<div class="setting-contain-wireless-inner-left">
+					<div class="setting-wirless-info-contain" id="setting-wirless-info-contain">
+						<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+							<span class="setting-contain-usermanage-ctrl-changepassword-cell-title fontweightbold"><span class="lang"></span><!--Wireless Network List-->:</span>
+							<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+								<input id="setting-contain-wireless-ctrl-search" class="setting-contain-button lang_button" type="button" value="Scan"></span>
+
+						</div>
+
+						<div class="setting-contain-wireless-ctrl-table"></div>
+					</div>
+				</div>
+
+				<div id="setting-wirless-content" class="setting-contain-wireless-inner-left width700 marginbottom12">
+					<div class="setting-wireless-contain-button-cell">
+
+						<span class="setting-wireless-button">
+							<input id="setting-wireless-info-manually" class="setting-contain-button lang_button" type="button" value="Manually"></span>
+					</div>
+
+					<div id="setting-wirless-auto-info-contain" >
+						<div style="display:none" class="setting-contain-usermanage-ctrl-changepassword-cell">
+							<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Channel-->:</span>
+							<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+								<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain-currentuser" id="setting-wireless-info-channel">10</span>
+							</span>
+						</div>
+
+						<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+							<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Wireless Network Name-->:</span>
+							<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+								<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain-currentuser" id="setting-wireless-info-ssid">EasyN_AP</span>
+							</span>
+						</div>
+
+						<div id="setting-wireless-info-HtExtCha" class="setting-contain-usermanage-ctrl-changepassword-cell">
+							<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--HtExtCha-->:</span>
+							<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+								<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain-currentuser" >0</span>
+							</span>
+						</div>
+						<div style="display:none" class="setting-contain-usermanage-ctrl-changepassword-cell">
+							<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Singal-->:</span>
+							<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+								<span id="setting-wireless-info-singal" class="setting-contain-usermanage-ctrl-changepassword-cell-contain-currentuser" >0</span>
+							</span>
+						</div>
+						<div id="setting-wireless-info-auth-contain" class="setting-contain-usermanage-ctrl-changepassword-cell">
+							<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Security-->:</span>
+							<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+								<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain-currentuser" id="setting-wireless-info-auth">WPA2-PSK</span>
+							</span>
+						</div>
+						<div id="setting-wireless-info-encp-contain" class="setting-contain-usermanage-ctrl-changepassword-cell">
+							<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Encryption-->:</span>
+							<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+								<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain-currentuser" id="setting-wireless-info-encp"></span>
+							</span>
+						</div>
+						<div id="setting-wireless-info-wepindex-contain" class="setting-contain-usermanage-ctrl-changepassword-cell">
+							<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Wep Key Index-->:</span>
+							<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+								<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain-currentuser">
+									<select id="setting-wireless-info-wepkeyindex">
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+									</select>
+								</span>
+							</span>
+						</div>
+						<div id="setting-wireless-info-wepkey-contain" class="setting-contain-usermanage-ctrl-changepassword-cell">
+							<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Password-->:</span>
+							<span  class="setting-contain-usermanage-ctrl-changepassword-cell-contain setting-contain-forshowpassword">
+								<input id="setting-wireless-info-wepkey" class="setting-contain-usermanage-ctrl-input setting-contain-ctrl-password" maxlength="26" class="setting-contain-usermanage-ctrl-input" type="password" />
+								<input id="setting-wireless-info-wepkey-text" class="setting-contain-usermanage-ctrl-input setting-contain-ctrl-passwordtext" maxlength="26" class="setting-contain-usermanage-ctrl-input" type="text" />
+								<span class="setting-contain-checkbox">
+									<div class="setting-contain-checkbox-cell">
+										<input id="setting-wireless-info-wepkey-checkbox" class="" type="checkbox" ></div>
+									<span  class="setting-contain-wirelessinfo-checkbox-title setting-contain-checkbox-title"><span class="lang"></span><!--Show password--></span>
+								</span>
+							</span>
+						</div>
+						<div id="setting-wireless-info-wpakey-contain" class="setting-contain-usermanage-ctrl-changepassword-cell">
+							<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Password-->:</span>
+							<span  class="setting-contain-usermanage-ctrl-changepassword-cell-contain setting-contain-forshowpassword">
+								<input id="setting-wireless-info-wpakey" class="setting-contain-usermanage-ctrl-input setting-contain-ctrl-password" maxlength="64" type="password"/>
+								<input id="setting-wireless-info-wpakey-text" class="setting-contain-usermanage-ctrl-input setting-contain-ctrl-passwordtext" maxlength="64" type="text"/>
+								<span class="setting-contain-checkbox">
+									<div class="setting-contain-checkbox-cell" >
+										<input id="setting-wireless-info-wpakey-checkbox" type="checkbox" ></div>
+									<span  class="setting-contain-wirelessinfo-checkbox-title setting-contain-checkbox-title"><span class="lang"></span><!--Show password--></span>
+								</span>
+							</span>
+						</div>
+
+					</div>
+					<div  id="setting-wireless-info-manually-contain">
+						<div  style="display:none" class="setting-contain-usermanage-ctrl-changepassword-cell">
+							<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Region-->:</span>
+							<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+								<span  class="setting-contain-usermanage-ctrl-changepassword-cell-contain-currentuser">
+									<select id="countryselect"></select>
+								</span>
+							</span>
+						</div>
+						<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+							<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Wireless Network Name-->:</span>
+							<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+								<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain-currentuser">
+									<input type="text" class="setting-contain-usermanage-ctrl-input" maxlength="32" id="setting-wirelessmanually-ssid"></span>
+							</span>
+						</div>
+						<div style="display:none" class="setting-contain-usermanage-ctrl-changepassword-cell">
+							<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Channel-->:</span>
+							<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+								<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain-currentuser" id="setting-wireless-channel-select"></span>
+							</span>
+						</div>
+
+						<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+							<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Security-->:</span>
+							<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+								<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain-currentuser" id="setting-wirelessmanually-auth-select"></span>
+							</span>
+						</div>
+						<div id="setting-wirelessmanually-wepkeyindex-select-contain" class="setting-contain-usermanage-ctrl-changepassword-cell">
+							<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Wep Key Index-->:</span>
+							<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+								<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain-currentuser" id="setting-wirelessmanually-wepkeyindex-select"></span>
+							</span>
+						</div>
+						<div id="setting-wirelessmanually-encp-select-contain" class="setting-contain-usermanage-ctrl-changepassword-cell">
+							<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Encryption-->:</span>
+							<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+								<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain-currentuser" id="setting-wirelessmanually-encp-select"></span>
+							</span>
+						</div>
+						<div id="setting-wirelessmanually-wepkey-contain" class="setting-contain-usermanage-ctrl-changepassword-cell">
+							<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Password-->:</span>
+							<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain"></span>
+							<span  class="setting-contain-usermanage-ctrl-changepassword-cell-contain setting-contain-forshowpassword">
+								<input id="setting-wirelessmanually-wepkey" class="setting-contain-usermanage-ctrl-input setting-contain-ctrl-password" maxlength="26" type="password" />
+								<input id="setting-wirelessmanually-wepkey-text" class="setting-contain-usermanage-ctrl-input setting-contain-ctrl-passwordtext" maxlength="26" type="text" />
+								<span class="setting-contain-checkbox">
+									<div class="setting-contain-checkbox-cell">
+										<input id="setting-wirelessmanually-wepkey-checkbox" class="" type="checkbox"></div>
+									<span class="setting-contain-wirelessinfo-checkbox-title setting-contain-checkbox-title"><span class="lang"></span><!--Show password--></span>
+								</span>
+							</span>
+						</div>
+						<div id="setting-wirelessmanually-wpakey-contain"  class="setting-contain-usermanage-ctrl-changepassword-cell">
+							<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Password-->:</span>
+							<span  class="setting-contain-usermanage-ctrl-changepassword-cell-contain setting-contain-forshowpassword">
+								<input id="setting-wirelessmanually-wpakey" class="setting-contain-usermanage-ctrl-input setting-contain-ctrl-password" maxlength="64" type="password" />
+								<input id="setting-wirelessmanually-wpakey-text" class="setting-contain-usermanage-ctrl-input setting-contain-ctrl-passwordtext" maxlength="64" type="text" />
+								<span class="setting-contain-checkbox">
+									<div class="setting-contain-checkbox-cell">
+										<input id="setting-wirelessmanually-wpakey-checkbox" class="" name ="setting-wirelessmanually-wpakey-checkbox" type="checkbox"></div>
+									<span class="setting-contain-wirelessinfo-checkbox-title setting-contain-checkbox-title"><span class="lang"></span><!--Show password--></span>
+								</span>
+							</span>
+						</div>
+
+					</div>
+
+				</div>
+				<div class="setting-contain-ip-ctrl-button">
+					<div class="setting-contain-ip-ctrl-button-inner">
+						<input type="button" id="setting-contain-wireless-ctrl-save" class="setting-contain-button lang_button" value="Save"/>
+					</div>
+				</div>
+			</div>
+			<div class="setting-contain-cell setting-contain-ddns">
+				<div class="setting-contain-title">
+					<span class="setting-contain-title-cell"><span class="lang"></span><!--DDNS--></span>
+				</div>
+
+				<div class="setting-contain-inner-left">
+					<div id="setting-contain-ddns-ctrl-selected" class="setting-contain-usermanage-ctrl-changepassword-cell">
+						<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Service Provider-->:</span>
+						<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+							<select id="ddns_type" class="setting-contain-select-height" name="type" size="1">
+								<option selected="true" value="0">No-IP (www.noip.com)</option>
+								<option value="1">DynDNS (www.dyn.com)</option>
+								<option  value="2">Comexe (www.comexe.cn)</option>
+							</select>
+							<a id="ddns-select-regist-title" class="setting-contain-cloud-register" href="http://www.noip.com" target="_blank"><span class="lang"></span><!--Go to register-->...</a>
+						</span>
+					</div>
+					<div class="ddns-type-noip setting-contain-ddns-type ">
+						<div class="ddns-comexe-login-mode ddns-comexe-login-mode-exsting">
+
+							<div class="setting-contain-ddns-child setting-contain-ddns-child-noip">
+								<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+									<span class="setting-contain-usermanage-ip-ipmodel-cell-title"><span class="lang"></span><!--Username-->:</span>
+									<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+										<input id="ddns-noip-user" class="setting-contain-usermanage-ctrl-input" type="text"></span>
+								</div>
+								<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+									<span class="setting-contain-usermanage-ip-ipmodel-cell-title"><span class="lang"></span><!--Password-->:</span>
+									<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+										<input id="ddns-noip-pwd" class="setting-contain-usermanage-ctrl-input" type="password"></span>
+								</div>
+								<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+									<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Domain Name-->:</span>
+									<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+										<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain-currentuser">
+											<input id="ddns-noip-domain" maxlength="127" class="setting-contain-usermanage-ctrl-input" type="text"></span>
+									</span>
+								</div>
+
+								<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+									<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Connection Status-->:</span>
+									<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+										<span id="ddns-noip-connect" class="setting-contain-usermanage-ctrl-changepassword-cell-contain-currentuser"><span class="lang"></span><!--Connection--></span>
+									</span>
+								</div>
+								<div class="setting-contain-ddns-button">
+
+									<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+										<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain-currentuser">
+											<input id="ddns-noip-Login" class="setting-contain-button ddns-login-button lang_button" value="Login" type="button" />
+											<input id="ddns-noip-Logout" class="setting-contain-button ddns-login-button lang_button" value="Logout" type="button"/>
+										</span>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="ddns-type-Comexe setting-contain-ddns-type">
+						<div class="ddns-comexe-login-mode ddns-comexe-login-mode-exsting">
+
+							<div class="setting-contain-ddns-child setting-contain-ddns-child-cmxaction">
+								<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+									<span class="setting-contain-usermanage-ip-ipmodel-cell-title"><span class="lang"></span><!--Username-->:</span>
+									<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+										<input id="ddns-cmxaction-user" class="setting-contain-usermanage-ctrl-input" type="text"></span>
+								</div>
+								<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+									<span class="setting-contain-usermanage-ip-ipmodel-cell-title"><span class="lang"></span><!--Password-->:</span>
+									<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+										<input id="ddns-cmxaction-pwd" class="setting-contain-usermanage-ctrl-input" type="password"></span>
+								</div>
+								<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+									<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Domain Name-->:</span>
+									<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+										<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain-currentuser">
+											<input id="ddns-cmxaction-domain" maxlength="127" class="setting-contain-usermanage-ctrl-input" type="text"></span>
+									</span>
+								</div>
+
+								<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+									<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Connection Status-->:</span>
+									<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+										<span id="ddns-cmxaction-connect" class="setting-contain-usermanage-ctrl-changepassword-cell-contain-currentuser"><span class="lang"></span><!--Connection--></span>
+									</span>
+								</div>
+								<div class="setting-contain-ddns-button">
+									<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+										<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain-currentuser">
+											<input id="ddns-cmxaction-Login" class="setting-contain-button ddns-login-button lang_button" value="Login" type="button">
+											<input id="ddns-cmxaction-Logout" class="setting-contain-button ddns-login-button lang_button" value="Logout" type="button"></span>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="ddns-type-dyndns setting-contain-ddns-type">
+						<div class="ddns-dyndns-login-mode ddns-dyndns-login-mode-exsting">
+
+							<div class="setting-contain-ddns-child setting-contain-ddns-child-dyndns">
+								<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+									<span class="setting-contain-usermanage-ip-ipmodel-cell-title"><span class="lang"></span><!--Username-->:</span>
+									<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+										<input id="ddns-dyndns-user" class="setting-contain-usermanage-ctrl-input" type="text"></span>
+								</div>
+								<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+									<span class="setting-contain-usermanage-ip-ipmodel-cell-title"><span class="lang"></span><!--Password-->:</span>
+									<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+										<input id="ddns-dyndns-pwd" class="setting-contain-usermanage-ctrl-input" type="password"></span>
+								</div>
+								<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+									<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Domain Name-->:</span>
+									<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+										<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain-currentuser">
+											<input id="ddns-dyndns-domain" class="setting-contain-usermanage-ctrl-input" type="text" maxlength="127"></span>
+									</span>
+								</div>
+
+								<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+									<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Connection Status-->:</span>
+									<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+										<span id="ddns-dyndns-connect" class="setting-contain-usermanage-ctrl-changepassword-cell-contain-currentuser"><span class="lang"></span><!--Connection--></span>
+									</span>
+								</div>
+								<div class="setting-contain-ddns-button">
+									<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+										<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain-currentuser">
+											<input id="ddns-dyndns-Login" class="setting-contain-button ddns-login-button lang_button" value="Login" type="button">
+											<input id="ddns-dyndns-Logout" class="setting-contain-button ddns-login-button lang_button" value="Logout" type="button"></span>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="setting-contain-ip-ctrl-button">
+					<div class="setting-contain-ip-ctrl-button-inner">
+						<div class="setting-contain-ip-ctrl-button-inner-cell ddns-ctrl-noip-save">
+							<input id="setting-contain-ddns-ctrl-noip-save" class="setting-contain-button setting-contain-ddns-ctrl-btn lang_button" type="button" value="Save"></div>
+						<div class="setting-contain-ip-ctrl-button-inner-cell ddns-ctrl-dyndns-save">
+							<input id="setting-contain-ddns-ctrl-dyndns-save" class="setting-contain-button setting-contain-ddns-ctrl-btn lang_button" type="button" value="Save"></div>
+						<div class="setting-contain-ip-ctrl-button-inner-cell ddns-ctrl-cmxaction-save">
+							<input id="setting-contain-ddns-ctrl-cmxaction-save" class="setting-contain-button setting-contain-ddns-ctrl-btn lang_button" type="button" value="Save"></div>
+					</div>
+				</div>
+			</div>
+			<div class="setting-contain-cell setting-contain-led">
+				<div class="setting-contain-title">
+					<span class="setting-contain-title-cell"><span class="lang"></span><!--LED--></span>
+				</div>
+				<div class="setting-contain-inner-left">
+					<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+						<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--LED-->:</span>
+
+						<span class="setting-contain-radio-ctrl">
+							<div class="setting-radio-outcontain led-radio-contain">
+								<div class="setting-radio-contain">
+									<input id="ledable-on" class="led-radio-setting led-radio-setting-selected" name="ledable" type="radio" value="1"/>
+								</div>
+								<span class="setting-contain-ip-ipmodel-title"><span class="lang"></span><!--On--></span>
+							</div>
+							<div class="setting-radio-outcontain setting-radio-outcontain-floatright led-radio-contain">
+								<div class="setting-radio-contain ">
+									<input id="ledable-off" class="led-radio-setting"name="ledable" type="radio" value="0"/>
+								</div>
+								<span class="setting-contain-ip-ipmodel-title"><span class="lang"></span><!--Off--></span>
+							</div>
+						</span>
+
+					</div>
+				</div>
+				<div class="setting-contain-ip-ctrl-button">
+					<div class="setting-contain-ip-ctrl-button-inner">
+						<input id="ledable-submit" class="setting-contain-button lang_button" name="" type="button" value="Save"/>
+					</div>
+				</div>
+			</div>
+
+			<div class="setting-contain-cell setting-contain-camera">
+				<div class="setting-contain-title">
+					<span class="setting-contain-title-cell"><span class="lang"></span><!--Video--></span>
+				</div>
+				<div class="setting-contain-inner-left">
+					<div class="setting-contain-video-title">
+						<span class="fontweightbold"><span class="lang"></span><!--Video Profile1-->:</span>
+					</div>
+					<div class="video-profile-table-contain">
+						<div class="video-profile-table">
+							<div class="video-profile-table-head">
+								<span class="video-profile-table-head-cell borderleft"><span class="lang"></span><!--Mode--></span>
+								<span class="video-profile-table-head-cell"><span class="lang"></span><!--Resolution--></span>
+								<span class="video-profile-table-head-cell video-profile-frame-rate"><span class="lang"></span><!--Frame Rate--></span>
+								<span class="video-profile-table-head-cell video-profile-frame-rate"><span class="lang"></span><!--Mode--></span>
+								<span class="video-profile-table-head-cell video-profile-frame-rate video-profile1-bitrate borderright" style="display: none;"><span class="lang"></span><!--Image quality--></span>
+								<span class="video-profile-table-head-cell video-profile-frame-rate video-profile1-imgquality borderright" style="display: block;"><span class="lang"></span><!--Image quality--></span>
+							</div>
+							<div class="video-profile-table-body">
+								<span id="p1BitRateMode" class="video-profile-table-body-cell">H.264</span>
+								<span id="p1Resolution" class="video-profile-table-body-cell">640*480</span>
+								<span class="video-profile-table-body-cell video-profile-frame-rate">
+									<div class="video-profile-table-select">
+										<select id="p1FrameRate" class="video-profile-frame-rate-select" name="p1FrameRate">
+											<option value="30">30FPS</option>
+											<option value="25">25FPS</option>
+											<option value="20">20FPS</option>
+											<option value="15">15FPS</option>
+											<option value="10">10FPS</option>
+										</select>
+									</div>
+								</span>
+								<span id="p1Resolution" class="video-profile-table-body-cell video-profile-frame-rate">VBR</span>
+								<span class="video-profile-table-body-cell borderright video-profile-frame-rate video-profile1-bitrate" style="display: none;">
+									<div class="video-profile-table-select">
+										<select id="p1BitRate" class="video-profile-frame-rate-select" name="p1BitRate">
+											<!-- <option value="2048000">2Mbps</option> -->
+											<option value="1024000">1Mbps</option>
+											<option value="512000">512kbps</option>
+											<option value="256000">256kbps</option>
+											<option value="128000">128kbps</option>
+										</select>
+									</div>
+								</span>
+								<span class="video-profile-table-body-cell borderright video-profile-frame-rate video-profile1-imgquality">
+									<div class="video-profile-table-select">
+										<select id="p1ImgQuality" class="video-profile-frame-rate-select" name="p1ImgQuality">
+											<option value="0" class="lang_option">High</option>
+											<option value="1" class="lang_option">Medium</option>
+											<option value="2" class="lang_option">Low</option>
+										</select>
+									</div>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="setting-contain-inner-left">
+					<div class="setting-contain-video-title">
+						<span class="fontweightbold"><span class="lang"></span><!--Video Profile2-->:</span>
+					</div>
+					<div class="video-profile-table-contain">
+						<div class="video-profile-table">
+							<div class="video-profile-table-head">
+								<span class="video-profile-table-head-cell borderleft"><span class="lang"></span><!--Mode--></span>
+								<span class="video-profile-table-head-cell"><span class="lang"></span><!--Resolution--></span>
+								<span class="video-profile-table-head-cell video-profile-frame-rate"><span class="lang"></span><!--Frame Rate--></span>
+								<span class="video-profile-table-head-cell video-profile-frame-rate"><span class="lang"></span><!--Mode--></span>
+								<span class="video-profile-table-head-cell video-profile-frame-rate video-profile2-bitrate borderright" style="display: none;"><span class="lang"></span><!--Image quality--></span>
+								<span class="video-profile-table-head-cell video-profile-frame-rate video-profile2-imgquality borderright" style="display: block;"><span class="lang"></span><!--Image quality--></span>
+							</div>
+							<div class="video-profile-table-body">
+								<span id="p2BitRateMode" class="video-profile-table-body-cell">H.264</span>
+								<span id="p2Resolution" class="video-profile-table-body-cell">320*240</span>
+								<span class="video-profile-table-body-cell video-profile-frame-rate">
+									<div class="video-profile-table-select">
+										<select id="p2FrameRate" class="video-profile-frame-rate-select" name="p2FrameRate">
+											<option value="15" id="rateDisappear-15">15FPS</option>
+											<option value="10" id="rateDisappear-10">10FPS</option>
+											<option value="5" id="rateDisappear-5">5FPS</option>
+										</select>
+									</div>
+								</span>
+								<span id="p1Resolution" class="video-profile-table-body-cell video-profile-frame-rate">VBR</span>
+								<span class="video-profile-table-body-cell borderright video-profile-frame-rate video-profile2-bitrate" style="display: none;">
+									<div class="video-profile-table-select">
+										<select id="p2BitRate" class="video-profile-frame-rate-select" name="p2BitRate">
+											<!-- <option value="2048000">2Mbps</option> -->
+											<option value="1024000">1Mbps</option>
+											<option value="512000">512kbps</option>
+											<option value="256000">256kbps</option>
+											<option value="128000">128kbps</option>
+										</select>
+									</div>
+								</span>
+								<span class="video-profile-table-body-cell borderright video-profile-frame-rate video-profile2-imgquality">
+									<div class="video-profile-table-select">
+										<select id="p2ImgQuality" class="video-profile-frame-rate-select" name="p2ImgQuality">
+											<option value="0" class="lang_option">High</option>
+											<option value="1" class="lang_option">Medium</option>
+											<option value="2" class="lang_option">Low</option>
+										</select>
+									</div>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="setting-contain-inner-left margintop10">
+					<!-- <div class="setting-contain-usermanage-ctrl-changepassword-cell">
+						<span class="setting-contain-usermanage-ctrl-changepassword-cell-title">Frame Rate:</span>
+						<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+							<select id="framerate" class="vedioselect" name="framerate">
+								<option value="20">20fps</option>
+								<option value="15">15fps</option>
+								<option value="10">10fps</option>
+								<option value="5">5fps</option>
+							</select>
+						</span>
+					</div> -->
+
+					<!-- <div class="setting-contain-usermanage-ctrl-changepassword-cell">
+						<span class="setting-contain-usermanage-ctrl-changepassword-cell-title">Image Quality:</span>
+						<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain"></span>
+					</div> -->
+					<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+						<span class="setting-contain-usermanage-ip-ipmodel-cell-title"><span class="lang"></span><!--Backlight Compensation-->:</span>
+
+						<span class="setting-contain-radio-ctrl">
+							<div class="setting-radio-outcontain">
+								<div class="setting-radio-contain">
+									<input id="backlight-enable" class="backlight-radio-setting" type="radio" value="2" name="backlight"></div>
+								<span class="setting-contain-ip-ipmodel-title"><span class="lang"></span><!--Enable--></span>
+							</div>
+							<div class="setting-radio-outcontain setting-radio-outcontain-floatright">
+								<div class="setting-radio-contain ">
+									<input id="backlight-disable" class="backlight-radio-setting backlight-radio-setting-selected" type="radio" checked="" value="0" name="backlight">
+									<span class="setting-contain-ip-ipmodel-title"><span class="lang"></span><!--Disable--></span>
+								</div>
+							</div>
+						</span>
+
+					</div>
+					<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+						<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Light Frequency-->:</span>
+						<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+							<select id="lightfrequency" class="vedioselect" name="lightfrequency">
+								<option value="0" class="lang_option">Auto</option>
+								<option value="1">50Hz</option>
+								<option value="2">60Hz</option>
+							</select>
+						</span>
+					</div>
+					<!-- <div class="setting-contain-title">
+					<span class="setting-contain-title-cell">OSD (On Screen Display)</span>
+				</div>
+				-->
+				<div class="setting-contain-usermanage-ctrl-changepassword-cell" style="display:none;">
+					<span class="setting-contain-usermanage-ip-ipmodel-cell-title"><span class="lang"></span><!--Time Stamp-->:</span>
+
+					<span class="setting-contain-radio-ctrl">
+						<div class="setting-radio-outcontain">
+							<div class="setting-radio-contain">
+								<input id="timestamp-enable" class="timestamp-radio-setting" type="radio" value="1" name="timestamp"></div>
+							<span class="setting-contain-ip-ipmodel-title"><span class="lang"></span><!--Enable--></span>
+						</div>
+						<div class="setting-radio-outcontain setting-radio-outcontain-floatright">
+							<div class="setting-radio-contain ">
+								<input id="timestamp-disable" class="timestamp-radio-setting timestamp-radio-setting-selected" type="radio" checked="" value="0" name="timestamp">
+								<span class="setting-contain-ip-ipmodel-title"><span class="lang"></span><!--Disable--></span>
+							</div>
+						</div>
+					</span>
+
+				</div>
+				<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+					<span class="setting-contain-usermanage-ip-ipmodel-cell-title"><span class="lang"></span><!--Time Stamp,On-Screen Display (OSD)-->:</span>
+
+					<span class="setting-contain-radio-ctrl">
+						<div class="setting-radio-outcontain">
+							<div class="setting-radio-contain">
+								<input id="osd-enable" class="osd-radio-setting" type="radio" value="1" name="osd"></div>
+							<span class="setting-contain-ip-ipmodel-title"><span class="lang"></span><!--Enable--></span>
+						</div>
+						<div class="setting-radio-outcontain setting-radio-outcontain-floatright">
+							<div class="setting-radio-contain ">
+								<input id="osd-disable" class="osd-radio-setting osd-radio-setting-selected" type="radio" checked="" value="0" name="osd">
+								<span class="setting-contain-ip-ipmodel-title"><span class="lang"></span><!--Disable--></span>
+							</div>
+						</div>
+					</span>
+
+				</div>
+				<div class="osd-setting-show">
+					<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+						<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--OSD Text-->:</span>
+						<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+							<!--<input id="osd-setting-text" name="osdtextbak" class="setting-contain-usermanage-ctrl-input" type="text" size="20" maxLength="19"  onkeyup="common.checkInput(this, /[^a-zA-Z0-9\\. -]|_/ig)"/>-->
+							<input id="osd-setting-text" name="osdtextbak" class="setting-contain-usermanage-ctrl-input" type="text" size="20" maxLength="19"/>
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="setting-contain-ip-ctrl-button">
+				<div class="setting-contain-ip-ctrl-button-inner">
+					<input id="setting-contain-video-ctrl-save" class="setting-contain-button lang_button" type="button" value="Save"></div>
+			</div>
+		</div>
+
+		<div class="setting-contain-cell setting-contain-ftpalarm">
+
+			<div class="setting-contain-title">
+				<span class="setting-contain-title-cell"><span class="lang"></span><!--Notification Delivery--></span>
+			</div>
+			<div class="setting-contain-inner-left">
+				<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+					<span class="setting-contain-notice-ctrl-cell-title fontweightbold"><span class="lang"></span><!--Target-->:</span>
+					<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+						<input id="ftp_img_upload" type="checkbox" name="leftright" value="1">
+						<span id="ftp_img_upload-title" class="setting-contain-ip-ipmodel-title"><span class="lang"></span><!--FTP--></span>
+					</span>
+				</div>
+
+				<div id="setting-contain-notice-ftp" class="setting-contain-notice-inner-left">
+					<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+						<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--FTP Server/Port-->:</span>
+						<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+							<input id="advance-ftp-server-serviceaddr" class="setting-contain-usermanage-ctrl-input" maxlength="63" type="text" value="">
+							<span class="spaninspan">:</span>
+							<input id="advance-ftp-server-port" class="setting-contain-usermanage-ctrl-input" maxlength="5" type="text" value=""></span>
+					</div>
+					<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+						<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Username-->:</span>
+						<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+							<input id="advance-ftp-server-username" class="setting-contain-usermanage-ctrl-input" maxlength="63" type="text" value=""></span>
+					</div>
+					<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+						<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Password-->:</span>
+						<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+							<input id="advance-ftp-server-password" class="setting-contain-usermanage-ctrl-input" maxlength="63" type="password" value=""></span>
+					</div>
+					<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+						<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Path-->:</span>
+						<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+							<input id="advance-ftp-server-path" class="setting-contain-usermanage-ctrl-input" type="text" maxlength="63" value="/"></span>
+					</div>
+					<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+						<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Passive Mode-->:</span>
+						<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+							<input id="advance-ftp-server-initiative" type="checkbox" value="1" name="initiative"></span>
+					</div>
+					<div class="setting-contain-notice-ctrl-btn">
+						<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+							<input id="advance-ftp-test" class="mf setting-contain-button lang_button" type="button" value="Test"/>
+							<span id="ftp-test-loadingshow" class="setting-contain-loadingshow"></span>
+						</span>
+					</div>
+
+				</div>
+				<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+					<span class="setting-contain-notice-ctrl-cell-title fontweightbold"></span>
+					<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+						<input id="email_notifica" type="checkbox" name="updown" value="1">
+						<span id="email_notifica-title" class="setting-contain-ip-ipmodel-title"><span class="lang"></span><!--E-mail--></span>
+					</span>
+				</div>
+
+				<div id="setting-contain-notice-smtp" class="setting-contain-notice-inner-left">
+
+					<div id="recipient-creat-1" class="recipient-creat-contain setting-contain-usermanage-ctrl-changepassword-cell">
+						<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Recipient E-mail Address-->:</span>
+						<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+							<input id="advance-smtp-server-recipient1"  class="setting-contain-usermanage-ctrl-input" maxlength="63" type="text" value="">
+							<span id="recipient-creat-title" class="setting-contain-creat-email">
+								<a  class="setting-contain-cloud-register" href="javascript:void(0)" style="color: rgb(0, 0, 0); text-decoration: none;"><span class="lang"></span><!--Add recipient--></a>
+							</span>
+
+						</span>
+					</div>
+					<div id="recipient-creat-2" class="recipient-creat-contain setting-contain-usermanage-ctrl-changepassword-cell">
+						<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Recipient E-mail Address-->:</span>
+						<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+							<input id="advance-smtp-server-recipient2" class="setting-contain-usermanage-ctrl-input" maxlength="63" type="text" value="">
+							<span class="recipient-creat-delete  setting-contain-creat-email">
+								<a  class="setting-contain-cloud-register" href="javascript:void(0)" style="color: rgb(0, 0, 0); text-decoration: none;"><span class="lang"></span><!--Delete--></a>
+							</span>
+
+						</span>
+					</div>
+					<div id="recipient-creat-3"  class="recipient-creat-contain setting-contain-usermanage-ctrl-changepassword-cell">
+						<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Recipient E-mail Address-->:</span>
+						<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+							<input id="advance-smtp-server-recipient3" class="setting-contain-usermanage-ctrl-input" maxlength="63" type="text" value="">
+							<span class="recipient-creat-delete  setting-contain-creat-email">
+								<a  class="setting-contain-cloud-register" href="javascript:void(0)" style="color: rgb(0, 0, 0); text-decoration: none;"><span class="lang"></span><!--Delete--></a>
+							</span>
+
+						</span>
+					</div>
+					<div id="recipient-creat-4"  class="recipient-creat-contain setting-contain-usermanage-ctrl-changepassword-cell">
+						<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Recipient E-mail Address-->:</span>
+						<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+							<input id="advance-smtp-server-recipient4" class="setting-contain-usermanage-ctrl-input" maxlength="63" type="text" value="">
+							<span class="recipient-creat-delete setting-contain-creat-email">
+								<a class="setting-contain-cloud-register" href="javascript:void(0)" style="color: rgb(0, 0, 0); text-decoration: none;"><span class="lang"></span><!--Delete--></a>
+							</span>
+
+						</span>
+					</div>
+
+					<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+						<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Sender E-mail Address-->:</span>
+						<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+							<input id="advance-smtp-server-username"class="setting-contain-usermanage-ctrl-input" maxlength="63" type="text" value=""></span>
+					</div>
+					<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+						<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Password-->:</span>
+						<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+							<input id="advance-smtp-server-password" class="setting-contain-usermanage-ctrl-input" type="password" maxlength="63" value=""></span>
+					</div>
+					<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+						<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--SMTP Server/Port-->:</span>
+						<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+							<input id="advance-smtp-server-ip" class="setting-contain-usermanage-ctrl-input" maxlength="63" type="text" value="">
+							<span class="spaninspan">:</span>
+							<input id="advance-smtp-server-port"  class="setting-contain-usermanage-ctrl-input" maxlength="5" type="text" value=""></span>
+					</div>
+					<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+						<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--SSL Encryption-->:</span>
+						<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+							<select id="advance-smtp-server-sslencry" name="sslencry">
+								<option value="0">Close</option>
+								<option value="1">TLS</option>
+								<option value="2">STARTTLS</option>
+							</select>
+						</span>
+					</div>
+					<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+						<span class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Sending Interval-->:</span>
+						<span id="advance-smtp-server-interval-select" class="setting-contain-usermanage-ctrl-changepassword-cell-contain"></span>
+					</div>
+
+					<div class="setting-contain-notice-ctrl-btn">
+						<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+							<input id="setting-contain-test-a-email" class="mf setting-contain-button lang_button" type="button" value="Test"/>
+							<span id="smtp-test-loadingshow" class="setting-contain-loadingshow"></span>
+						</span>
+					</div>
+					<div class="setting-contain-notice-ctrl-btn">
+						<p id="smtp_note">
+							Note:If you want to set <em>Hotmail</em> as sender E-mail Address, you need to set SMTP Server/Port as <em>smtp-mail.outlook.com:25 (Or 587)</em>, and SSL Encryption as <em>STARTTLS</em>. If you want to set Gmail as sender E-mail Address, please refer to this link: <a target="_blank" href="http://www.tp-link.com/en/faq-900.html">http://www.tp-link.com/en/faq-900.html</a>
+						</p>
+					</div>
+
+				</div>
+
+			</div>
+			<div class="setting-contain-ip-ctrl-button">
+				<div class="setting-contain-ip-ctrl-button-inner">
+					<input id="setting-contain-ftp-alarm-ctrl-save" class="setting-contain-button lang_button" type="button" value="Save"></div>
+			</div>
+		</div>
+		<div class="setting-contain-cell setting-contain-motionalarm">
+			<div class="setting-contain-title">
+				<span class="setting-contain-title-cell"><span class="lang"></span><!--Motion Detection--></span>
+			</div>
+			<div class="setting-contain-inner-left paddnone">
+				<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+					<span class="setting-contain-usermanage-ctrl-motion-cell-title"><span class="lang"></span><!--Motion Detection-->:</span>
+
+					<span class="setting-contain-radio-ctrl motion-radio-ctrl-width">
+						<div class="setting-radio-outcontain">
+							<div class="setting-radio-contain">
+								<input id="mdenable" name="mdenable" class="detection-radio-setting detection-radio-setting-selected" type="radio" value="1"/>
+							</div>
+							<span class="setting-contain-ip-ipmodel-title"><span class="lang"></span><!--Enable--></span>
+						</div>
+						<div class="setting-radio-outcontain setting-radio-outcontain-floatright">
+							<div class="setting-radio-contain ">
+								<input id="mddisable" name="mdenable" class="detection-radio-setting" type="radio" value="0"/>
+								<span class="setting-contain-ip-ipmodel-title"><span class="lang"></span><!--Disable--></span>
+							</div>
+						</div>
+					</span>
+				</div>
+			</div>
+			<div class="setting-contain-inner-left nopadding">
+				<div class="setting-contain-usermanage-ctrl-motiondetection-vedioctrl">
+					<div id="motiondetection-vedioctrl" style = "display:block">
+						<OBJECT id='mdplugin' classid='CLSID:71B417B2-B60E-4680-B6FC-8C342DFC4757' align='center' width="320" height="240" border='0px'>
+							<param name="wmode" value="opaque" />
+							<FONT id="mdpluginfont" COLOR=red SIZE=5>
+								<!-- Can't find object -->
+							</FONT>
+						</OBJECT>
+					</div>
+
+					<div id = "mdchromealert" style = "display:none">
+						<span>
+							<img src = "../images/tpcamera.png">
+						</span>
+
+						<span>
+							<div>
+								<p>Um,this brower may not support camera video well.</p>
+							</div>
+							<div>
+								<p>If you could't view the camera video,try the tpCamera app or another brower such as Internet Explorer,Firefox,Safari,or Opera.We will update the software as soon as possible. Sorry for the in convenience and thanks for your choice.</p>
+							</div>
+						<span>
+					</div>	
+
+				</div>
+				
+				<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+					<p class="mdtips"><span class="lang"></span><!--Tip-->:</p>
+					<p id="motion-detection-tips" class="setting-contain-usermanage-ctrl-changepassword-cell-title"><span class="lang"></span><!--Drag the mouse to draw the areas you want to monitor-->.</p>
+				</div>
+
+				<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+					<span class="setting-contain-usermanage-ctrl-motion-cell-title"><span class="lang"></span><!--Sensitivity-->:</span>
+					<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+						<select id="motion-sensitivity" name="motion-sensitivity">
+							<option value="3" class="lang_option">High</option>
+							<option value="2" class="lang_option">Medium</option>
+							<option value="1" class="lang_option">Low</option>
+						</select>
+					</span>
+				</div>
+
+			</div>
+			<div class="setting-contain-ip-ctrl-button">
+				<div class="setting-contain-ip-ctrl-button-inner">
+					<input id="setting-contain-motiondetection-ctrl-save" class="setting-contain-button lang_button" type="button" value="Save">
+					<input id="setting-contain-motiondetection-ctrl-clear" class="setting-contain-button lang_button" type="button" value="Clear">
+				</div>
+			</div>
+		</div>
+
+		<div class="setting-contain-cell setting-contain-motionsoundalarm">
+			<div class="setting-contain-title">
+				<span class="setting-contain-title-cell"><span class="lang"></span><!--Sound Detection--></span>
+			</div>
+			<div class="setting-contain-inner-left paddnone">
+				<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+					<span class="setting-contain-usermanage-ctrl-motion-cell-title"><span class="lang"></span><!--Sound Detection-->:</span>
+
+					<span class="setting-contain-radio-ctrl motion-radio-ctrl-width">
+						<div class="setting-radio-outcontain">
+							<div class="setting-radio-contain">
+								<input id="mdsenable" name="mdsenable" class="sdetection-radio-setting sdetection-radio-setting-selected" type="radio" value="1"/>
+							</div>
+							<span class="setting-contain-ip-ipmodel-title"><span class="lang"></span><!--Enable--></span>
+						</div>
+						<div class="setting-radio-outcontain setting-radio-outcontain-floatright">
+							<div class="setting-radio-contain ">
+								<input id="mdsdisable" name="mdsenable" class="sdetection-radio-setting" type="radio" value="0"/>
+								<span class="setting-contain-ip-ipmodel-title"><span class="lang"></span><!--Disable--></span>
+							</div>
+						</div>
+					</span>
+				</div>
+			</div>
+			<div id="sound-set-content" class="setting-contain-inner-left nopadding">
+
+				<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+					<span class="setting-contain-usermanage-ctrl-motion-cell-title"><span class="lang"></span><!--Sensitivity-->:</span>
+					<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+						<select id="motion-sound-sensitivity" name="motion-sound-sensitivity">
+							<option value="3" class="lang_option">High</option>
+							<option value="2" class="lang_option">Medium</option>
+							<option value="1" class="lang_option">Low</option>
+						</select>
+					</span>
+				</div>
+				<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+					<span class="setting-contain-usermanage-ctrl-motion-cell-title"><span class="lang"></span><!--Threshold-->:</span>
+					<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+						<select id="motion-sound-threshold" name="motion-sound-threshold">
+							<option value="20">Whisper</option>
+							<option value="40">Quiet home</option>
+							<option value="60">Hair dryer</option>
+							<option value="80">Noisy office</option>
+						</select>
+					</span>
+				</div>
+				<div class="setting-contain-usermanage-ctrl-motiondetection-vedioctrl">
+					<div id="motiondetection-soundctrl"></div>
+				</div>
+				<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+					<p class="mdtips"><span class="lang"></span><!--Tip-->: </p>
+					<p id="motion-detection-tips" class="setting-contain-usermanage-ctrl-changepassword-cell-title">
+						<span class="lang"></span><!--You can also drag the arrow to set the threshold for sound detection-->.
+					</p>
+				</div>
+
+			</div>
+			<div class="setting-contain-ip-ctrl-button">
+				<div class="setting-contain-ip-ctrl-button-inner">
+					<input id="motionsounddetection-ctrl-save" class="setting-contain-button lang_button" type="button" value="Save"></div>
+			</div>
+		</div>
+
+		<div class="setting-contain-cell setting-contain-log">
+			<div class="setting-contain-title">
+				<span class="setting-contain-title-cell"><span class="lang"></span><!--System Log--></span>
+			</div>
+			<div class="setting-contain-inner-left">
+				<div class="setting-contain-log-ctrl-table"></div>
+			</div>
+			<div class="setting-contain-ip-ctrl-button">
+				<div class="setting-contain-ip-ctrl-button-inner log-btn-right">
+					<input id="refresh-log-table" class="setting-contain-button floatleft lang_button" type="button" value="Refresh">
+					<input id="logdownload" class="setting-contain-button floatleft  lang_button" type="button" value="Save Log">
+					<input id="clear-log-table" class="setting-contain-button floatleft  lang_button" type="button" value="Clear Log"></div>
+			</div>
+		</div>
+		<div class="setting-contain-cell setting-contain-time">
+			<div class="setting-contain-timezone-title setting-contain-title">
+				<span class="setting-contain-title-cell"><span class="lang"></span><!--Date/Time--></span>
+			</div>
+			<div class="setting-contain-inner-left">
+				<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+					<span class="setting-contain-usermanage-ctrl-changepassword-cell-title fontweightbold"><span class="lang"></span><!--Time Configuration-->:</span>
+					<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain"></span>
+				</div>
+
+				<div class="setting-contain-timezone-cell setting-contain-usermanage-ctrl-changepassword-cell">
+					<span class="setting-contain-usermanage-ctrl-date-cell-title"><span class="lang"></span><!--Current Time-->:</span>
+					<span class="setting-contain-timezone">
+
+						<span class="setting-contain-timezone-current-time">
+							<span class="setting-current-time">
+								<span class="setting-current-date setting-current-time-cell">2013-12-20</span>
+							</span>
+							<!-- <input id="sync-manual-time-year" class="midinput setting-contain-usermanage-ctrl-input"  type="text" value="2013-02-01">--></span>
+						<span class="setting-contain-timezone-current-time">
+							<span class="setting-current-time">
+								<span class="setting-current-hour setting-current-time-cell">12:11:23</span>
+							</span>
+							<!-- <input  id="sync-manual-time-hour" class="midinput setting-contain-usermanage-ctrl-input"  type="text" value="09:43:21">--></span>
+						<!-- <input type="button" class="timezonebutton" id="datetimeset"value="Manually"/>
+						-->
+					</span>
+
+				</div>
+
+				<div class="setting-contain-timezone-cell setting-contain-usermanage-ctrl-changepassword-cell">
+					<span class="setting-contain-usermanage-ctrl-date-cell-title"><span class="lang"></span><!--Time Zone-->:</span>
+					<span class="setting-contain-timezone">
+						<select id="system-setTimeZone" class="setting-contain-select-height" name="setTimeZone">
+							<option value="-1" class="lang_option">Auto Timezone</option>
+							<option value="0" class="lang_option">(GMT-12:00) International Date Line West</option>
+							<option value="1" class="lang_option">(GMT-11:00) Midway Island, Samoa</option>
+							<option value="2" class="lang_option">(GMT-10:00) Hawaii</option>
+							<option value="3" class="lang_option">(GMT-09:00) Alaska</option>
+							<option value="4" class="lang_option">(GMT-08:00) Pacific Time (US & Canada); Tijuana</option>
+							<option value="5" class="lang_option">(GMT-07:00) Mountain Time (US & Canada)</option>
+							<option value="6" class="lang_option">(GMT-07:00) Chihuahua</option>
+							<option value="7" class="lang_option">(GMT-07:00) La Paz, Mazatlan</option>
+							<option value="8" class="lang_option">(GMT-07:00) Arizona</option>
+							<option value="9" class="lang_option">(GMT-06:00) Saskatchewan</option>
+							<option value="10" class="lang_option">(GMT-06:00) Guadalajara, Mexico City, Monterrey</option>
+							<option value="11" class="lang_option">(GMT-06:00) Central Time (US & Canada)</option>
+							<option value="12" class="lang_option">(GMT-06:00) Central America</option>
+							<option value="13" class="lang_option">(GMT-05:00) Indiana (East)</option>
+							<option value="14" class="lang_option">(GMT-05:00) Eastern Time (US & Canada)</option>
+							<option value="15" class="lang_option">(GMT-05:00) Bogota, Lima, Quito</option>
+							<option value="16" class="lang_option">(GMT-04:30) Caracas</option>
+							<option value="17" class="lang_option">(GMT-04:00) Santiago</option>
+							<option value="18" class="lang_option">(GMT-04:00) La Paz</option>
+							<option value="19" class="lang_option">(GMT-04:00) Atlantic Time (Canada)</option>
+							<option value="20" class="lang_option">(GMT-03:30) Newfoundland</option>
+							<option value="21" class="lang_option">(GMT-03:00) Greenland</option>
+							<option value="22" class="lang_option">(GMT-03:00) Buenos Aires, Georgetown</option>
+							<option value="23" class="lang_option">(GMT-03:00) Brasilia</option>
+							<option value="24" class="lang_option">(GMT-02:00) Mid-Atlantic</option>
+							<option value="25" class="lang_option">(GMT-01:00) Cape Verde Is.</option>
+							<option value="26" class="lang_option">(GMT-01:00) Azores</option>
+							<option value="27" class="lang_option" selected="selected">(GMT) Greenwich Mean Time: Dublin, Edinburgh, Lisbon, London</option>
+							<option value="28" class="lang_option">(GMT) Casablanca</option>
+							<option value="29" class="lang_option">(GMT) Monrovia</option>
+							<option value="30" class="lang_option">(GMT+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna</option>
+							<option value="31" class="lang_option">
+								(GMT+01:00) Belgrade, Bratislava, Budapest, Ljubljana, Prague
+							</option>
+							<option value="32" class="lang_option">(GMT+01:00) Brussels, Copenhagen, Madrid, Paris</option>
+							<option value="33" class="lang_option">(GMT+01:00) Sarajevo, Skopje, Warsaw, Zagreb</option>
+							<option value="34" class="lang_option">(GMT+01:00) West Central Africa</option>
+							<option value="35" class="lang_option">(GMT+02:00) Athens, Istanbul</option>
+							<option value="36" class="lang_option">(GMT+02:00) Bucharest</option>
+							<option value="37" class="lang_option">(GMT+02:00) Cairo</option>
+							<option value="38" class="lang_option">(GMT+02:00) Harare, Pretoria,Minsk</option>
+							<option value="39" class="lang_option">(GMT+02:00) Helsinki, Kyiv, Riga, Sofia, Tallinn, Vilnius</option>
+							<option value="40" class="lang_option">(GMT+02:00) Jerusalem</option>
+							<option value="41" class="lang_option">(GMT+03:00) Baghdad</option>
+							<option value="42" class="lang_option">(GMT+03:00) Kuwait, Riyadh</option>
+							<option value="43" class="lang_option">(GMT+03:00) Moscow,Volgograd,Nairobi</option>
+							<option value="44" class="lang_option">(GMT+03:00) St.Petersburg</option>
+							<option value="45" class="lang_option">(GMT+03:30) Tehran</option>
+							<option value="46" class="lang_option">(GMT+04:00) Abu Dhabi, Muscat,Tbilisi, Yerevan</option>
+							<option value="47" class="lang_option">(GMT+04:00) Baku</option>
+							<option value="48" class="lang_option">(GMT+04:30) Kabul</option>
+							<option value="49" class="lang_option">(GMT+05:00) Ekaterinburg</option>
+							<option value="50" class="lang_option">(GMT+05:00) Islamabad, Karachi, Tashkent</option>
+							<option value="51" class="lang_option">(GMT+05:30) Chennai, Kolkata, Mumbai, New Delhi</option>
+							<option value="52" class="lang_option">(GMT+05:45) Kathmandu</option>
+							<option value="53" class="lang_option">(GMT+06:00) Almaty, Novosibirsk</option>
+							<option value="54" class="lang_option">(GMT+06:00) Astana, Dhaka</option>
+							<option value="55" class="lang_option">(GMT+06:00) Sri Jayawardenepura</option>
+							<option value="56" class="lang_option">(GMT+06:30) Rangoon</option>
+							<option value="57" class="lang_option">(GMT+07:00) Bangkok, Hanoi, Jakarta</option>
+							<option value="58" class="lang_option">(GMT+07:00) Krasnoyarsk</option>
+							<option value="59" class="lang_option">(GMT+08:00) Beijing, Chongqing, Hong Kong, Urumqi</option>
+							<option value="60" class="lang_option">(GMT+08:00) Irkutsk</option>
+							<option value="61" class="lang_option">(GMT+08:00) Ulaan Bataar</option>
+							<option value="62" class="lang_option">(GMT+08:00) Kuala Lumpur, Singapore</option>
+							<option value="63" class="lang_option">(GMT+08:00) Perth</option>
+							<option value="64" class="lang_option">(GMT+08:00) Taipei</option>
+							<option value="65" class="lang_option">(GMT+09:00) Osaka</option>
+							<option value="66" class="lang_option">(GMT+09:00) Seoul</option>
+							<option value="67" class="lang_option">(GMT+09:00) Yakutsk</option>
+							<option value="68" class="lang_option">(GMT+09:30) Adelaide</option>
+							<option value="69" class="lang_option">(GMT+10:00) Brisbane</option>
+							<option value="70" class="lang_option">(GMT+10:00) Canberra, Melbourne, Sydney</option>
+							<option value="71" class="lang_option">(GMT+10:00) Guam, Port Moresby</option>
+							<option value="72" class="lang_option">(GMT+10:00) Hobart</option>
+							<option value="73" class="lang_option">(GMT+10:00) Vladivostok</option>
+							<option value="74" class="lang_option">(GMT+11:00) Magadan, Solomon Is., New Caledonia</option>
+							<option value="75" class="lang_option">(GMT+12:00) Auckland, Wellington</option>
+							<option value="76" class="lang_option">(GMT+12:00) Fiji</option>
+							<option value="77" class="lang_option">(GMT+12:00) Kamchatka, Marshall Is.</option>
+						</select>
+					</span>
+
+				</div>
+				<div class="setting-contain-timezone-cell setting-contain-usermanage-ctrl-changepassword-cell">
+
+					<span class="setting-dst-checkbox-contain">
+						<input id="daysave-enable" type="checkbox" value="1" name="daysave">
+						<span id="daysave-enable-title" class="setting-contain-ip-ipmodel-title"><span class="lang"></span><!--Enable Daylight Saving Time--></span>
+
+					</span>
+					<span class="setting-time-button"></span>
+				</div>
+				<div id="dmt-Recurring-setting-contain" class="setting-contain-timezone-cell-dst setting-contain-usermanage-ctrl-backup-cell">
+					<div class="setting-contain-dmt-cell">
+						<span class="setting-contain-dmt-cell-onoff">
+							<span class="setting-contain-timezone-input setting-contain-timezone-name-cell setting-contain-timezone-radio">
+								<input id="dmt-enable" class="dmtradio dmtradio-select" type="radio" name="dmt" value="1" checked="">
+								<span  class="setting-contain-timezone-padding setting-contain-timezone-name setting-contain-timezone-name-cell"><span class="lang"></span><!--Automatically--></span>
+							</span>
+							<span class="setting-contain-timezone-input setting-contain-timezone-name-cell setting-contain-timezone-radio">
+								<input id="dmt-disable" class="dmtradio dmtradio-select" type="radio" name="dmt" value="0">
+								<span class="setting-contain-timezone-name setting-contain-timezone-name-cell"><span class="lang"></span><!--Manually--></span>
+							</span>
+						</span>
+					</div>
+
+					<div id="dmt-Recurring-setting" class="setting-contain-dmtmodel-cell">
+						<div class="setting-contain-dmtmodel-cell-inner">
+							<span class="setting-contain-dmt-setting">
+								<span class="setting-contain-dmt-setting-cell setting-contain-dmt-setting-cell-title">
+									<span class="setting-contain-dmt-setting-cell-font"><span class="lang"></span><!--Time Offset-->:</span>
+								</span>
+								<span class="setting-contain-dmt-setting-cell">
+									<span id="sync-manual-time-Recurring-select"></span>
+									<!-- <input id="sync-manual-time-Recurring" class="midinput setting-contain-usermanage-ctrl-input-nptser setting-contain-usermanage-ctrl-input" maxlength="4" type="text" value="10"/>
+									-->
+								</span>
+								<span class="setting-contain-dmt-setting-cell">
+									<span class="setting-contain-dmt-timedomain-font"></span>
+								</span>
+							</span>
+							<span class="setting-contain-dmt-setting">
+								<span class="setting-contain-dmt-setting-cell setting-contain-dmt-setting-cell-title">
+									<span class="setting-contain-dmt-setting-cell-font "><span class="lang"></span><!--Start Time-->:</span>
+								</span>
+								<span id="recurring-start-stands-select" class="setting-contain-dmt-setting-cell"></span>
+								<span id="recurring-start-week-select" class="setting-contain-dmt-setting-cell"></span>
+
+								<span class="setting-contain-dmt-setting-cell">
+									<span class="setting-contain-dmt-setting-cell-font"><span class="lang"></span><!--in--></span>
+								</span>
+								<span id="recurring-start-month-select" class="setting-contain-dmt-setting-cell"></span>
+								<span class="setting-contain-dmt-setting-cell">
+									<span class="setting-contain-dmt-setting-cell-font"><span class="lang"></span><!--at--></span>
+								</span>
+								<span id="recurring-start-hour-select" class="setting-contain-dmt-setting-cell"></span>
+								<span class="setting-contain-dmt-setting-cell">
+									<span class="setting-contain-dmt-setting-cell-font">:</span>
+								</span>
+								<span id="recurring-start-min-select" class="setting-contain-dmt-setting-cell"></span>
+							</span>
+
+							<span class="setting-contain-dmt-setting">
+								<span class="setting-contain-dmt-setting-cell setting-contain-dmt-setting-cell-title">
+									<span class="setting-contain-dmt-setting-cell-font"><span class="lang"></span><!--End Time-->:</span>
+								</span>
+								<span id="recurring-end-stands-select"  class="setting-contain-dmt-setting-cell"></span>
+								<span id="recurring-end-week-select" class="setting-contain-dmt-setting-cell"></span>
+
+								<span class="setting-contain-dmt-setting-cell">
+									<span class="setting-contain-dmt-setting-cell-font"><span class="lang"></span><!--in--></span>
+								</span>
+								<span id="recurring-end-month-select" class="setting-contain-dmt-setting-cell"></span>
+								<span class="setting-contain-dmt-setting-cell">
+									<span class="setting-contain-dmt-setting-cell-font"><span class="lang"></span><!--at--></span>
+								</span>
+								<span  id="recurring-end-hour-select" class="setting-contain-dmt-setting-cell"></span>
+								<span class="setting-contain-dmt-setting-cell">
+									<span class="setting-contain-dmt-setting-cell-font">:</span>
+								</span>
+								<span id="recurring-end-min-select" class="setting-contain-dmt-setting-cell"></span>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+					<span class="setting-contain-usermanage-ctrl-changepassword-cell-title fontweightbold"><span class="lang"></span><!--Automatic Time Configuration-->:</span>
+					<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain"></span>
+				</div>
+				<div class="setting-contain-timezone-cell setting-contain-usermanage-ctrl-changepassword-cell">
+					<span class="setting-dst-checkbox-contain">
+						<input id="synntp-enable" type="checkbox" value="1" name="daysave">
+						<span id="synntp-enable-title" class="setting-contain-ip-ipmodel-title"><span class="lang"></span><!--Synchronize With NTP Server--></span>
+					</span>
+					<span class="setting-time-button"></span>
+				</div>
+				<!-- <div class="setting-contain-timezone-cell setting-contain-usermanage-ctrl-changepassword-cell">
+				<span class="setting-contain-usermanage-ctrl-changepassword-cell-title">Time:</span>
+				<span class="setting-contain-timezone ">
+
+					<span class="setting-contain-timezone-input setting-contain-timezone-name-cell">
+						<span class="setting-current-time">
+							<span class="setting-current-hour setting-current-time-cell">12:11:23</span>
+						</span>
+						<input  id="sync-manual-time-hour" class="midinput setting-contain-usermanage-ctrl-input"  type="text" value="09:43:21"></span>
+				</span>
+			</div>
+			-->
+			<div id="synntp-setting-contain" class="setting-contain-ntpserver-cell setting-contain-usermanage-ctrl-changepassword-cell">
+				<div class="setting-contain-dmt-cell">
+					<span class="setting-contain-dmt-cell-onoff">
+						<span class="setting-contain-timezone-input setting-contain-timezone-name-cell setting-contain-timezone-radio">
+							<input id="synntp-ntpserver" class="dmtradio synntp-ntpserver-radio" type="radio" checked="" value="0" name="ntpmode">
+							<span class="setting-contain-timezone-padding setting-contain-timezone-name setting-contain-timezone-name-cell"><span class="lang"></span><!--NTP Service--></span>
+						</span>
+					</span>
+					<span class="setting-contain-timezone setting-contain-timezone-ntpservice">
+						<span class="setting-contain-timezone-input setting-contain-timezone-name-cell">
+							<input id="sync-manual-time-nptser1" class="midinput setting-contain-usermanage-ctrl-input-nptser setting-contain-usermanage-ctrl-input"  maxlength="64" type="text" value="192.168.1.1">
+							<div class="sync-ntp-sword">
+								<span class="sync-ntp-sword-img"></span>
+							</div>
+							<select id="sync-auto-time-nptser1">
+								<option value="0">0.pool.ntp.org</option>
+								<option value="1">time.windows.com</option>
+								<option value="2">time.nist.gov</option>
+							</select>
+						</span>
+					</span>
+				</div>
+
+				<div class="setting-contain-dmt-cell">
+					<span class="setting-contain-dmt-cell-onoff">
+						<span class="setting-contain-timezone-input setting-contain-timezone-name-cell setting-contain-timezone-radio">
+							<input id="synntp-dhcp" class="dmtradio synntp-ntpserver-radio" type="radio" value="1" name="ntpmode">
+							<span class="setting-contain-timezone-padding setting-contain-timezone-name setting-contain-timezone-name-cell"><span class="lang"></span><!--Set NTP Server from Dynamic IP--></span>
+						</span>
+					</span>
+				</div>
+			</div>
+			<div class="setting-contain-usermanage-ctrl-changepassword-cell">
+				<span class="setting-contain-usermanage-ctrl-changepassword-cell-title fontweightbold"><span class="lang"></span><!--Set Date And Time Manually-->:</span>
+				<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain"></span>
+			</div>
+			<div class="setting-contain-timezone-cell setting-contain-usermanage-ctrl-changepassword-cell">
+				<span class="setting-dst-checkbox-contain">
+					<input id="set-time-manually" type="checkbox" value="1" name="timemode">
+					<span id="set-time-manually-title" class="setting-contain-ip-ipmodel-title"><span class="lang"></span><!--Set Date and Time Manually--></span>
+				</span>
+				<span class="setting-time-button"></span>
+			</div>
+			<div id="set-time-manually-contain" class="setting-contain-timezone-cell-dst setting-contain-usermanage-ctrl-backup-cell">
+
+				<div class="setting-contain-dmtmodel-cell-inner">
+					<span class="setting-contain-dmt-setting-timemult">
+						<span class="setting-contain-dmt-setting-time setting-contain-dmt-setting-cell-title">
+							<span class="setting-contain-dmt-setting-cell-time"><span class="lang"></span><!--Year-->:</span>
+							<span id="datemode-start-year-select" class="setting-contain-manual-setting-cell"></span>
+						</span>
+					</span>
+
+					<span class="setting-contain-dmt-setting-timemult">
+						<span class="setting-contain-dmt-setting-time setting-contain-dmt-setting-cell-title">
+							<span class="setting-contain-dmt-setting-cell-time"><span class="lang"></span><!--Month-->:</span>
+							<span id="datemode-start-month-select" class="setting-contain-manual-setting-cell"></span>
+						</span>
+					</span>
+
+					<span class="setting-contain-dmt-setting-timemult">
+						<span class="setting-contain-dmt-setting-time setting-contain-dmt-setting-cell-title">
+							<span class="setting-contain-dmt-setting-cell-time"><span class="lang"></span><!--Day-->:</span>
+							<span id="datemode-start-day-select" class="setting-contain-manual-setting-cell"></span>
+						</span>
+					</span>
+				</div>
+
+				<div class="setting-contain-dmtmodel-cell-inner">
+					<span class="setting-contain-dmt-setting-timemult">
+						<span class="setting-contain-dmt-setting-time setting-contain-dmt-setting-cell-title">
+							<span class="setting-contain-dmt-setting-cell-time"><span class="lang"></span><!--Hour-->:</span>
+							<span id="datemode-start-hour-select" class="setting-contain-manual-setting-cell"></span>
+						</span>
+					</span>
+
+					<span class="setting-contain-dmt-setting-timemult">
+						<span class="setting-contain-dmt-setting-time setting-contain-dmt-setting-cell-title">
+							<span class="setting-contain-dmt-setting-cell-time"><span class="lang"></span><!--Minute-->:</span>
+							<span id="datemode-start-min-select" class="setting-contain-manual-setting-cell"></span>
+						</span>
+					</span>
+
+					<span class="setting-contain-dmt-setting-timemult">
+						<span class="setting-contain-dmt-setting-time setting-contain-dmt-setting-cell-title">
+							<span class="setting-contain-dmt-setting-cell-time"><span class="lang"></span><!--Second-->:</span>
+							<span id="datemode-start-sec-select" class="setting-contain-manual-setting-cell"></span>
+						</span>
+					</span>
+				</div>
+
+				<div class="setting-contain-dmtmodel-cell-inner">
+					<input id="synpctime" class="setting-contain-button lang_button" type="button" value="Copy Your Computer's Time Settings"></div>
+
+			</div>
+		</div>
+		<div class="setting-contain-ip-ctrl-button">
+			<div class="setting-contain-ip-ctrl-button-inner">
+				<input id="dmtapply" class="setting-contain-button lang_button" type="button" value="Save"></div>
+		</div>
+
+	</div>
+
+	<div class="setting-contain-cell setting-contain-sysmanage">
+		<div class="setting-contain-timezone-title setting-contain-title">
+			<span id="setting-contain-system-management" class="setting-contain-title-cell"><span class="lang"></span><!--Reboot--></span>
+		</div>
+		<div class="sevenprogressbar">
+			<span class="sevenprogressbar-cell">
+				<span class="sevenprogressbar-text"><span class="lang"></span><!--text--></span>
+			</span>
+			<span class="sevenprogressbar-cell">
+				<span class="sevenprogressbar-percent"></span>
+				<span class="sevenprogressbar-img"></span>
+			</span>
+		</div>
+
+		<div id="setting-conatain-sysreboot">
+
+			<div class="setting-contain-inner-left">
+				<div class="setting-contain-management-ctrl-cell">
+					<span id="manage-reboot-tips" class="setting-contain-sys-manage-cell-title"><span class="lang"></span><!--Reboot your camera-->:</span>
+					<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+						<input id="sysmanage-reboot" type="button" class="setting-contain-button sysmanage-button lang_button" value="Reboot"></span>
+				</div>
+				<!-- <div  class="setting-contain-management-ctrl-cell">
+				<span class="setting-sysmanage-button-reboot setting-contain-usermanage-ctrl-changepassword-cell-contain"></span>
+			</div>
+			-->
+		</div>
+		<div class="setting-contain-timezone-title setting-contain-title">
+			<span id="setting-contain-system-management-bandr" class="setting-contain-title-cell"><span class="lang"></span><!--Backup and Restore--></span>
+		</div>
+		<div class="setting-contain-inner-left">
+			<div class="setting-contain-management-ctrl-cell">
+				<span id="manage-current-tips" class="setting-contain-sys-manage-cell-title"><span class="lang"></span><!--Back up current settings-->:</span>
+				<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+					<input id="sysmanage-backup" type="button" class="setting-contain-button sysmanage-button lang_button" value="Backup"></span>
+			</div>
+			<div class="setting-contain-management-ctrl-cell">
+				<span id="manage-Restore-tips" class="setting-contain-sys-manage-cell-title"><span class="lang"></span><!--Restore settings from a backup file-->:</span>
+				<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain"></span>
+			</div>
+			<div class="setting-contain-management-ctrl-cell">
+				<span class="setting-contain-update-cell setting-contain-usermanage-ctrl-changepassword-cell-contain">
+					<div class="file-input-float">
+						<input id="sysmanage-restore-path-input"  class="setting-contain-usermanage-ctrl-input"  type="input"></div>
+					<input id="sysmanage-restore-path" unselectable ="on" class="setting-contain-file-update"  type="file" name="IPCAM"></span>
+				<!-- 在对文件进行上传的页面进行修改时注意要将type为file的input标签长宽覆盖住自定义的input及按钮，否则在IE下会因为安全策略导致文件无法上传-->
+				<span class="sysmanage-file-button-setting setting-contain-update-cell setting-contain-usermanage-ctrl-changepassword-cell-contain">
+					<input  id="sysmanage-factory-restore" type="button" class="setting-contain-button sysmanage-button sysmanage-update-button lang_button" value="Restore">
+					<input id="sysmanage-restore-path-button" class="setting-contain-button lang_button" type="button" value="Browse"></span>
+			</div>
+			<div class="setting-contain-management-ctrl-cell">
+				<span id="manage-Revert-tips" class="setting-contain-sys-manage-cell-title"><span class="lang"></span><!--Restore factory default settings-->:</span>
+				<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+					<input id="sysmanage-factory-reset" type="button" class="setting-contain-button sysmanage-button lang_button" value="Reset"></span>
+			</div>
+			<div class="setting-contain-management-ctrl-cell">
+				<span class="setting-contain-management-ctrl-cell-title"></span>
+				<span class="setting-sysmanage-button-reboot setting-contain-usermanage-ctrl-changepassword-cell-contain"></span>
+			</div>
+		</div>
+		<!-- foot of setting-contain-inner-left-->
+
+		<div class="setting-contain-timezone-title setting-contain-title">
+			<span id="setting-contain-system-management-update" class="setting-contain-title-cell"><span class="lang"></span><!--Update--></span>
+		</div>
+
+		<div class="setting-contain-inner-left">
+
+			<div class="setting-contain-management-ctrl-cell">
+				<span id="manage-upgrade-tips" class="setting-contain-sys-manage-cell-title"><span class="lang"></span><!--Upgrade from a file on your hard disk-->:</span>
+				<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain"></span>
+			</div>
+			<div class="setting-contain-management-ctrl-cell">
+				<span class="setting-contain-management-ctrl-cell-title"></span>
+				<span class="setting-contain-update-cell setting-contain-usermanage-ctrl-changepassword-cell-contain">
+					<div class="file-input-float">
+						<input id="sysmanage-upgrade-path-input"  class="setting-contain-usermanage-ctrl-input"  type="input"></div>
+					<input id="sysmanage-upgrade-path" unselectable="on" class="setting-contain-file-update" type="file" name="IPCAM"></span>
+				<span class="sysmanage-file-button-setting setting-contain-update-cell setting-contain-usermanage-ctrl-changepassword-cell-contain">
+					<input id="sysmanage-upgrade" type="submit" class="setting-contain-button sysmanage-button sysmanage-update-button" value="Upgrade">
+					<input id="sysmanage-upgrade-path-button" class="setting-contain-button lang_button" type="button" value="Browse"></span>
+			</div>
+			<div class="setting-contain-management-ctrl-cell" style="display:none">
+				<span id="manage-Revert-tips" class="setting-contain-sys-manage-cell-title"><span class="lang"></span><!--Software update-->:</span>
+				<span class="setting-contain-usermanage-ctrl-changepassword-cell-contain">
+					<input id="sysmanage-software-detect" type="button" class="setting-contain-button sysmanage-button lang_button" value="Download">
+					<span id="sysmanage-software-detect-tips" class="setting-contain-sys-manage-cell-title"><span class="lang"></span><!--Your software version is the latest one-->.</span>
+				</span>
+			</div>
+		</div>
+		<!--end of setting-contain-inner-left-->
+		<!-- <div class="setting-contain-ip-ctrl-button">
+		<div class="setting-contain-ip-ctrl-button-inner"></div>
+	</div>
+	-->
+</div>
+<!--end of setting-conatain-sysreboot-->
+
+</div>
+</div>
+</div>
+</div>
+<!--foot of setting -->
+</div>
+<!--foot of containbody-main-innner-->
+<!--foot of containbody-main-->
+</div>
+<div id="htmlsp1"></div>
+</body>
+<!-- jquery ui-->
+<script type="text/javascript" src="lib/jqueryX.js"></script>
+<script type="text/javascript" src="lib/raphael-min.js"></script>
+<!--page js -->
+<script type="text/javascript" src="i18n/en.js?v=1.1.0"></script>
+<script type="text/javascript" src="js/index.js?v=1.1.0"></script>
+<script type="text/javascript" src="js/common.js?v=1.1.0"></script>
+<script type="text/javascript" src="js/plug.js?v=1.1.0"></script>
+</html>

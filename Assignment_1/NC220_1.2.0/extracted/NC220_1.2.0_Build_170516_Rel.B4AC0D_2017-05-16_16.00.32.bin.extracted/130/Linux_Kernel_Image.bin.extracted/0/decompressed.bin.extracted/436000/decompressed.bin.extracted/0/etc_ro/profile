@@ -1,0 +1,52 @@
+# /etc_ro/profile
+# System wide environment and startup programs
+#
+if filecut  -i /dev/mtdblock3 -s0x1FE -l 2 | grep -q "FF FF"
+then
+	insmod /usr/local/lib/kernel/drivers/net/wireless/rt2860v2_ap/rt2860v2_ap.ko 
+	ifconfig ra0 up
+	ifconfig eth2 192.168.0.10
+	tp_mp_server "TL-NC200" "156TCa{m4372V30" &
+else
+# necessary dirs
+mkdir -p /var/run/lighttpd
+
+# envs...
+PATH=$PATH:/usr/local/bin:/usr/local/sbin
+export PATH
+
+# lib searching path
+LD_LIBRARY_PATH=/usr/local/lib
+export LD_LIBRARY_PATH
+
+# startup local interface
+ifconfig lo up
+
+# setting default time
+if [ -f /usr/local/etc/TZ ]; then
+	rm -rf /usr/local/etc/TZ
+fi
+echo "GMT-0:00" > /usr/local/etc/TZ
+if [ -f /usr/local/config/ipcamera/last_time ]; then
+	date -s "$(cat /usr/local/config/ipcamera/last_time)"
+else
+	date -s '2017-05-23 0:0:0'
+fi
+
+if [ -f /usr/local/config/ipcamera/datetime.conf ]; then
+	rm -rf /usr/local/etc/TZ
+	timezone_str=$(cat /usr/local/config/ipcamera/datetime.conf | grep DATETIME_TIMEZONEENV)
+	echo ${timezone_str#*=} > /usr/local/etc/TZ
+fi
+
+# start telnetd for debug
+# telnetd
+
+# start lighttpd
+if [ -f /usr/local/bin/watch_lighttpd.sh ]; then
+	/usr/local/bin/watch_lighttpd.sh &
+else
+	lighttpd -f /usr/local/config/lighttpd.conf
+fi
+
+fi

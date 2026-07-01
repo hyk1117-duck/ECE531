@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Network Camera</title>
+	<link type="text/css" href="css/common.css" rel="stylesheet" />
+	<!-- <link type="text/css" href="css/plug.css" rel="stylesheet" /> -->
+	<link href="favicon.ico" rel="icon" />
+	<link href="favicon.png" rel="shortcut icon png" />
+	<style type="text/css"></style>
+	<div id="indexsideover"></div>
+</head>
+<body>
+	<div id="main">
+		<div id="header">
+			<div id="top">
+				<div id="logo" class="tooltip lang_title" title="link to tp-link">
+					<a target="_blank" href="http://www.tp-link.com"></a>
+					<span style="display:none">TP-LINK</span>
+				</div>
+				<div id="logout" class="headright-title headright-type"></div>
+				<div id="headright">
+					<span class="headright-title">
+						<span class="lang"></span>
+						<!-- The Reboot Choice,TP know you more! -->
+					</span>
+					<ul class="headright-menu">
+						<li class="headright-menu-cell"><span class="lang"></span><!--[English]--></li>
+						<li class="headright-menu-model">NC220</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="radius-color"></div>
+		<div id="container">
+			<div id = "containindex">
+				<div id="containbody-aside">
+					<div class="containbody-aside-metro">
+						<div class="contanbody-aside-metro-inner">
+							<span id= "title-videoManages" class="titlenavx titlenavx-selected">
+								<span class="titlenav-border  titlenav-border-first"></span>
+								<span class="title-img title-img-selected"></span>
+								<span class="titlenav-name"><span class="lang"></span><!--Live View--></span>
+							</span>
+						</div>
+					</div>
+				</div>
+				<!--foot of containbody-aside-->
+				<div id="containbody-main">
+					<div id="sideover"></div>
+					<div id="containbody-main-inner">
+						<div id="videoManages" class="containbody-main-inner-child containshow">
+							<div id="videoManages-main">
+								<div id="videoobject">
+									<div id="objectplayer">
+										<OBJECT id='tpplugin' class="tppluginie" classid='CLSID:71B417B2-B60E-4680-B6FC-8C342DFC4757' align='center' width="640" height="320" border='0px'>		
+											<param name="wmode" value="transparent">  
+											<FONT id="tppluginfont" style="display:none" COLOR=red SIZE=5>
+												<!-- Can't find object -->
+											</FONT>
+										</OBJECT>
+									</div>
+								</div>
+								<div id="controlpanel">
+									<ul class="controlpanelul">
+										<li class="videocorl">
+											<span id="videocut" class="videoimg videocutimg lang_title" title=""></span>
+										</li>
+										<li class="videocorl">
+											<span id="videovid" class="videoimg videovidimg lang_title" title=""></span>
+											<span id="videovidon" class="videoimg videovidonimg lang_title" title=""></span>
+										</li>
+										<li class="videocorl">
+											<span id="videoflip" class="videoimg videoflipimg lang_title" title="Flip"></span>
+										</li>
+										<li class="videocorl">
+											<span id="videomirror" class="videoimg videomirrorimg lang_title" title="Mirror"></span>
+										</li>
+										<li class="videocorl">
+											<span id="daynight" class="videoimg daynightimg lang_title" title="Day&Night"></span>
+											<div id="dayandnightcover"></div>
+										</li>
+										<li class="videocorl">
+											<span id="videozoom" class="videoimg videozoomimg lang_title" title="Zoom"></span>
+										</li>
+
+									</ul>
+									<ul id="daylist">
+										<li id="automode" class="dayctrl">
+											<span class="videoimg automodeimg lang_title" title="Auto"></span>
+										</li>
+										<li id="daymode" class="dayctrl">
+											<span class="videoimg daymodeimg lang_title" title="Day"></span>
+										</li>
+										<li id="nightmode" class="dayctrl">
+											<span class="videoimg nightmodeimg lang_title" title="Night"></span>
+										</li>
+									</ul>
+									<span id="videozoomul">
+										<div id="zoom-bar" class="zoom-bar watchmode-bar"></div>
+									</span>
+									<span class="toolbar-volumeset volume-offon-show">
+										<span id="videovolumestart" class="videocorl">
+											<span class="videoimg videovolumestartimg lang_title" title="Mute"></span>
+										</span>
+										<span id="videovolumestop" class="videocorl">
+											<span class="videoimg videovolumestopimg lang_title" title="Recover"></span>
+										</span>
+										<div id="volume-bar" class="volume-bar watchmode-bar"></div>
+
+									</span>
+									<span id="videofullscreen" class="videocorl">
+										<span class="videoimg videofullscreenimg lang_title" title="Full Screen"></span>
+									</span>
+								</div>
+								<div class="video-ctrl-state">
+									<div class="video-ctrl-state-cell">
+										<div class="watchmode">
+											<label for="brightness-val"><span class="lang"></span><!--Brightness-->:</label>
+											<div id="brightness-bar" class="watchmode-bar"></div>
+											<input type="text" maxlength="3" id="brightness-val" class="sf" />
+										</div>
+										<div class="watchmode">
+											<label for="contrast-val"><span class="lang"></span><!--Contrast-->:</label>
+											<div id="contrast-bar"  class="watchmode-bar"></div>
+											<input type="text" maxlength="3" id="contrast-val" class="sf" />
+										</div>
+										<div class="watchmode">
+											<label for="saturation-val"><span class="lang"></span><!--Saturation-->:</label>
+											<div id="saturation-bar" class="watchmode-bar"></div>
+											<input type="text" maxlength="3" id="saturation-val" class="sf" />
+										</div>
+										<input id="resetvideo" class="setting-contain-button lang_button" type="button" value=""></div>
+
+									<div class="video-ctrl-state-cell">
+										<div id="resolution-readjust-out" class="watchmode watchmode-long">
+											<label for="Resolution"><span class="lang"></span><!--Resolution-->:</label>
+											<select id="resolution-readjust"  name="cbr">
+												<option selected="true" name="VGA" value="1">640*480</option>
+												<option value="2" name="QVGA">320*240</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div id = "chromealert" style = "display:none">
+									<span>
+										<img src = "../images/tpcamera.png">
+									</span>
+
+									<span>
+										<div>
+											<p>Um,this brower may not support camera video well.</p>
+										</div>
+										<div>
+											<p>If you could't view the camera video,try the tpCamera app or another brower such as Internet Explorer,Firefox,Safari,or Opera.We will update the software as soon as possible. Sorry for the in convenience and thanks for your choice.</p>
+										</div>
+									</span>
+								</div>								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="lib/jqueryX.js"></script>
+<!--page js -->
+<script type="text/javascript" src="i18n/en.js?v=1.1.0"></script>
+<script type="text/javascript" src="js/common.js?v=1.1.0"></script>
+<script type="text/javascript" src="js/guest.js?v=1.1.0"></script>
+<script type="text/javascript" src="js/plug.js?v=1.1.0"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+	plug.select.initial($("body"));
+	
+})
+</script>
+</html>

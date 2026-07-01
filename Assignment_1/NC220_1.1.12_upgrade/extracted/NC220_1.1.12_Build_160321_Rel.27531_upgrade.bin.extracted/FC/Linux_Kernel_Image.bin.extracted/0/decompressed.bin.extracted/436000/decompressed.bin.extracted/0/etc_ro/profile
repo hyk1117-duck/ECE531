@@ -1,0 +1,40 @@
+# /etc_ro/profile
+# System wide environment and startup programs
+#
+if filecut  -i /dev/mtdblock3 -s0x1FE -l 2 | grep -q "FF FF"
+then
+	telnetd
+	insmod /usr/local/lib/kernel/drivers/net/wireless/rt2860v2_ap/rt2860v2_ap.ko 
+	ifconfig ra0 up
+	ifconfig eth2 192.168.0.10
+	tp_mp_server "TL-NC200" "156TCa{m4372V30" &
+else
+# necessary dirs
+mkdir -p /var/run/lighttpd
+
+# envs...
+PATH=$PATH:/usr/local/bin:/usr/local/sbin
+export PATH
+
+# lib searching path
+LD_LIBRARY_PATH=/usr/local/lib
+export LD_LIBRARY_PATH
+
+# startup local interface
+ifconfig lo up
+
+# setting default time
+echo "GMT-0:00" > /usr/local/etc/TZ
+date -s "2014-8-8 0:0:0"
+
+# start telnetd for debug
+# telnetd
+
+# start lighttpd
+if [ -f /usr/local/bin/watch_lighttpd.sh ]; then
+	/usr/local/bin/watch_lighttpd.sh &
+else
+	lighttpd -f /usr/local/config/lighttpd.conf
+fi
+
+fi

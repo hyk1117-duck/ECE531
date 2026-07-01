@@ -1,0 +1,368 @@
+.
+├── binwalk_output
+├── extracted
+│   ├── NC220_1.1.12_Build_160321_Rel.27531.bin -> /home/hyk1117/Class/Assignment_1/NC220_1.1.12/NC220_1.1.12_Build_160321_Rel.27531.bin
+│   └── NC220_1.1.12_Build_160321_Rel.27531.bin.extracted
+│       ├── 1E6F85
+│       │   └── jffs2-root
+│       │       ├── bin
+│       │       │   ├── filecut
+│       │       │   ├── img_built
+│       │       │   ├── pppd
+│       │       │   ├── rinetd
+│       │       │   ├── ssmtp
+│       │       │   ├── tp_mp_server
+│       │       │   ├── watch_adalarm.sh
+│       │       │   ├── watch_lighttpd.sh
+│       │       │   └── wput
+│       │       ├── config
+│       │       │   ├── conf.d
+│       │       │   │   ├── debug.conf
+│       │       │   │   ├── dirlisting.conf
+│       │       │   │   ├── fastcgi.conf
+│       │       │   │   └── mime.conf
+│       │       │   ├── ipcamera
+│       │       │   │   ├── Wireless.conf
+│       │       │   │   └── workmod.conf
+│       │       │   ├── lighttpd.conf
+│       │       │   ├── modules.conf
+│       │       │   ├── onvif_1.conf
+│       │       │   ├── onvif_1.conf_bak
+│       │       │   ├── RT2860AP.dat
+│       │       │   ├── SingleSKU_CE.dat
+│       │       │   ├── SingleSKU.dat
+│       │       │   ├── SingleSKU_FCC.dat
+│       │       │   └── workmod_define.conf
+│       │       ├── etc
+│       │       │   ├── 2048_newroot.cer
+│       │       │   ├── fstab
+│       │       │   ├── group
+│       │       │   ├── passwd
+│       │       │   ├── profile
+│       │       │   └── services
+│       │       ├── lib
+│       │       │   ├── kernel
+│       │       │   │   ├── crypto
+│       │       │   │   │   ├── aes_generic.ko
+│       │       │   │   │   └── ansi_cprng.ko
+│       │       │   │   └── drivers
+│       │       │   │       └── net
+│       │       │   │           └── wireless
+│       │       │   │               └── rt2860v2_ap
+│       │       │   │                   └── rt2860v2_ap.ko
+│       │       │   ├── libalarm.so
+│       │       │   ├── libalarm.so.extracted
+│       │       │   │   ├── 167E0
+│       │       │   │   │   └── pem.crt
+│       │       │   │   └── 16EA4
+│       │       │   │       └── pem.crt
+│       │       │   ├── libcloud.so.2
+│       │       │   ├── libcrypto.so.0.9.8
+│       │       │   ├── libevent-2.0.so.5
+│       │       │   ├── libevent_openssl-2.0.so.5
+│       │       │   ├── libfcgi.so.0
+│       │       │   ├── libfdk-aac.so.0
+│       │       │   ├── libjrpc.so
+│       │       │   ├── libminiupnpc.so.9
+│       │       │   ├── libnss_mdns-0.2.so
+│       │       │   ├── libssl.so.0.9.8
+│       │       │   ├── libstunclient.so
+│       │       │   ├── libudt.so
+│       │       │   ├── libupnpjrpc.so
+│       │       │   ├── mod_access.so
+│       │       │   ├── mod_dirlisting.so
+│       │       │   ├── mod_fastcgi.so
+│       │       │   ├── mod_indexfile.so
+│       │       │   └── mod_staticfile.so
+│       │       ├── sbin
+│       │       │   ├── ad_alarm
+│       │       │   ├── autoupgradenotice
+│       │       │   ├── autoupgrade.sh
+│       │       │   ├── doubletalk
+│       │       │   ├── ftpnew_alarm
+│       │       │   ├── gpld
+│       │       │   ├── ipcamera
+│       │       │   ├── lighttpd
+│       │       │   ├── mdnew_alarm
+│       │       │   ├── mDNSResponderPosix
+│       │       │   ├── onvif
+│       │       │   ├── p2pd
+│       │       │   ├── relayd
+│       │       │   ├── smtpnew_alarm
+│       │       │   ├── ssl-tunnel
+│       │       │   ├── ssl-tunnel.extracted
+│       │       │   │   └── 7ACC
+│       │       │   │       └── pem.crt
+│       │       │   ├── streamd
+│       │       │   ├── upgrader
+│       │       │   └── upnp
+│       │       ├── share
+│       │       └── www
+│       │           ├── css
+│       │           │   ├── common.css
+│       │           │   ├── login.css
+│       │           │   └── plug.css
+│       │           ├── favicon.ico
+│       │           ├── favicon.png
+│       │           ├── guest.html
+│       │           ├── i18n
+│       │           │   └── en.js
+│       │           ├── images
+│       │           │   ├── 220.png
+│       │           │   ├── asidebackground.png
+│       │           │   ├── asideblue.png
+│       │           │   ├── button1px.png
+│       │           │   ├── button-active.png
+│       │           │   ├── button-disable.png
+│       │           │   ├── button-hover.png
+│       │           │   ├── button.png
+│       │           │   ├── img.png
+│       │           │   ├── loading.gif
+│       │           │   ├── loadings.gif
+│       │           │   ├── logo.png
+│       │           │   ├── tpcamera.png
+│       │           │   └── tp-link_logo.png
+│       │           ├── index.html
+│       │           ├── js
+│       │           │   ├── analytics.js
+│       │           │   ├── common.js
+│       │           │   ├── guest.js
+│       │           │   ├── index.js
+│       │           │   ├── login.js
+│       │           │   └── plug.js
+│       │           ├── lib
+│       │           │   ├── jqueryX.js
+│       │           │   └── raphael-min.js
+│       │           └── login.html
+│       └── 1F120
+│           ├── Linux_Kernel_Image.bin
+│           └── Linux_Kernel_Image.bin.extracted
+│               └── 0
+│                   ├── decompressed.bin
+│                   └── decompressed.bin.extracted
+│                       └── 436000
+│                           ├── decompressed.bin
+│                           └── decompressed.bin.extracted
+│                               └── 0
+│                                   ├── bin
+│                                   │   ├── addgroup -> busybox
+│                                   │   ├── adduser -> busybox
+│                                   │   ├── adjtimex
+│                                   │   ├── ash -> busybox
+│                                   │   ├── ated
+│                                   │   ├── busybox
+│                                   │   ├── cat -> busybox
+│                                   │   ├── chmod -> busybox
+│                                   │   ├── cp -> busybox
+│                                   │   ├── date -> busybox
+│                                   │   ├── df -> busybox
+│                                   │   ├── dmesg -> busybox
+│                                   │   ├── echo -> busybox
+│                                   │   ├── gpio
+│                                   │   ├── grep -> busybox
+│                                   │   ├── hostname -> busybox
+│                                   │   ├── iwconfig
+│                                   │   ├── iwpriv
+│                                   │   ├── kill -> busybox
+│                                   │   ├── ln -> busybox
+│                                   │   ├── login -> busybox
+│                                   │   ├── ls -> busybox
+│                                   │   ├── mkdir -> busybox
+│                                   │   ├── mkfs.jffs2
+│                                   │   ├── mknod -> busybox
+│                                   │   ├── mount -> busybox
+│                                   │   ├── mv -> busybox
+│                                   │   ├── netstat -> busybox
+│                                   │   ├── nice -> busybox
+│                                   │   ├── ntpclient
+│                                   │   ├── nvram_daemon
+│                                   │   ├── nvram_get -> ralink_init
+│                                   │   ├── nvram_set -> ralink_init
+│                                   │   ├── ping -> busybox
+│                                   │   ├── ps -> busybox
+│                                   │   ├── ralink_init
+│                                   │   ├── reg
+│                                   │   ├── rm -> busybox
+│                                   │   ├── rmdir -> busybox
+│                                   │   ├── sed -> busybox
+│                                   │   ├── sh -> busybox
+│                                   │   ├── sleep -> busybox
+│                                   │   ├── touch -> busybox
+│                                   │   └── umount -> busybox
+│                                   ├── dev
+│                                   │   ├── ac0
+│                                   │   ├── acl0
+│                                   │   ├── cls0
+│                                   │   ├── console
+│                                   │   ├── flash0
+│                                   │   ├── gpio
+│                                   │   ├── hwnat0
+│                                   │   ├── i2cM0
+│                                   │   ├── i2s0
+│                                   │   ├── kmem
+│                                   │   ├── mem
+│                                   │   ├── motor
+│                                   │   ├── mtd0
+│                                   │   ├── mtd0ro
+│                                   │   ├── mtd1
+│                                   │   ├── mtd1ro
+│                                   │   ├── mtd2
+│                                   │   ├── mtd2ro
+│                                   │   ├── mtd3
+│                                   │   ├── mtd3ro
+│                                   │   ├── mtd4
+│                                   │   ├── mtd4ro
+│                                   │   ├── mtd5
+│                                   │   ├── mtd5ro
+│                                   │   ├── mtd6
+│                                   │   ├── mtd6ro
+│                                   │   ├── mtd7
+│                                   │   ├── mtd7ro
+│                                   │   ├── mtdblock0
+│                                   │   ├── mtdblock1
+│                                   │   ├── mtdblock2
+│                                   │   ├── mtdblock3
+│                                   │   ├── mtdblock4
+│                                   │   ├── mtdblock5
+│                                   │   ├── mtdblock6
+│                                   │   ├── mtdblock7
+│                                   │   ├── mtr0
+│                                   │   ├── null
+│                                   │   ├── nvram
+│                                   │   ├── pcm0
+│                                   │   ├── ppp
+│                                   │   ├── ptmx
+│                                   │   ├── pts
+│                                   │   │   ├── 0
+│                                   │   │   ├── 1
+│                                   │   │   ├── 2
+│                                   │   │   └── 3
+│                                   │   ├── ptyp0
+│                                   │   ├── ptyp1
+│                                   │   ├── ram
+│                                   │   ├── ram0
+│                                   │   ├── ram1
+│                                   │   ├── ram2
+│                                   │   ├── ram3
+│                                   │   ├── random
+│                                   │   ├── rdm0
+│                                   │   ├── snd
+│                                   │   │   ├── controlC0
+│                                   │   │   ├── pcmC0D0c
+│                                   │   │   └── pcmC0D0p
+│                                   │   ├── spiS0
+│                                   │   ├── swnat0
+│                                   │   ├── ttyp0
+│                                   │   ├── ttyp1
+│                                   │   ├── ttyS0
+│                                   │   ├── ttyS1
+│                                   │   ├── urandom
+│                                   │   ├── video0
+│                                   │   ├── video1
+│                                   │   └── watchdog
+│                                   ├── etc_ro
+│                                   │   ├── dhcp
+│                                   │   │   └── simple.script
+│                                   │   ├── fstab
+│                                   │   ├── inittab
+│                                   │   ├── linuxigd
+│                                   │   ├── motd
+│                                   │   ├── ppp
+│                                   │   │   ├── 3g
+│                                   │   │   ├── peers
+│                                   │   │   └── plugins
+│                                   │   ├── profile
+│                                   │   ├── rcS
+│                                   │   ├── usb
+│                                   │   ├── web
+│                                   │   ├── wlan
+│                                   │   │   └── MT7620_AP_2T2R-4L_V15.BIN
+│                                   │   └── xml
+│                                   ├── init -> bin/busybox
+│                                   ├── lib
+│                                   │   ├── ipsec
+│                                   │   ├── ld-uClibc-0.9.28.so
+│                                   │   ├── ld-uClibc.so.0 -> ld-uClibc-0.9.28.so
+│                                   │   ├── libcrypt-0.9.28.so
+│                                   │   ├── libcrypt.so -> libcrypt-0.9.28.so
+│                                   │   ├── libcrypt.so.0 -> libcrypt-0.9.28.so
+│                                   │   ├── libc.so -> libuClibc-0.9.28.so
+│                                   │   ├── libc.so.0 -> libuClibc-0.9.28.so
+│                                   │   ├── libdl-0.9.28.so
+│                                   │   ├── libdl.so -> libdl-0.9.28.so
+│                                   │   ├── libdl.so.0 -> libdl-0.9.28.so
+│                                   │   ├── libm-0.9.28.so
+│                                   │   ├── libm.so -> libm-0.9.28.so
+│                                   │   ├── libm.so.0 -> libm-0.9.28.so
+│                                   │   ├── libnsl-0.9.28.so
+│                                   │   ├── libnsl.so -> libnsl-0.9.28.so
+│                                   │   ├── libnsl.so.0 -> libnsl-0.9.28.so
+│                                   │   ├── libnvram-0.9.28.so
+│                                   │   ├── libnvram.so -> libnvram-0.9.28.so
+│                                   │   ├── libnvram.so.0 -> libnvram-0.9.28.so
+│                                   │   ├── libpthread-0.9.28.so
+│                                   │   ├── libpthread.so -> libpthread-0.9.28.so
+│                                   │   ├── libpthread.so.0 -> libpthread-0.9.28.so
+│                                   │   ├── libresolv-0.9.28.so
+│                                   │   ├── libresolv.so -> libresolv-0.9.28.so
+│                                   │   ├── libresolv.so.0 -> libresolv-0.9.28.so
+│                                   │   ├── librt-0.9.28.so
+│                                   │   ├── librt.so -> librt-0.9.28.so
+│                                   │   ├── librt.so.0 -> librt-0.9.28.so
+│                                   │   ├── libuClibc-0.9.28.so
+│                                   │   ├── libusb.so -> libusb.so.0.1.12
+│                                   │   ├── libusb.so.0.1.12
+│                                   │   ├── libutil-0.9.28.so
+│                                   │   ├── libutil.so -> libutil-0.9.28.so
+│                                   │   ├── libutil.so.0 -> libutil-0.9.28.so
+│                                   │   ├── libz-1.2.3.so
+│                                   │   ├── libz.so -> libz-1.2.3.so
+│                                   │   ├── libz.so.1 -> libz-1.2.3.so
+│                                   │   └── modules
+│                                   ├── mnt
+│                                   ├── proc
+│                                   ├── sbin
+│                                   │   ├── arp
+│                                   │   ├── getty
+│                                   │   ├── halt
+│                                   │   ├── ifconfig
+│                                   │   ├── init
+│                                   │   ├── insmod
+│                                   │   ├── lsmod
+│                                   │   ├── mdev
+│                                   │   ├── poweroff
+│                                   │   ├── reboot
+│                                   │   ├── rmmod
+│                                   │   ├── route
+│                                   │   ├── sysctl
+│                                   │   └── udhcpc
+│                                   ├── sys
+│                                   ├── tmp
+│                                   ├── usr
+│                                   │   ├── bin
+│                                   │   │   ├── [
+│                                   │   │   ├── [[
+│                                   │   │   ├── awk
+│                                   │   │   ├── expr
+│                                   │   │   ├── find
+│                                   │   │   ├── free
+│                                   │   │   ├── killall
+│                                   │   │   ├── passwd
+│                                   │   │   ├── pkill
+│                                   │   │   ├── seq
+│                                   │   │   ├── test
+│                                   │   │   ├── time
+│                                   │   │   ├── top
+│                                   │   │   ├── wc
+│                                   │   │   ├── wget
+│                                   │   │   └── xargs
+│                                   │   ├── codepages
+│                                   │   ├── local
+│                                   │   └── sbin
+│                                   │       ├── brctl
+│                                   │       └── telnetd
+│                                   └── var
+├── filesystem
+└── NC220_1.1.12_Build_160321_Rel.27531.bin
+
+66 directories, 300 files
