@@ -66,13 +66,26 @@ if (pid < 0) {
 
 // If we are the parent process, we can exit and let the child continue as a daemon
 if (pid > 0) {
-    return OK;
+    exit(OK);
 }
 
 // if the setsid call fails, we log the error and return an error code. 
-if(setsid() < -1) {
+if(setsid() < 0) {
     syslog(LOG_ERR, ERROR_FORMAT, strerror(errno));
     return ERR_SETSID;
+}
+
+// Double-fork was added.
+// With a single fork the daemon could still become a session leader and then control a terminal. This could couple the daemon to a terminal 
+// and cause it to receive signals from the terminal which we don't want and it could cause the daemon to close when the terminal closes. 
+// 
+pid = fork();
+if (pid < 0) {
+    syslog(LOG_ERR, ERROR_FORMAT, strerror(errno));
+    return ERR_FORK;
+}
+if (pid > 0) {
+    exit(OK);
 }
 
 // Close out unneeded file pointers
