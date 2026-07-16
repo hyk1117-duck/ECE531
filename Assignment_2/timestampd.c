@@ -77,7 +77,7 @@ if(setsid() < 0) {
 
 // Double-fork was added.
 // With a single fork the daemon could still become a session leader and then control a terminal. This could couple the daemon to a terminal 
-// and cause it to receive signals from the terminal which we don't want and it could cause the daemon to close when the terminal closes. 
+// and cause it to receive signals from the terminal which could prementively terminate the daemon. By double-forking, we ensure that the daemon is not a session leader and cannot acquire a controlling terminal.
 // 
 pid = fork();
 if (pid < 0) {
