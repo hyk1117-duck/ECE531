@@ -1,19 +1,26 @@
-/* cc -o hw netcall.c -lcurl */
+//gcc -o hw netcall.c -lcurl // compling for x86_64 architecture
+// arm-buildroot-linux-gnueabi-gcc -Wall netcall.c -o netcall -lcurl // compling for arm architecture
 
+
+//including required header files
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <getopt.h>
 #include <curl/curl.h>
 
+
+//Defining constants for exit codes
 #define EXIT_OK 0
 #define EXIT_FAILURE 1
 
+//defining a structure to hold the response data
 typedef struct {
     char *data;
     size_t size;
 } ResponseBuffer;
 
+//Defining an enumeration for HTTP methods
 typedef enum {
     METHOD_NONE,
     METHOD_GET,
@@ -22,12 +29,15 @@ typedef enum {
     METHOD_DELETE
 } HttpMethod;
 
+//Defining a structure to hold the request data
 typedef struct {
     HttpMethod method;
     char *url;
     char *data;
 } Request;
 
+
+//Callback function to write the response data into the ResponseBuffer
 static size_t write_callback(char *ptr, size_t size, size_t nmemb, void *userdata) {
     size_t total_size = size * nmemb;
     ResponseBuffer *buffer = (ResponseBuffer *)userdata;
@@ -45,6 +55,7 @@ static size_t write_callback(char *ptr, size_t size, size_t nmemb, void *userdat
     return total_size;
 }
 
+//Function to display the help message
 static void help(const char *progname) {
     printf("Usage: %s [options] [payload]\n", progname);
     printf("Options may appear in any order. The final positional argument is treated as the payload string.\n");
@@ -57,17 +68,7 @@ static void help(const char *progname) {
     printf("  -u, --url URL      Specify the URL to fetch (for example http://localhost:8080)\n");
 }
 
-static char *duplicate_string(const char *value) {
-    size_t length = strlen(value) + 1;
-    char *copy = malloc(length);
-
-    if (copy != NULL) {
-        memcpy(copy, value, length);
-    }
-
-    return copy;
-}
-
+//Function to join the end of the command line arguments into a single string
 static char *join_arguments(int argc, char *argv[], int start_index) {
     size_t total_length = 1;
 
@@ -91,6 +92,7 @@ static char *join_arguments(int argc, char *argv[], int start_index) {
     return joined;
 }
 
+//Function to clean up the request structure
 static void cleanup_request(Request *request) {
     free(request->url);
     free(request->data);
@@ -98,12 +100,16 @@ static void cleanup_request(Request *request) {
     request->data = NULL;
 }
 
+
+//Function to clean up the response buffer
 static void cleanup_response(ResponseBuffer *buffer) {
     free(buffer->data);
     buffer->data = NULL;
     buffer->size = 0;
 }
 
+
+//Function to check the format of the URL
 static int check_url_format(const char *url) {
     const char *host_start = url;
     const char *host_end;
@@ -155,25 +161,33 @@ static int check_url_format(const char *url) {
     return 1;
 }
 
+
+//Main function to handle command line arguments and perform the HTTP request
 int main(int argc, char *argv[]) {
+    // Initialize libcurl
     CURL *curl = curl_easy_init();
     CURLcode res;
+    // Variable to hold the HTTP response code
     long http_code = 0;
+    // Variable to hold the option index for getopt_long
+    int opt;
+    int option_index = 0;
+    opterr = 0;
+    // Initialize the response buffer and request structure
     ResponseBuffer response = {0};
     Request request = {
         .method = METHOD_NONE,
         .url = NULL,
         .data = NULL
     };
-
+    // Check if libcurl was initialized successfully
     if (!curl) {
         fprintf(stderr, "Failed to initialize libcurl\n");
         return EXIT_FAILURE;
     }
 
-    int opt;
-    int option_index = 0;
 
+    // Define the long options for command line arguments
     static struct option long_options[] = {
         {"help",   no_argument,       0, 'h'},
         {"post",   no_argument,       0, 'o'},
@@ -184,8 +198,8 @@ int main(int argc, char *argv[]) {
         {0, 0, 0, 0}
     };
 
-    opterr = 0;
 
+    // Parse command line arguments using getopt_long
     while ((opt = getopt_long(argc, argv, "hogpdu:", long_options, &option_index)) != -1) {
         switch (opt) {
             case 'h':
@@ -211,6 +225,7 @@ int main(int argc, char *argv[]) {
                 break;
 
             case 'u':
+                // Check if the URL argument is provided and not empty
                 if (optarg == NULL || optarg[0] == '\0') {
                     fprintf(stderr, "Error: URL is required\n");
                     cleanup_request(&request);
@@ -218,8 +233,9 @@ int main(int argc, char *argv[]) {
                     return EXIT_FAILURE;
                 }
 
+                // Free any previously allocated URL memory before assigning a new one
                 free(request.url);
-                request.url = duplicate_string(optarg);
+                request.url = optarg;
                 if (request.url == NULL) {
                     fprintf(stderr, "Failed to allocate memory\n");
                     cleanup_request(&request);
@@ -227,7 +243,7 @@ int main(int argc, char *argv[]) {
                     return EXIT_FAILURE;
                 }
                 break;
-
+            // Handle unknown options and missing required arguments
             case '?':
                 if (optopt == 'u') {
                     fprintf(stderr, "Error: URL is required\n");
@@ -242,7 +258,7 @@ int main(int argc, char *argv[]) {
                 return EXIT_FAILURE;
         }
     }
-
+    // Join the remaining command line arguments into a single string for the request payload
     request.data = join_arguments(argc, argv, optind);
     if (request.data == NULL) {
         fprintf(stderr, "Failed to allocate memory\n");
@@ -251,6 +267,7 @@ int main(int argc, char *argv[]) {
         return EXIT_FAILURE;
     }
 
+    // Validate the URL and HTTP method, and perform the HTTP request
     if (request.url == NULL) {
         fprintf(stderr, "Error: URL is required\n");
         cleanup_request(&request);
@@ -258,16 +275,20 @@ int main(int argc, char *argv[]) {
         return EXIT_FAILURE;
     }
 
+
+    // Validate the URL format
     if (!check_url_format(request.url)) {
         cleanup_request(&request);
         curl_easy_cleanup(curl);
         return EXIT_FAILURE;
     }
 
+    // If no HTTP method is specified, default to GET
     if (request.method == METHOD_NONE) {
         request.method = METHOD_GET;
     }
 
+    // Validate that payload is provided for POST, PUT, and DELETE methods
     if ((request.method == METHOD_POST || request.method == METHOD_PUT || request.method == METHOD_DELETE) &&
         (request.data == NULL || request.data[0] == '\0')) {
         fprintf(stderr, "Error: Payload is required\n");
@@ -305,13 +326,14 @@ int main(int argc, char *argv[]) {
             break;
 
         default:
-            fprintf(stderr, "Error: Invalid HTTP method\n");
+            fprintf(stderr, "Error: Invalid action\n");
             cleanup_response(&response);
             cleanup_request(&request);
             curl_easy_cleanup(curl);
             return EXIT_FAILURE;
     }
 
+    // Perform the HTTP request and handle any errors
     res = curl_easy_perform(curl);
     if (res != CURLE_OK) {
         fprintf(stderr, "curl_easy_perform() failed: %s\n", curl_easy_strerror(res));
@@ -321,14 +343,17 @@ int main(int argc, char *argv[]) {
         return EXIT_FAILURE;
     }
 
+    // Get the HTTP response code and print it along with the response data
     curl_easy_getinfo(curl, CURLINFO_RESPONSE_CODE, &http_code);
     printf("HTTP %ld\n", http_code);
     if (response.data != NULL && response.size > 0) {
         printf("%s", response.data);
     }
 
+    // Clean up allocated resources and return the appropriate exit code based on the HTTP response
     cleanup_response(&response);
     cleanup_request(&request);
     curl_easy_cleanup(curl);
+    // Return EXIT_FAILURE if the HTTP response code is 400 or greater, otherwise return EXIT_OK
     return (http_code >= 400) ? EXIT_FAILURE : EXIT_OK;
 }
