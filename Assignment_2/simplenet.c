@@ -1,5 +1,6 @@
 //Complie with gcc simplenet.c -o simplenet -Wall -lcurl 
 
+
 #include <stdio.h>
 #include <curl/curl.h>
 
@@ -7,7 +8,7 @@
 #define INIT_ERR 1
 #define REQ_ERR  2
 
-#define URL "http://localhost:8000"
+#define URL "http://google.com"
 
 int main(void) {
     CURL *curl;
@@ -24,6 +25,29 @@ int main(void) {
     curl_easy_cleanup(curl);
     } else {
         return INIT_ERR;
+    }
+
+
+        if (url) {
+        printf("URL: %s\n", url);
+    }
+
+    if (get) {
+        printf("Method: GET\n");
+    }
+
+    if (post_data) {
+        printf("Method: POST\n");
+        printf("Data: %s\n", post_data);
+    }
+
+    if (put_data) {
+        printf("Method: PUT\n");
+        printf("Data: %s\n", put_data);
+    }
+
+    if (delete) {
+        printf("Method: DELETE\n");
     }
     return OK;
 }
