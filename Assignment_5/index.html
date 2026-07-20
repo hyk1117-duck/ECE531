@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>NanoHTTPD + MongoDB</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 640px; margin: 40px auto; padding: 0 16px; color: #1a1a1a; }
+  h1 { font-size: 1.4rem; }
+  form { display: flex; gap: 8px; margin-bottom: 24px; }
+  input { flex: 1; padding: 8px 10px; border: 1px solid #ccc; border-radius: 6px; }
+  button { padding: 8px 14px; border: none; border-radius: 6px; background: #2563eb; color: white; cursor: pointer; }
+  button:hover { background: #1d4ed8; }
+  li { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid #eee; }
+  li button { background: #dc2626; padding: 4px 10px; font-size: 0.8rem; }
+  li button:hover { background: #b91c1c; }
+  ul { list-style: none; padding: 0; }
+  #status { color: #666; font-size: 0.85rem; }
+</style>
+</head>
+<body>
+  <h1>Items (stored in MongoDB)</h1>
+
+  <form id="add-form">
+    <input id="name-input" placeholder="Name" required>
+    <input id="value-input" placeholder="Value" required>
+    <button type="submit">Push</button>
+  </form>
+
+  <p id="status">Loading…</p>
+  <ul id="list"></ul>
+
+<script>
+const API = "/api/items";
+
+async function pullItems() {
+  const status = document.getElementById("status");
+  status.textContent = "Loading…";
+  const res = await fetch(API);
+  const items = await res.json();
+  const list = document.getElementById("list");
+  list.innerHTML = "";
+  items.forEach(item => {
+    const li = document.createElement("li");
+    li.innerHTML = `<span>${item.name}: ${item.value}</span>`;
+    const del = document.createElement("button");
+    del.textContent = "Delete";
+    del.onclick = () => deleteItem(item.id);
+    li.appendChild(del);
+    list.appendChild(li);
+  });
+  status.textContent = `${items.length} item(s)`;
+}
+
+async function pushItem(name, value) {
+  await fetch(API, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ name, value })
+  });
+  await pullItems();
+}
+
+async function deleteItem(id) {
+  await fetch(`${API}/${id}`, { method: "DELETE" });
+  await pullItems();
+}
+
+document.getElementById("add-form").addEventListener("submit", (e) => {
+  e.preventDefault();
+  const name = document.getElementById("name-input").value;
+  const value = document.getElementById("value-input").value;
+  pushItem(name, value);
+  e.target.reset();
+});
+
+pullItems();
+</script>
+</body>
+</html>
