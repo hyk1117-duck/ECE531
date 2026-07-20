@@ -18,6 +18,7 @@ import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Map;
 
+
 /**
  * Minimal REST CRUD server over MongoDB, plus a static file server for the
  * frontend in src/main/resources/public/.
