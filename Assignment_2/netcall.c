@@ -1,6 +1,4 @@
-//gcc -o hw netcall.c -lcurl // compling for x86_64 architecture
-// arm-buildroot-linux-gnueabi-gcc -Wall netcall.c -o netcall -lcurl // compling for arm architecture
-
+//output/host/bin/arm-buildroot-linux-gnueabi-gcc -Wall netcall.c -o netcall -lcurl
 
 //including required header files
 #include <stdio.h>

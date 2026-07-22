@@ -1,8 +1,5 @@
-/*
- * add_entry.c
- * Creates ten new entries in the database by sending PUT requests to the server, then fetches each of them via GET.
- * gcc add_entry.c -o add_entry -lcurl
- */
+
+//gcc app.c -o app -lcurl
 
 #include <stdio.h>
 #include <stdlib.h>
