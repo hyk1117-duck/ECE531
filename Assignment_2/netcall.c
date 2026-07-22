@@ -114,6 +114,7 @@ static int check_url_format(const char *url) {
     const char *host_start = url;
     const char *host_end;
 
+    // Check if the URL starts with "http://", "https://", or "localhost"
     if (strncmp(url, "http://", 7) == 0) {
         host_start = url + 7;
     } else if (strncmp(url, "https://", 8) == 0) {
@@ -125,25 +126,27 @@ static int check_url_format(const char *url) {
         return 0;
     }
 
+    // Check if the host part is empty
     if (*host_start == '\0') {
         fprintf(stderr, "Error: Invalid URL format\n");
         return 0;
     }
 
+    // Find the end of the host part (before ':' or '/')
     host_end = host_start;
     while (*host_end != '\0' && *host_end != ':' && *host_end != '/') {
         host_end++;
     }
-
+    // Check if the host part is empty
     if (host_end == host_start) {
         fprintf(stderr, "Error: Invalid URL format\n");
         return 0;
     }
-
+    // If a port is specified, check if it's a valid number
     if (*host_end == ':') {
         const char *port_start = host_end + 1;
         const char *port_end = port_start;
-
+        // Check if the port part is empty or contains non-digit characters
         while (*port_end != '\0' && *port_end != '/') {
             if (*port_end < '0' || *port_end > '9') {
                 fprintf(stderr, "Error: Invalid port number\n");
@@ -151,7 +154,7 @@ static int check_url_format(const char *url) {
             }
             port_end++;
         }
-
+        // Check if the port part is empty
         if (port_end == port_start) {
             fprintf(stderr, "Error: Invalid port number\n");
             return 0;
@@ -298,11 +301,13 @@ int main(int argc, char *argv[]) {
         return EXIT_FAILURE;
     }
 
+    // Set the URL, follow redirects, and specify the write callback function for the response
     curl_easy_setopt(curl, CURLOPT_URL, request.url);
     curl_easy_setopt(curl, CURLOPT_FOLLOWLOCATION, 1L);
     curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, write_callback);
     curl_easy_setopt(curl, CURLOPT_WRITEDATA, &response);
 
+    // Set the appropriate HTTP method and payload based on the request structure
     switch (request.method) {
         case METHOD_POST:
             curl_easy_setopt(curl, CURLOPT_POST, 1L);
