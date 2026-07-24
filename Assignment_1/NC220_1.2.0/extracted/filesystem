@@ -1,0 +1,695 @@
+.
+├── filesystem
+├── jffs2-root
+│   ├── bin
+│   │   ├── filecut
+│   │   ├── img_built
+│   │   ├── logCtrl
+│   │   ├── pppd
+│   │   ├── rinetd
+│   │   ├── ssmtp
+│   │   ├── tp_mp_server
+│   │   ├── watch_adalarm.sh
+│   │   ├── watch_lighttpd.sh
+│   │   └── wput
+│   ├── config
+│   │   ├── conf.d
+│   │   │   ├── debug.conf
+│   │   │   ├── dirlisting.conf
+│   │   │   ├── fastcgi.conf
+│   │   │   └── mime.conf
+│   │   ├── ipcamera
+│   │   │   ├── Region
+│   │   │   ├── Wireless.conf
+│   │   │   └── workmod.conf
+│   │   ├── lighttpd.conf
+│   │   ├── modules.conf
+│   │   ├── RT2860AP.dat
+│   │   ├── SingleSKU_CE.dat
+│   │   ├── SingleSKU.dat
+│   │   ├── SingleSKU_FCC.dat
+│   │   ├── syslog.conf
+│   │   └── workmod_define.conf
+│   ├── etc
+│   │   ├── 2048_newroot.cer
+│   │   ├── fstab
+│   │   ├── group
+│   │   ├── passwd
+│   │   ├── profile
+│   │   └── services
+│   ├── lib
+│   │   ├── kernel
+│   │   │   ├── crypto
+│   │   │   │   ├── aes_generic.ko
+│   │   │   │   └── ansi_cprng.ko
+│   │   │   └── drivers
+│   │   │       └── net
+│   │   │           └── wireless
+│   │   │               └── rt2860v2_ap
+│   │   │                   └── rt2860v2_ap.ko
+│   │   ├── libalarm.so
+│   │   ├── libalarm.so.extracted
+│   │   │   ├── 1CDF0
+│   │   │   │   └── pem.crt
+│   │   │   └── 1D4B4
+│   │   │       └── pem.crt
+│   │   ├── libcloud.so.2
+│   │   ├── libcrypto.so.0.9.8
+│   │   ├── libevent-2.0.so.5
+│   │   ├── libevent_openssl-2.0.so.5
+│   │   ├── libevent_pthreads-2.0.so.5
+│   │   ├── libfcgi.so.0
+│   │   ├── libfdk-aac.so.0
+│   │   ├── libjrpc.so
+│   │   ├── libminiupnpc.so.9
+│   │   ├── libnss_mdns-0.2.so
+│   │   ├── libssl.so.0.9.8
+│   │   ├── libstunclient.so
+│   │   ├── libudt.so
+│   │   ├── libupnpjrpc.so
+│   │   ├── mod_access.so
+│   │   ├── mod_dirlisting.so
+│   │   ├── mod_fastcgi.so
+│   │   ├── mod_indexfile.so
+│   │   └── mod_staticfile.so
+│   ├── qemu-mipsel
+│   ├── sbin
+│   │   ├── ad_alarm
+│   │   ├── autoupgradenotice
+│   │   ├── autoupgrade.sh
+│   │   ├── datetimed
+│   │   ├── ftpnew_alarm
+│   │   ├── gpld
+│   │   ├── ipcamera
+│   │   ├── lighttpd
+│   │   ├── mdnew_alarm
+│   │   ├── mDNSResponderPosix
+│   │   ├── motion -> mdnew_alarm
+│   │   ├── onvif
+│   │   ├── p2pd
+│   │   ├── p2pd.extracted
+│   │   │   ├── 213E0
+│   │   │   │   └── pem.crt
+│   │   │   └── 21AA4
+│   │   │       └── pem.crt
+│   │   ├── relayd
+│   │   ├── relayd.extracted
+│   │   │   ├── 1B730
+│   │   │   │   └── pem.crt
+│   │   │   └── 1BDF4
+│   │   │       └── pem.crt
+│   │   ├── save_last_time.sh
+│   │   ├── smtpnew_alarm
+│   │   ├── ssl-tunnel
+│   │   ├── ssl-tunnel.extracted
+│   │   │   └── 829C
+│   │   │       └── pem.crt
+│   │   ├── streamd
+│   │   ├── syslogd
+│   │   ├── upgrader
+│   │   ├── upnp
+│   │   └── watch_upgrade.sh
+│   ├── usr
+│   │   └── local
+│   │       └── config
+│   │           └── ipcamera
+│   │               ├── ApMac
+│   │               └── TpHeader
+│   └── www
+│       ├── css
+│       │   ├── cloud.css
+│       │   ├── common
+│       │   │   ├── header.css
+│       │   │   ├── login.css
+│       │   │   ├── main.css
+│       │   │   ├── nav_left.css
+│       │   │   └── reset.css
+│       │   ├── dateandtime.css
+│       │   ├── live_view.css
+│       │   ├── log.css
+│       │   ├── motion.css
+│       │   ├── notification.css
+│       │   ├── plug.css
+│       │   ├── sound.css
+│       │   ├── sysmanager.css
+│       │   ├── videosetting.css
+│       │   ├── wireless.css
+│       │   └── wirelessEx.css
+│       ├── data
+│       │   └── area.json
+│       ├── favicon.ico
+│       ├── favicon.png
+│       ├── guest.html
+│       ├── i18n
+│       │   ├── en.js
+│       │   ├── lang_ch.js
+│       │   └── lang_en.js
+│       ├── images
+│       │   ├── 220.png
+│       │   ├── asidebackground.png
+│       │   ├── asideblue.png
+│       │   ├── button1px.png
+│       │   ├── button-active.png
+│       │   ├── button-disable.png
+│       │   ├── button-hover.png
+│       │   ├── button.png
+│       │   ├── file.png
+│       │   ├── img.png
+│       │   ├── loading.gif
+│       │   ├── loadings.gif
+│       │   ├── other.png
+│       │   ├── photo.png
+│       │   ├── rotate-green.png
+│       │   ├── rotate-no-background.png
+│       │   ├── rotate-white.png
+│       │   ├── tpcamera_tips.png
+│       │   ├── tp-link_logo.png
+│       │   └── video.png
+│       ├── index.html
+│       ├── js
+│       │   ├── account.js
+│       │   ├── cloud_setting.js
+│       │   ├── common
+│       │   │   ├── common.js
+│       │   │   ├── conf.js
+│       │   │   ├── data.js
+│       │   │   └── plug.js
+│       │   ├── date.js
+│       │   ├── dayandtime.js
+│       │   ├── ddns.js
+│       │   ├── index_guest.js
+│       │   ├── index.js
+│       │   ├── led.js
+│       │   ├── live_view.js
+│       │   ├── login.js
+│       │   ├── management.js
+│       │   ├── motion_detection.js
+│       │   ├── network.js
+│       │   ├── notification.js
+│       │   ├── plug.js
+│       │   ├── sd.js
+│       │   ├── sound_detection.js
+│       │   ├── status.js
+│       │   ├── system_log.js
+│       │   ├── video.js
+│       │   ├── videosetting.js
+│       │   ├── wireless_connection.js
+│       │   └── wireless_extender.js
+│       ├── JSON
+│       │   ├── gettimesetting.json
+│       │   └── settimesetting.json
+│       ├── lib
+│       │   ├── jqueryX.js
+│       │   └── raphael-min.js
+│       ├── login.html
+│       ├── page
+│       │   ├── content_account.htm
+│       │   ├── content_cloudSetting.htm
+│       │   ├── content_dateTime.htm
+│       │   ├── content_ddns.htm
+│       │   ├── content_led.htm
+│       │   ├── content_live_view.htm
+│       │   ├── content_motionDetect.htm
+│       │   ├── content_navigator.htm
+│       │   ├── content_network.htm
+│       │   ├── content_notification.htm
+│       │   ├── content_sd.htm
+│       │   ├── content_soundDetect.htm
+│       │   ├── content_status.htm
+│       │   ├── content_syslog.htm
+│       │   ├── content_sysmanage.htm
+│       │   ├── content_videosetting.htm
+│       │   ├── content_wirelessConnect.htm
+│       │   ├── content_wirelessEx.htm
+│       │   └── nav_left.htm
+│       └── widget
+│           ├── canvas.js
+│           ├── scrollbar.css
+│           ├── scrollbar.js
+│           ├── select.css
+│           ├── select.js
+│           ├── yscroll.js
+│           └── ytable.js
+├── linux-kernel
+│   ├── bin
+│   │   ├── addgroup -> busybox
+│   │   ├── adduser -> busybox
+│   │   ├── adjtimex
+│   │   ├── ash -> busybox
+│   │   ├── ated
+│   │   ├── busybox
+│   │   ├── cat -> busybox
+│   │   ├── chmod -> busybox
+│   │   ├── cp -> busybox
+│   │   ├── date -> busybox
+│   │   ├── df -> busybox
+│   │   ├── dmesg -> busybox
+│   │   ├── echo -> busybox
+│   │   ├── gpio
+│   │   ├── grep -> busybox
+│   │   ├── hostname -> busybox
+│   │   ├── iwconfig
+│   │   ├── iwpriv
+│   │   ├── kill -> busybox
+│   │   ├── ln -> busybox
+│   │   ├── login -> busybox
+│   │   ├── ls -> busybox
+│   │   ├── mkdir -> busybox
+│   │   ├── mkfs.jffs2
+│   │   ├── mknod -> busybox
+│   │   ├── mount -> busybox
+│   │   ├── mv -> busybox
+│   │   ├── netstat -> busybox
+│   │   ├── nice -> busybox
+│   │   ├── ntpclient
+│   │   ├── nvram_daemon
+│   │   ├── nvram_get -> ralink_init
+│   │   ├── nvram_set -> ralink_init
+│   │   ├── ping -> busybox
+│   │   ├── ps -> busybox
+│   │   ├── ralink_init
+│   │   ├── reg
+│   │   ├── rm -> busybox
+│   │   ├── rmdir -> busybox
+│   │   ├── sed -> busybox
+│   │   ├── sh -> busybox
+│   │   ├── sleep -> busybox
+│   │   ├── touch -> busybox
+│   │   └── umount -> busybox
+│   ├── dev
+│   │   ├── ac0
+│   │   ├── acl0
+│   │   ├── cls0
+│   │   ├── console
+│   │   ├── dsp
+│   │   ├── flash0
+│   │   ├── gpio
+│   │   ├── hwnat0
+│   │   ├── i2cM0
+│   │   ├── i2s0
+│   │   ├── kmem
+│   │   ├── mem
+│   │   ├── mixer
+│   │   ├── motor
+│   │   ├── mtd0
+│   │   ├── mtd0ro
+│   │   ├── mtd1
+│   │   ├── mtd1ro
+│   │   ├── mtd2
+│   │   ├── mtd2ro
+│   │   ├── mtd3
+│   │   ├── mtd3ro
+│   │   ├── mtd4
+│   │   ├── mtd4ro
+│   │   ├── mtd5
+│   │   ├── mtd5ro
+│   │   ├── mtd6
+│   │   ├── mtd6ro
+│   │   ├── mtd7
+│   │   ├── mtd7ro
+│   │   ├── mtdblock0
+│   │   ├── mtdblock1
+│   │   ├── mtdblock2
+│   │   ├── mtdblock3
+│   │   ├── mtdblock4
+│   │   ├── mtdblock5
+│   │   ├── mtdblock6
+│   │   ├── mtdblock7
+│   │   ├── mtr0
+│   │   ├── null
+│   │   ├── nvram
+│   │   ├── pcm0
+│   │   ├── ppp
+│   │   ├── ptmx
+│   │   ├── pts
+│   │   │   ├── 0
+│   │   │   ├── 1
+│   │   │   ├── 2
+│   │   │   └── 3
+│   │   ├── ptyp0
+│   │   ├── ptyp1
+│   │   ├── ram
+│   │   ├── ram0
+│   │   ├── ram1
+│   │   ├── ram2
+│   │   ├── ram3
+│   │   ├── random
+│   │   ├── rdm0
+│   │   ├── snd
+│   │   │   ├── controlC0
+│   │   │   ├── pcmC0D0c
+│   │   │   └── pcmC0D0p
+│   │   ├── spiS0
+│   │   ├── swnat0
+│   │   ├── ttyp0
+│   │   ├── ttyp1
+│   │   ├── ttyS0
+│   │   ├── ttyS1
+│   │   ├── urandom
+│   │   ├── video0
+│   │   ├── video1
+│   │   └── watchdog
+│   ├── etc -> /usr/local/etc
+│   ├── etc_ro
+│   │   ├── dhcp
+│   │   │   └── simple.script
+│   │   ├── fstab
+│   │   ├── inittab
+│   │   ├── motd
+│   │   ├── profile
+│   │   ├── rcS
+│   │   └── wlan
+│   │       └── MT7620_AP_2T2R-4L_V15.BIN
+│   ├── init -> bin/busybox
+│   ├── lib
+│   │   ├── ld-uClibc-0.9.28.so
+│   │   ├── ld-uClibc.so.0 -> ld-uClibc-0.9.28.so
+│   │   ├── libalarm.so
+│   │   ├── libalarm.so.extracted
+│   │   │   ├── 1CDF0
+│   │   │   │   └── pem.crt
+│   │   │   └── 1D4B4
+│   │   │       └── pem.crt
+│   │   ├── libcloud.so.2
+│   │   ├── libcrypt-0.9.28.so
+│   │   ├── libcrypto.so.0.9.8
+│   │   ├── libcrypt.so -> libcrypt-0.9.28.so
+│   │   ├── libcrypt.so.0 -> libcrypt-0.9.28.so
+│   │   ├── libc.so -> libuClibc-0.9.28.so
+│   │   ├── libc.so.0 -> libuClibc-0.9.28.so
+│   │   ├── libdl-0.9.28.so
+│   │   ├── libdl.so -> libdl-0.9.28.so
+│   │   ├── libdl.so.0 -> libdl-0.9.28.so
+│   │   ├── libevent-2.0.so.5
+│   │   ├── libevent_openssl-2.0.so.5
+│   │   ├── libevent_pthreads-2.0.so.5
+│   │   ├── libfcgi.so.0
+│   │   ├── libfdk-aac.so.0
+│   │   ├── libjrpc.so
+│   │   ├── libm-0.9.28.so
+│   │   ├── libminiupnpc.so.9
+│   │   ├── libm.so -> libm-0.9.28.so
+│   │   ├── libm.so.0 -> libm-0.9.28.so
+│   │   ├── libnsl-0.9.28.so
+│   │   ├── libnsl.so -> libnsl-0.9.28.so
+│   │   ├── libnsl.so.0 -> libnsl-0.9.28.so
+│   │   ├── libnss_mdns-0.2.so
+│   │   ├── libnvram-0.9.28.so
+│   │   ├── libnvram.so -> libnvram-0.9.28.so
+│   │   ├── libnvram.so.0 -> libnvram-0.9.28.so
+│   │   ├── libpthread-0.9.28.so
+│   │   ├── libpthread.so -> libpthread-0.9.28.so
+│   │   ├── libpthread.so.0 -> libpthread-0.9.28.so
+│   │   ├── libresolv-0.9.28.so
+│   │   ├── libresolv.so -> libresolv-0.9.28.so
+│   │   ├── libresolv.so.0 -> libresolv-0.9.28.so
+│   │   ├── librt-0.9.28.so
+│   │   ├── librt.so -> librt-0.9.28.so
+│   │   ├── librt.so.0 -> librt-0.9.28.so
+│   │   ├── libssl.so.0.9.8
+│   │   ├── libstunclient.so
+│   │   ├── libuClibc-0.9.28.so
+│   │   ├── libudt.so
+│   │   ├── libupnpjrpc.so
+│   │   ├── libusb.so -> libusb.so.0.1.12
+│   │   ├── libusb.so.0.1.12
+│   │   ├── libutil-0.9.28.so
+│   │   ├── libutil.so -> libutil-0.9.28.so
+│   │   ├── libutil.so.0 -> libutil-0.9.28.so
+│   │   ├── libz-1.2.3.so
+│   │   ├── libz.so -> libz-1.2.3.so
+│   │   ├── libz.so.1 -> libz-1.2.3.so
+│   │   ├── mod_access.so
+│   │   ├── mod_dirlisting.so
+│   │   ├── mod_fastcgi.so
+│   │   ├── mod_indexfile.so
+│   │   └── mod_staticfile.so
+│   ├── qemu-mipsel
+│   ├── sbin
+│   │   ├── arp
+│   │   ├── getty
+│   │   ├── halt
+│   │   ├── ifconfig
+│   │   ├── init
+│   │   ├── insmod
+│   │   ├── ipcamera
+│   │   ├── lsmod
+│   │   ├── mdev
+│   │   ├── poweroff
+│   │   ├── reboot
+│   │   ├── rmmod
+│   │   ├── route
+│   │   ├── sysctl
+│   │   └── udhcpc
+│   ├── usr
+│   │   ├── bin
+│   │   │   ├── [
+│   │   │   ├── [[
+│   │   │   ├── awk
+│   │   │   ├── expr
+│   │   │   ├── find
+│   │   │   ├── free
+│   │   │   ├── killall
+│   │   │   ├── passwd
+│   │   │   ├── pkill
+│   │   │   ├── seq
+│   │   │   ├── test
+│   │   │   ├── time
+│   │   │   ├── top
+│   │   │   ├── wc
+│   │   │   ├── wget
+│   │   │   └── xargs
+│   │   ├── local
+│   │   │   ├── bin
+│   │   │   │   ├── filecut
+│   │   │   │   ├── img_built
+│   │   │   │   ├── logCtrl
+│   │   │   │   ├── pppd
+│   │   │   │   ├── rinetd
+│   │   │   │   ├── ssmtp
+│   │   │   │   ├── tp_mp_server
+│   │   │   │   ├── watch_adalarm.sh
+│   │   │   │   ├── watch_lighttpd.sh
+│   │   │   │   └── wput
+│   │   │   ├── config
+│   │   │   │   ├── conf.d
+│   │   │   │   │   ├── debug.conf
+│   │   │   │   │   ├── dirlisting.conf
+│   │   │   │   │   ├── fastcgi.conf
+│   │   │   │   │   └── mime.conf
+│   │   │   │   ├── ipcamera
+│   │   │   │   │   ├── ApMac
+│   │   │   │   │   ├── Region
+│   │   │   │   │   ├── TpHeader
+│   │   │   │   │   ├── Wireless.conf
+│   │   │   │   │   └── workmod.conf
+│   │   │   │   ├── lighttpd.conf
+│   │   │   │   ├── modules.conf
+│   │   │   │   ├── RT2860AP.dat
+│   │   │   │   ├── SingleSKU_CE.dat
+│   │   │   │   ├── SingleSKU.dat
+│   │   │   │   ├── SingleSKU_FCC.dat
+│   │   │   │   ├── syslog.conf
+│   │   │   │   └── workmod_define.conf
+│   │   │   ├── etc
+│   │   │   │   ├── 2048_newroot.cer
+│   │   │   │   ├── fstab
+│   │   │   │   ├── group
+│   │   │   │   ├── passwd
+│   │   │   │   ├── profile
+│   │   │   │   └── services
+│   │   │   ├── lib
+│   │   │   │   ├── kernel
+│   │   │   │   │   ├── crypto
+│   │   │   │   │   │   ├── aes_generic.ko
+│   │   │   │   │   │   └── ansi_cprng.ko
+│   │   │   │   │   └── drivers
+│   │   │   │   │       └── net
+│   │   │   │   │           └── wireless
+│   │   │   │   │               └── rt2860v2_ap
+│   │   │   │   │                   └── rt2860v2_ap.ko
+│   │   │   │   ├── libalarm.so
+│   │   │   │   ├── libalarm.so.extracted
+│   │   │   │   │   ├── 1CDF0
+│   │   │   │   │   │   └── pem.crt
+│   │   │   │   │   └── 1D4B4
+│   │   │   │   │       └── pem.crt
+│   │   │   │   ├── libcloud.so.2
+│   │   │   │   ├── libcrypto.so.0.9.8
+│   │   │   │   ├── libevent-2.0.so.5
+│   │   │   │   ├── libevent_openssl-2.0.so.5
+│   │   │   │   ├── libevent_pthreads-2.0.so.5
+│   │   │   │   ├── libfcgi.so.0
+│   │   │   │   ├── libfdk-aac.so.0
+│   │   │   │   ├── libjrpc.so
+│   │   │   │   ├── libminiupnpc.so.9
+│   │   │   │   ├── libnss_mdns-0.2.so
+│   │   │   │   ├── libssl.so.0.9.8
+│   │   │   │   ├── libstunclient.so
+│   │   │   │   ├── libudt.so
+│   │   │   │   ├── libupnpjrpc.so
+│   │   │   │   ├── mod_access.so
+│   │   │   │   ├── mod_dirlisting.so
+│   │   │   │   ├── mod_fastcgi.so
+│   │   │   │   ├── mod_indexfile.so
+│   │   │   │   └── mod_staticfile.so
+│   │   │   ├── sbin
+│   │   │   │   ├── ad_alarm
+│   │   │   │   ├── autoupgradenotice
+│   │   │   │   ├── autoupgrade.sh
+│   │   │   │   ├── datetimed
+│   │   │   │   ├── ftpnew_alarm
+│   │   │   │   ├── gpld
+│   │   │   │   ├── ipcamera
+│   │   │   │   ├── lighttpd
+│   │   │   │   ├── mdnew_alarm
+│   │   │   │   ├── mDNSResponderPosix
+│   │   │   │   ├── motion -> mdnew_alarm
+│   │   │   │   ├── onvif
+│   │   │   │   ├── p2pd
+│   │   │   │   ├── p2pd.extracted
+│   │   │   │   │   ├── 213E0
+│   │   │   │   │   │   └── pem.crt
+│   │   │   │   │   └── 21AA4
+│   │   │   │   │       └── pem.crt
+│   │   │   │   ├── relayd
+│   │   │   │   ├── relayd.extracted
+│   │   │   │   │   ├── 1B730
+│   │   │   │   │   │   └── pem.crt
+│   │   │   │   │   └── 1BDF4
+│   │   │   │   │       └── pem.crt
+│   │   │   │   ├── save_last_time.sh
+│   │   │   │   ├── smtpnew_alarm
+│   │   │   │   ├── ssl-tunnel
+│   │   │   │   ├── ssl-tunnel.extracted
+│   │   │   │   │   └── 829C
+│   │   │   │   │       └── pem.crt
+│   │   │   │   ├── streamd
+│   │   │   │   ├── syslogd
+│   │   │   │   ├── upgrader
+│   │   │   │   ├── upnp
+│   │   │   │   └── watch_upgrade.sh
+│   │   │   └── www
+│   │   │       ├── css
+│   │   │       │   ├── cloud.css
+│   │   │       │   ├── common
+│   │   │       │   │   ├── header.css
+│   │   │       │   │   ├── login.css
+│   │   │       │   │   ├── main.css
+│   │   │       │   │   ├── nav_left.css
+│   │   │       │   │   └── reset.css
+│   │   │       │   ├── dateandtime.css
+│   │   │       │   ├── live_view.css
+│   │   │       │   ├── log.css
+│   │   │       │   ├── motion.css
+│   │   │       │   ├── notification.css
+│   │   │       │   ├── plug.css
+│   │   │       │   ├── sound.css
+│   │   │       │   ├── sysmanager.css
+│   │   │       │   ├── videosetting.css
+│   │   │       │   ├── wireless.css
+│   │   │       │   └── wirelessEx.css
+│   │   │       ├── data
+│   │   │       │   └── area.json
+│   │   │       ├── favicon.ico
+│   │   │       ├── favicon.png
+│   │   │       ├── guest.html
+│   │   │       ├── i18n
+│   │   │       │   ├── en.js
+│   │   │       │   ├── lang_ch.js
+│   │   │       │   └── lang_en.js
+│   │   │       ├── images
+│   │   │       │   ├── 220.png
+│   │   │       │   ├── asidebackground.png
+│   │   │       │   ├── asideblue.png
+│   │   │       │   ├── button1px.png
+│   │   │       │   ├── button-active.png
+│   │   │       │   ├── button-disable.png
+│   │   │       │   ├── button-hover.png
+│   │   │       │   ├── button.png
+│   │   │       │   ├── file.png
+│   │   │       │   ├── img.png
+│   │   │       │   ├── loading.gif
+│   │   │       │   ├── loadings.gif
+│   │   │       │   ├── other.png
+│   │   │       │   ├── photo.png
+│   │   │       │   ├── rotate-green.png
+│   │   │       │   ├── rotate-no-background.png
+│   │   │       │   ├── rotate-white.png
+│   │   │       │   ├── tpcamera_tips.png
+│   │   │       │   ├── tp-link_logo.png
+│   │   │       │   └── video.png
+│   │   │       ├── index.html
+│   │   │       ├── js
+│   │   │       │   ├── account.js
+│   │   │       │   ├── cloud_setting.js
+│   │   │       │   ├── common
+│   │   │       │   │   ├── common.js
+│   │   │       │   │   ├── conf.js
+│   │   │       │   │   ├── data.js
+│   │   │       │   │   └── plug.js
+│   │   │       │   ├── date.js
+│   │   │       │   ├── dayandtime.js
+│   │   │       │   ├── ddns.js
+│   │   │       │   ├── index_guest.js
+│   │   │       │   ├── index.js
+│   │   │       │   ├── led.js
+│   │   │       │   ├── live_view.js
+│   │   │       │   ├── login.js
+│   │   │       │   ├── management.js
+│   │   │       │   ├── motion_detection.js
+│   │   │       │   ├── network.js
+│   │   │       │   ├── notification.js
+│   │   │       │   ├── plug.js
+│   │   │       │   ├── sd.js
+│   │   │       │   ├── sound_detection.js
+│   │   │       │   ├── status.js
+│   │   │       │   ├── system_log.js
+│   │   │       │   ├── video.js
+│   │   │       │   ├── videosetting.js
+│   │   │       │   ├── wireless_connection.js
+│   │   │       │   └── wireless_extender.js
+│   │   │       ├── JSON
+│   │   │       │   ├── gettimesetting.json
+│   │   │       │   └── settimesetting.json
+│   │   │       ├── lib
+│   │   │       │   ├── jqueryX.js
+│   │   │       │   └── raphael-min.js
+│   │   │       ├── login.html
+│   │   │       ├── page
+│   │   │       │   ├── content_account.htm
+│   │   │       │   ├── content_cloudSetting.htm
+│   │   │       │   ├── content_dateTime.htm
+│   │   │       │   ├── content_ddns.htm
+│   │   │       │   ├── content_led.htm
+│   │   │       │   ├── content_live_view.htm
+│   │   │       │   ├── content_motionDetect.htm
+│   │   │       │   ├── content_navigator.htm
+│   │   │       │   ├── content_network.htm
+│   │   │       │   ├── content_notification.htm
+│   │   │       │   ├── content_sd.htm
+│   │   │       │   ├── content_soundDetect.htm
+│   │   │       │   ├── content_status.htm
+│   │   │       │   ├── content_syslog.htm
+│   │   │       │   ├── content_sysmanage.htm
+│   │   │       │   ├── content_videosetting.htm
+│   │   │       │   ├── content_wirelessConnect.htm
+│   │   │       │   ├── content_wirelessEx.htm
+│   │   │       │   └── nav_left.htm
+│   │   │       └── widget
+│   │   │           ├── canvas.js
+│   │   │           ├── scrollbar.css
+│   │   │           ├── scrollbar.js
+│   │   │           ├── select.css
+│   │   │           ├── select.js
+│   │   │           ├── yscroll.js
+│   │   │           └── ytable.js
+│   │   └── sbin
+│   │       └── brctl
+│   └── var
+│       ├── log
+│       └── run
+│           └── ipcamera.pid
+└── NC220_1.2.0_Build_170516_Rel.B4AC0D_2017-05-16_16.00.32.bin -> /home/hyk1117/Class/Assignment_1/NC220_1.2.0/NC220_1.2.0_Build_170516_Rel.B4AC0D_2017-05-16_16.00.32.bin
+
+99 directories, 594 files

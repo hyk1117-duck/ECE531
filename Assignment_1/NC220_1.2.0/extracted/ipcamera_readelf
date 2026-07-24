@@ -1,0 +1,36 @@
+
+Dynamic section at offset 0x120 contains 33 entries:
+  Tag        Type                         Name/Value
+ 0x00000001 (NEEDED)                     Shared library: [libevent-2.0.so.5]
+ 0x00000001 (NEEDED)                     Shared library: [libcloud.so.2]
+ 0x00000001 (NEEDED)                     Shared library: [libalarm.so]
+ 0x00000001 (NEEDED)                     Shared library: [libstunclient.so]
+ 0x00000001 (NEEDED)                     Shared library: [libpthread.so.0]
+ 0x00000001 (NEEDED)                     Shared library: [librt.so.0]
+ 0x00000001 (NEEDED)                     Shared library: [libm.so.0]
+ 0x00000001 (NEEDED)                     Shared library: [libfcgi.so.0]
+ 0x00000001 (NEEDED)                     Shared library: [libcrypto.so.0.9.8]
+ 0x00000001 (NEEDED)                     Shared library: [libssl.so.0.9.8]
+ 0x00000001 (NEEDED)                     Shared library: [libc.so.0]
+ 0x00000001 (NEEDED)                     Shared library: [libevent_pthreads-2.0.so.5]
+ 0x0000000c (INIT)                       0x40f7fc
+ 0x0000000d (FINI)                       0x52ff70
+ 0x00000004 (HASH)                       0x400250
+ 0x00000005 (STRTAB)                     0x408d44
+ 0x00000006 (SYMTAB)                     0x402b04
+ 0x0000000a (STRSZ)                      27295 (bytes)
+ 0x0000000b (SYMENT)                     16 (bytes)
+ 0x70000016 (MIPS_RLD_MAP)               0x593530
+ 0x00000015 (DEBUG)                      0x0
+ 0x00000003 (PLTGOT)                     0x593540
+ 0x00000011 (REL)                        0x40f7e4
+ 0x00000012 (RELSZ)                      24 (bytes)
+ 0x00000013 (RELENT)                     8 (bytes)
+ 0x70000001 (MIPS_RLD_VERSION)           1
+ 0x70000005 (MIPS_FLAGS)                 NOTPOT
+ 0x70000006 (MIPS_BASE_ADDRESS)          0x400000
+ 0x7000000a (MIPS_LOCAL_GOTNO)           30
+ 0x70000011 (MIPS_SYMTABNO)              1572
+ 0x70000012 (MIPS_UNREFEXTNO)            25
+ 0x70000013 (MIPS_GOTSYM)                0x17
+ 0x00000000 (NULL)                       0x0

@@ -1,0 +1,34 @@
+
+Dynamic section at offset 0x120 contains 31 entries:
+  Tag        Type                         Name/Value
+ 0x00000001 (NEEDED)                     Shared library: [libevent-2.0.so.5]
+ 0x00000001 (NEEDED)                     Shared library: [libcloud.so.2]
+ 0x00000001 (NEEDED)                     Shared library: [libstunclient.so]
+ 0x00000001 (NEEDED)                     Shared library: [libpthread.so.0]
+ 0x00000001 (NEEDED)                     Shared library: [librt.so.0]
+ 0x00000001 (NEEDED)                     Shared library: [libm.so.0]
+ 0x00000001 (NEEDED)                     Shared library: [libfcgi.so.0]
+ 0x00000001 (NEEDED)                     Shared library: [libcrypto.so.0.9.8]
+ 0x00000001 (NEEDED)                     Shared library: [libssl.so.0.9.8]
+ 0x00000001 (NEEDED)                     Shared library: [libc.so.0]
+ 0x0000000c (INIT)                       0x40f4f0
+ 0x0000000d (FINI)                       0x548040
+ 0x00000004 (HASH)                       0x400240
+ 0x00000005 (STRTAB)                     0x408cf8
+ 0x00000006 (SYMTAB)                     0x402ae8
+ 0x0000000a (STRSZ)                      26557 (bytes)
+ 0x0000000b (SYMENT)                     16 (bytes)
+ 0x70000016 (MIPS_RLD_MAP)               0x5a7b30
+ 0x00000015 (DEBUG)                      0x0
+ 0x00000003 (PLTGOT)                     0x5a7b40
+ 0x00000011 (REL)                        0x40f4b8
+ 0x00000012 (RELSZ)                      56 (bytes)
+ 0x00000013 (RELENT)                     8 (bytes)
+ 0x70000001 (MIPS_RLD_VERSION)           1
+ 0x70000005 (MIPS_FLAGS)                 NOTPOT
+ 0x70000006 (MIPS_BASE_ADDRESS)          0x400000
+ 0x7000000a (MIPS_LOCAL_GOTNO)           31
+ 0x70000011 (MIPS_SYMTABNO)              1569
+ 0x70000012 (MIPS_UNREFEXTNO)            25
+ 0x70000013 (MIPS_GOTSYM)                0x1b
+ 0x00000000 (NULL)                       0x0
