@@ -3,9 +3,10 @@
 #include <string.h>
 #include <stdint.h>
 #include <time.h>
+#include <unistd.h>
 #include <curl/curl.h>
 #include <cjson/cJSON.h>
-#include <unistd.h>
+
 
 #define API_BASE "http://ec2-18-220-131-54.us-east-2.compute.amazonaws.com:8080"
 #define DATA_ENDPOINT API_BASE "/data"
@@ -13,6 +14,7 @@
 #define STATUS_FILE_PATH "/tmp/status"
 #define STATUS_ID      "6a6570674d6b1510bc5c6dad"
 #define TEMPERATURE_ID "6a6570674d6b1510bc5c6dae"
+
 #define POLL_INTERVAL_SECONDS 10
 
 typedef struct {
@@ -31,6 +33,35 @@ typedef struct {
     size_t size;
 } response_buffer_t;
 
+char* allocateBuffer(FILE* file, long* outFileSize) {
+    // Move to the end of the file to determine its size
+    fseek(file, 0, SEEK_END);
+    long size = ftell(file);
+    rewind(file); // Return file pointer to the beginning
+
+    // Pass the file size back to the caller via pointer
+    if (outFileSize != NULL) {
+        *outFileSize = size;
+    }
+
+    // Allocate memory for the string (+1 byte for the null terminator)
+    char* buffer = (char*)malloc((size + 1) * sizeof(char));
+    if (buffer == NULL) {
+        printf("Error: Memory allocation failed\n");
+        return NULL;
+    }
+
+    return buffer;
+}
+
+/**
+ * Returns the current local time as "HH:MM" (24-hour), matching the
+ * format used by the schedule's time1/time2/time3 fields.
+ *
+ * Note: uses a static internal buffer, so the returned pointer is
+ * only valid until the next call — copy it out if you need to hold
+ * onto more than one timestamp at once.
+ */
 char* get_current_time(void) {
     static char buffer[6]; // "HH:MM" + null terminator
     time_t now = time(NULL);
@@ -64,7 +95,6 @@ void heater_status(const int* status) {
  * @return 0 on success, -1 on failure (file missing/unreadable or
  *         unrecognized content).
  */
-
 int read_status(int* status) {
     FILE* statusFile = fopen(STATUS_FILE_PATH, "r");
     if (statusFile == NULL) {
@@ -276,46 +306,70 @@ int push_status_and_temp(int status, float temp) {
 }
 
 /**
- * Determines the desired temperature for the current time, based on
- * the schedule fetched from the server.
+ * Converts an "HH:MM" string into minutes since midnight (0-1439).
  *
- * Since "HH:MM" is a fixed-width, zero-padded format, plain string
- * comparison sorts times correctly — no need to parse into integers.
+ * @param hhmm The time string to parse.
+ * @return Minutes since midnight, or -1 if the string is empty,
+ *         malformed, or out of range.
+ */
+static int time_to_minutes(const char* hhmm) {
+    int h, m;
+    if (sscanf(hhmm, "%d:%d", &h, &m) != 2) return -1;
+    if (h < 0 || h > 23 || m < 0 || m > 59) return -1;
+    return h * 60 + m;
+}
+
+/**
+ * Circular distance in minutes between two times-of-day, accounting
+ * for midnight wraparound (e.g. 23:58 and 00:02 are 4 minutes apart,
+ * not 1436).
  *
- * Picks the slot with the latest scheduled time that is <= the
- * current time (i.e. the most recently triggered slot). If the
- * current time is earlier than all three scheduled times (e.g. it's
- * 1 AM and the earliest slot is 6 AM), falls back to the slot with
- * the latest time overall, treating it as still active from the
- * previous day.
+ * @param a First time, in minutes since midnight.
+ * @param b Second time, in minutes since midnight.
+ * @return The shorter of the two distances around the 24-hour clock.
+ */
+static int circular_distance(int a, int b) {
+    int diff = abs(a - b);
+    int wrapped = 24 * 60 - diff;
+    return diff < wrapped ? diff : wrapped;
+}
+
+/**
+ * Picks the schedule slot whose time is closest to the current time
+ * (in either direction — past or future) and returns its temperature.
  *
  * @param schedule The schedule fetched via fetch_schedule().
  * @param current_time The current time as "HH:MM", from get_current_time().
- * @return The desired temperature for the active slot.
+ * @return The desired temperature for the closest slot. Falls back to
+ *         entries[0]->temperature if every slot has an empty/malformed
+ *         time (nothing valid to compare against) or current_time
+ *         itself can't be parsed.
  */
 float get_desired_temperature(const schedule_t* schedule, const char* current_time) {
     const schedule_entry_t* entries[3] = { &schedule->time1, &schedule->time2, &schedule->time3 };
-    const schedule_entry_t* active = NULL;
+
+    int now_min = time_to_minutes(current_time);
+    if (now_min < 0) {
+        return entries[0]->temperature; // malformed current time; fall back
+    }
+
+    const schedule_entry_t* closest = NULL;
+    int best_distance = -1;
 
     for (int i = 0; i < 3; i++) {
-        if (strcmp(entries[i]->time, current_time) <= 0) {
-            if (active == NULL || strcmp(entries[i]->time, active->time) > 0) {
-                active = entries[i];
-            }
+        int slot_min = time_to_minutes(entries[i]->time);
+        if (slot_min < 0) continue; // skip unset/malformed slots
+
+        int distance = circular_distance(now_min, slot_min);
+        if (closest == NULL || distance < best_distance) {
+            best_distance = distance;
+            closest = entries[i];
         }
     }
 
-    if (active == NULL) {
-        active = entries[0];
-        for (int i = 1; i < 3; i++) {
-            if (strcmp(entries[i]->time, active->time) > 0) {
-                active = entries[i];
-            }
-        }
-    }
-
-    return active->temperature;
+    return (closest != NULL) ? closest->temperature : entries[0]->temperature;
 }
+
 int main() {
     curl_global_init(CURL_GLOBAL_DEFAULT);
 
@@ -358,4 +412,3 @@ int main() {
     curl_global_cleanup();
     return 0;
 }
-
